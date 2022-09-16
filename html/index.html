@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/index.css">
+  <script src="../js/utils.js" defer></script>
+  <script src="../js/common.js" defer></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- header is fixed across files -->
+  <header>
+    <h1>W</h1>
+    <nav>
+      <ul>
+        <li>
+          <a href="" class="nav-active">Home</a>
+        </li>
+        <li>
+          <a href="">Tours</a>
+        </li>
+        <li>
+          <a href="">About Us</a>
+        </li>
+        <li>
+          <a href="">FAQs</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="user-menu" id="user-menu">
+      <!-- svg for user icon (copied directly from userIcon.svg and modified abit to be able to style it) -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" class="header-icon">
+        <g>
+          <circle cx="7" cy="5.5" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          </circle>
+          <path d="M2.73,11.9a5,5,0,0,1,8.54,0" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+          <circle cx="7" cy="7" r="6.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          </circle>
+        </g>
+      </svg>
+      <!-- will be expanded out when user click on the user icon -->
+      <!-- will use js to determine which div to show -->
+      <div class="user-menu-actions" id="not-logged-in-menu">
+        <a href="">Log In</a>
+      </div>
+      <div class="user-menu-actions" id="logged-in-menu">
+        <a href="">My Account</a>
+        <a href="">Log Out</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- main content differs across files -->
+  <main>
+    <div class="hero" id="hero-1">
+      <div class="hero-wrapper">
+        <div class="intro">
+          <h1>Welcome to Penang!!!</h1>
+          <h3>We have everything in store for you</h3>
+        </div>
+        <button class="action-btn-primary">View Deals</button>
+      </div>
+    </div>
+    <div class="hero" id="hero-2">
+      <div class="hero-wrapper">
+        <div class="intro">
+          <h1>Penang Lang?</h1>
+          <h3>Why not bring others around?</h3>
+        </div>
+        <button class="action-btn-primary">Be a Tour Guide</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- footer is fixed across files -->
+  <footer>
+    <div class="footer-navs"></div>
+  </footer>
+</body>
+
+</html>

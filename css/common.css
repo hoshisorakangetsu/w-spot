@@ -1,0 +1,220 @@
+/* This file contains styles that will be used accross all pages */
+/* default everything to 0 margin and 0 padding, will add them for specific elems*/
+* {
+  margin: 0;
+  padding: 0;
+  transition: .3s;
+  text-align: center;
+}
+
+/* variables */
+:root {
+  /* color for text/primary color */
+  --h: 185;
+  --s: 80%;
+  --l: 75%;
+  --hsl-primary: hsl(var(--h), var(--s), var(--l));
+
+  /* tweaked color to apply a matching secondary color (mostly for element background) based on primary color*/
+  --s-secondary: 40%;
+  --l-secondary: 25%;
+  --hsl-secondary: hsl(var(--h), var(--s-secondary), var(--l-secondary));
+
+  /* text will be white */
+  --l-text: 90%;
+  --hsl-text: hsl(var(--h), var(--s), var(--l-text));
+
+  /* tweaked color to apply a matching bg color (the main body) based on primary color*/
+  --s-bg: 30%;
+  --l-bg: 10%;
+  --hsl-bg: hsl(var(--h), var(--s-bg), var(--l-bg));
+
+  /* tweaked color to apply a matching box shadows based on primary color*/
+  --s-shadow: 15%;
+  --l-shadow: 70%;
+  --hsl-shadow: hsl(var(--h), var(--s-shadow), var(--l-shadow));
+
+  --hsla-selection: hsla(var(--h), var(--s), var(--l), 0.4);
+}
+
+/* apply primary color to all texts */
+body {
+  color: var(--hsl-primary);
+}
+
+/* fixed styles for both type of headers*/
+header {
+  height: 5vh;
+  border-radius: 99999px;  /* css hack for pill shape */
+  background-color: var(--hsl-secondary);
+  color: var(--hsl-text);
+  position: fixed;
+  top: 2vh;
+  left: 0; right: 0;
+  padding: 1vh 3vw;
+  margin: 0 auto;
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: .5s;
+}
+
+.floating {
+  top: 3vh;
+  box-shadow: 0px 2px 8px var(--hsl-shadow);
+}
+
+header h1 {
+  position: relative;
+}
+
+header h1::after {
+  position: absolute;
+  left: 100%;
+  content: "-Spot";
+  white-space: nowrap;
+  overflow: hidden;
+  transition: .2s;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+
+nav ul li a {
+  display: block;
+  opacity: 1;
+  padding: .25vh 1vw;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: .2s;
+  text-decoration: none;
+  color: var(--hsl-text);
+}
+
+nav ul li a.nav-active {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--hsl-primary);
+}
+
+/* add hover on the navs to give user feedback on they hovered on something clickable */
+nav ul li a:hover {
+  font-size: 2rem;
+}
+
+.user-menu {
+  position: relative;
+}
+
+.user-menu-actions {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 130%;
+  right: 0;
+  width: max-content;
+  border-radius: 15px;
+  background-color: var(--hsl-bg);
+  padding: 1vh 1vw;
+}
+
+.user-menu-actions a {
+  display: block;
+  text-decoration: none;
+  color: var(--hsl-text);
+  padding: 1vh 2vw;
+  border-radius: 10px;
+}
+
+.user-menu-actions a:hover,
+.user-menu-actions a:focus {
+  background-color: var(--hsla-selection);
+}
+
+.user-menu-actions a:active {
+  opacity: .7;
+}
+
+/* by default no show menu, will decide which menu to show after user click the icon */
+#logged-in-menu, #not-logged-in-menu {
+  display: none;
+}
+
+.show-user-menu-actions {
+  animation: open-user-menu .5s ease;
+}
+
+.header-icon {
+  height: 5vh;
+  width: 5vh;
+  stroke: var(--hsl-text) !important;
+}
+
+main {
+  min-height: 100vh;
+  background-color: var(--hsl-bg);
+}
+
+/* only if user can hover only show the expanded and collapsed header */
+@media only screen and (hover: hover) {
+  /* class for the collapsed header */
+  .collapsed {
+    width: 50%;
+    justify-content: space-between;
+  }
+
+  .collapsed h1::after {
+    opacity: 0;
+    left: 0;
+  }
+
+  .collapsed ul {
+    gap: 0;
+  }
+  
+  .collapsed .nav-active {
+    font-weight: bold;
+    font-size: 2rem;
+    color: var(--hsl-primary);
+  }
+  
+  .collapsed li a:not(.nav-active) {
+    display: none;
+    opacity: 0;
+  }
+}
+
+.action-btn-primary {
+  background-color: var(--hsl-primary);
+  padding: 2vh 2vw;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 2px 2px 4px var(--hsl-shadow);
+}
+
+.action-btn-primary:hover,
+.action-btn-primary:focus {
+  transform: translateY(-10%);
+  box-shadow: 2px 2px 12px var(--hsl-shadow);
+}
+
+.action-btn-primary:active {
+  transform: unset;
+}
+
+@keyframes open-user-menu {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: unset;
+  }
+}

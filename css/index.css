@@ -1,0 +1,34 @@
+/* styles for landing page */
+.hero {
+  height: 100vh;
+  /* all the hero sections will have this property, so why not put it here */
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+.hero-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5vh;
+  height: inherit;
+}
+
+.hero-wrapper h1 {
+  font-size: 3rem;
+}
+
+#hero-1 {
+  background: linear-gradient(
+      hsla(var(--h), var(--s-bg), var(--l-bg), 0.5), 
+      hsla(var(--h), var(--s-bg), var(--l-bg), 0.5)
+    ), url(../assets/sunrise-png.png);
+}
+
+#hero-2 {
+  background: linear-gradient(
+      hsla(var(--h), var(--s-bg), var(--l-bg), 0.5), 
+      hsla(var(--h), var(--s-bg), var(--l-bg), 0.5)
+    ), url(../assets/penang-bridge-2.png);
+}

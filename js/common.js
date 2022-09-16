@@ -43,7 +43,10 @@ document.addEventListener('click', event => {
   const isClickInsideUserMenu = userMenuBtn.contains(event.target)
 
   if (!isClickInsideUserMenu) {
-    toggleMenuActionShow()
+    // only toggle the show if menu is opened
+    if (isUserMenuOpen) {
+      toggleMenuActionShow()
+    }
   }
 })
 

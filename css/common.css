@@ -25,8 +25,8 @@
   --hsl-text: hsl(var(--h), var(--s), var(--l-text));
 
   /* tweaked color to apply a matching bg color (the main body) based on primary color*/
-  --s-bg: 30%;
-  --l-bg: 10%;
+  --s-bg: 35%;
+  --l-bg: 15%;
   --hsl-bg: hsl(var(--h), var(--s-bg), var(--l-bg));
 
   /* tweaked color to apply a matching box shadows based on primary color*/
@@ -109,14 +109,15 @@ nav ul li a:hover {
 
 .user-menu {
   position: relative;
+  cursor: pointer;
 }
 
 .user-menu-actions {
   position: absolute;
   display: flex;
   flex-direction: column;
-  top: 130%;
-  right: 0;
+  top: 115%;
+  right: -100%;
   width: max-content;
   border-radius: 15px;
   background-color: var(--hsl-bg);
@@ -215,6 +216,6 @@ main {
 
   100% {
     opacity: 1;
-    transform: unset;
+    transform: translateY(0);
   }
 }

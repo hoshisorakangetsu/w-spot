@@ -1,9 +1,14 @@
+// to simplify html code
+function goHome() {
+  window.location.href = './index.html'
+}
+
 // if user is logged in, this will be a string with smtg inside, if not it will be null
 let isLoggedIn = sessionStorage.getItem('isLoggedIn')
 
 const userMenuBtn = document.querySelector('#user-menu')
-let isUserMenuOpen = false;
-let openedMenuId = '';
+let isUserMenuOpen = false
+let openedMenuId = ''
 
 function toggleMenuActionShow() {
   const userActionMenus = document.querySelectorAll('.user-menu-actions')

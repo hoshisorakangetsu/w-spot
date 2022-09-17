@@ -40,6 +40,12 @@
   --hsla-selection: hsla(var(--h), var(--s), var(--l), 0.4);
 }
 
+/* stuffs highlighted by user */
+::selection {
+  background-color: var(--hsla-selection);
+  color: var(--hsl-text);
+}
+
 /* apply primary color to all texts */
 body {
   color: var(--hsl-primary);

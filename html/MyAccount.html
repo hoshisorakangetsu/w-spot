@@ -6,7 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/common.css">
-  <link rel="stylesheet" href="../css/index.css">
   <script src="../js/utils.js" defer></script>
   <script src="../js/common.js" defer></script>
   <script src="../js/loginGuard.js" defer></script>
@@ -20,16 +19,16 @@
     <nav>
       <ul>
         <li>
-          <a href="" class="nav-active">Home</a>
+          <a href="./index.html" class="nav-active">Home</a>
         </li>
         <li>
-          <a href="">Tours</a>
+          <a href="./Tours.html">Tours</a>
         </li>
         <li>
-          <a href="">About Us</a>
+          <a href="./AboutUs.html">About Us</a>
         </li>
         <li>
-          <a href="">FAQs</a>
+          <a href="./FAQ.html">FAQs</a>
         </li>
       </ul>
     </nav>
@@ -47,40 +46,36 @@
       <!-- will be expanded out when user click on the user icon -->
       <!-- will use js to determine which div to show -->
       <div class="user-menu-actions" id="not-logged-in-menu">
-        <a href="">Log In</a>
+        <a href="./login.html">Log In</a>
       </div>
       <div class="user-menu-actions" id="logged-in-menu">
-        <a href="">My Account</a>
-        <a href="">Log Out</a>
+        <a href="./MyAccount.html">My Account</a>
+        <!-- TODO: add logout functionality -->
+        <a href="#">Log Out</a>
       </div>
     </div>
   </header>
 
   <!-- main content differs across files -->
   <main>
-    <div class="hero" id="hero-1">
-      <div class="hero-wrapper">
-        <div class="intro">
-          <h1>Welcome to Penang!!!</h1>
-          <h3>We have everything in store for you</h3>
-        </div>
-        <button class="action-btn-primary">View Deals</button>
-      </div>
-    </div>
-    <div class="hero" id="hero-2">
-      <div class="hero-wrapper">
-        <div class="intro">
-          <h1>Penang Lang?</h1>
-          <h3>Why not bring others around?</h3>
-        </div>
-        <button class="action-btn-primary">Be a Tour Guide</button>
-      </div>
-    </div>
+    
   </main>
 
   <!-- footer is fixed across files -->
   <footer>
-    <div class="footer-navs"></div>
+    <div class="footer-navs">
+      <h1>W-Spot</h1>
+      <div class="footer-links">
+        <a href="./index.html">Home</a>
+        <a href="./Tours.html">Tours</a>
+        <a href="./FAQ.html">FAQs</a>
+        <a href="./AboutUs.html">About Us</a>
+      </div>
+    </div>
+    <hr />
+    <div class="copyright-claim">
+      <p>Copyright &copy; w-spot inc. 2022-2050</p>
+    </div>
   </footer>
 </body>
 

@@ -19,16 +19,16 @@
     <nav>
       <ul>
         <li>
-          <a href="" class="nav-active">Home</a>
+          <a href="./index.html" class="nav-active">Home</a>
         </li>
         <li>
-          <a href="">Tours</a>
+          <a href="./Tours.html">Tours</a>
         </li>
         <li>
-          <a href="">About Us</a>
+          <a href="./AboutUs.html">About Us</a>
         </li>
         <li>
-          <a href="">FAQs</a>
+          <a href="./FAQ.html">FAQs</a>
         </li>
       </ul>
     </nav>
@@ -46,11 +46,12 @@
       <!-- will be expanded out when user click on the user icon -->
       <!-- will use js to determine which div to show -->
       <div class="user-menu-actions" id="not-logged-in-menu">
-        <a href="">Log In</a>
+        <a href="./login.html">Log In</a>
       </div>
       <div class="user-menu-actions" id="logged-in-menu">
-        <a href="">My Account</a>
-        <a href="">Log Out</a>
+        <a href="./MyAccount.html">My Account</a>
+        <!-- TODO: add logout functionality -->
+        <a href="#">Log Out</a>
       </div>
     </div>
   </header>
@@ -79,7 +80,19 @@
 
   <!-- footer is fixed across files -->
   <footer>
-    <div class="footer-navs"></div>
+    <div class="footer-navs">
+      <h1>W-Spot</h1>
+      <div class="footer-links">
+        <a href="./index.html">Home</a>
+        <a href="./Tours.html">Tours</a>
+        <a href="./FAQ.html">FAQs</a>
+        <a href="./AboutUs.html">About Us</a>
+      </div>
+    </div>
+    <hr />
+    <div class="copyright-claim">
+      <p>Copyright &copy; w-spot inc. 2022-2050</p>
+    </div>
   </footer>
 </body>
 

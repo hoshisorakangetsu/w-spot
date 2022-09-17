@@ -29,6 +29,9 @@
   --l-bg: 15%;
   --hsl-bg: hsl(var(--h), var(--s-bg), var(--l-bg));
 
+  /* to have a background in a background (highlight a container) */
+  --hsl-bg-darker: hsl(var(--h), var(--s-bg), 5%);
+
   /* tweaked color to apply a matching box shadows based on primary color*/
   --s-shadow: 15%;
   --l-shadow: 70%;
@@ -44,6 +47,7 @@ body {
 
 /* fixed styles for both type of headers*/
 header {
+  z-index: 999; /* on top everything */
   height: 5vh;
   border-radius: 99999px;  /* css hack for pill shape */
   background-color: var(--hsl-secondary);
@@ -67,6 +71,7 @@ header {
 
 header h1 {
   position: relative;
+  cursor: pointer;
 }
 
 header h1::after {
@@ -192,6 +197,8 @@ main {
 
 .action-btn-primary {
   background-color: var(--hsl-primary);
+  color: var(--hsl-secondary);
+  font-size: 1.25em;
   padding: 2vh 2vw;
   border-radius: 10px;
   border: none;
@@ -218,4 +225,46 @@ main {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+footer {
+  background-color: var(--hsl-bg);
+}
+
+footer h1 {
+  cursor: pointer;
+}
+
+footer *:not(hr) {
+  padding: 1vh 1vw;
+}
+
+footer hr {
+  border: 1px solid var(--hsl-primary);
+  margin: 0px 2vw;
+}
+
+.footer-navs {
+  margin: 0px auto;
+  max-width: 320px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--hsl-bg-darker);
+  border-radius: 15px;
+}
+
+.footer-links a {
+  display: block;
+  text-decoration: none;
+  color: var(--hsl-text);
+  font-size: 1.25em;
+  border-radius: 10px;
+  margin: .5vh 0px;
+}
+
+.footer-links a:hover {
+  background-color: var(--hsla-selection);
 }

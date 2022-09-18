@@ -4,7 +4,7 @@ function goHome() {
 }
 
 // if user is logged in, this will be a string with smtg inside, if not it will be null
-let isLoggedIn = sessionStorage.getItem('isLoggedIn')
+let isLoggedIn = !!sessionStorage.getItem('loggedInUser')
 
 const userMenuBtn = document.querySelector('#user-menu')
 let isUserMenuOpen = false

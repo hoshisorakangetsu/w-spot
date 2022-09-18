@@ -1,0 +1,146 @@
+/* since login and register share some similar styles, will be placing them in the same file */
+.login-register-main {
+  height: 100vh;
+  /* background-image: url(../assets/penang-bridge-2.png); */
+  background-color: var(--hsl-bg-darker);
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-register-dialog-wrapper {
+  width: 75%;
+  height: 50vh;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  box-shadow: 1px 2px 15px var(--hsl-shadow);
+  border-radius: 12px;
+}
+
+.login-register-dialog-left {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.login-register-dialog-left * {
+  color: var(--hsl-primary);
+}
+
+.login-register-dialog-left h1 {
+  position: absolute;
+  font-size: 4em;
+  top: 10%;
+  left: 0; right: 0;
+}
+
+.login-register-dialog-left h2 {
+  font-size: 2em;
+}
+
+.login-register-dialog-left p {
+  font-size: 1.75em;
+  margin-top: 3vh;
+}
+
+.login-register-dialog-right {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  background-color: var(--hsla-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2vh 1vw;
+}
+
+.login-register-dialog-right form {
+  box-sizing: border-box;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+/* will use a little hack to allow selecting the label (to set color on invalid) */
+.form-input {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 4px;
+  margin: 2vh 0px;
+}
+
+.form-input label {
+  text-align: left;
+  font-size: 1.25em;
+  padding-left: .25em;
+}
+
+.login-register-dialog-right form input[type="text"], 
+.login-register-dialog-right form input[type="password"] {
+  padding: 1vh 1vw;
+  font-size: 1.25em;
+  text-align: left;
+  outline: none;
+  border-radius: 10px;
+  color: var(--hsl-primary);
+  background-color: transparent;
+  border: 2px solid var(--hsl-primary);
+}
+
+.login-register-dialog-right form input[type="text"]:focus, 
+.login-register-dialog-right form input[type="password"]:focus {
+  background-color: var(--hsl-primary);
+  color: var(--hsl-bg-darker);
+}
+
+/* will use js to toggle the submitted class on the form, so user wont see the red stuff as soon as they enter the form */
+.submitted input:invalid, 
+.submitted input:invalid {
+  border: 2px solid var(--hsl-invalid) !important;
+}
+
+/* now u see the hack, + is adjacent sibling selector, to use it the label have to be after the input (i can technically do this with js without this hack, but i tot it'd be fun if i played around with it so here it is) */
+.submitted input:invalid + label, 
+.submitted input:invalid + label {
+  color: var(--hsl-invalid);
+  font-weight: bold;
+}
+
+.submitted .invalid::after {
+  content: attr(data-invalid-msg);
+  color: var(--hsl-invalid);
+  text-align: left;
+  order: -1;
+}
+
+.login-register-dialog-right form button {
+  border-radius: 12px;
+  outline: none;
+  padding: 1vh 2vw;
+  margin-top: 2vh;
+  font-size: 1.25em;
+}
+
+.login-left {
+  background-image: url(../assets/sunrise-png.png);
+}
+
+.login-right p {
+  font-size: 1.25em;
+  color: var(--hsl-text);
+}
+
+.login-right a {
+  color: var(--hsl-text);
+}
+
+.login-right a:hover {
+  color: var(--hsl-primary);
+}

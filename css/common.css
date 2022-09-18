@@ -15,6 +15,12 @@
   --l: 75%;
   --hsl-primary: hsl(var(--h), var(--s), var(--l));
 
+  /* color for error */
+  --h-invalid: 340;
+  --s-invalid: 90%;
+  --l-invalid: 65%;
+  --hsl-invalid: hsl(var(--h-invalid), var(--s-invalid), var(--l-invalid));
+
   /* tweaked color to apply a matching secondary color (mostly for element background) based on primary color*/
   --s-secondary: 40%;
   --l-secondary: 25%;
@@ -24,10 +30,16 @@
   --l-text: 90%;
   --hsl-text: hsl(var(--h), var(--s), var(--l-text));
 
+  --s-text-secondary: 60%;
+  --l-text-secondary: 35%;
+  --hsl-text-secondary: hsl(var(--h), var(--s-text-secondary), var(--l-text-secondary));
+
   /* tweaked color to apply a matching bg color (the main body) based on primary color*/
   --s-bg: 35%;
   --l-bg: 15%;
   --hsl-bg: hsl(var(--h), var(--s-bg), var(--l-bg));
+  /* bg color with transparency */
+  --hsla-bg: hsla(var(--h), var(--s-bg), var(--l-bg), 0.8);
 
   /* to have a background in a background (highlight a container) */
   --hsl-bg-darker: hsl(var(--h), var(--s-bg), 5%);
@@ -283,6 +295,10 @@ footer hr {
 
 .footer-more-infos a {
   padding: 0;
+}
+
+.footer-more-infos a:hover {
+  color: var(--hsl-primary);
 }
 
 .footer-links a {

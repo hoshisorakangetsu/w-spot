@@ -3,6 +3,15 @@ function goHome() {
   window.location.href = './index.html'
 }
 
+// should start to use this function everywhere as it helps remember where u are before u login
+function goToLogin() {
+  // only set last path if it is not register.html (we dont wanna redirect user back to register do ya)
+  if (!window.location.href.includes('register.html')) {
+    sessionStorage.setItem('lastPath', window.location.href)
+  }
+  window.location.href = './login.html'
+}
+
 // if user is logged in, this will be a string with smtg inside, if not it will be null
 let isLoggedIn = !!sessionStorage.getItem('loggedInUser')
 

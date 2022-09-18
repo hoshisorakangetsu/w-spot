@@ -103,7 +103,6 @@ let header = document.querySelector('header')
 // to determine whether to add and remove the collapsed class or not
 let headerIsFloating = false
 function collapseHeader() {
-  console.log(headerIsFloating)
   if (headerIsFloating) {
     header.classList.add('collapsed')
     // unshow the user menu action when the header collapse also

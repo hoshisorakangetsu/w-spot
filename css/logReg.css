@@ -129,6 +129,10 @@
   font-weight: bold;
 }
 
+.invalid {
+  transition: margin 0s;
+}
+
 .submitted .invalid::after {
   content: attr(data-invalid-msg);
   color: var(--hsl-invalid);
@@ -159,4 +163,8 @@
 
 .login-right a:hover {
   color: var(--hsl-primary);
+}
+
+.register-right .form-input.invalid {
+  margin-bottom: 0px;
 }

@@ -90,7 +90,63 @@ function login(ev) {
 
   // sets the localUser as the loggedInUser
   sessionStorage.setItem('loggedInUser', localUser)
+  // retrieve last location before heading to login (will be safe even if user registered before login as register won't be saved in sessionStorage)
+  alert('Login successful! Welcom, ' + usernameEl.value)
+  window.location.href = sessionStorage.getItem('lastPath')
 }
 
-// TODO: add register functionality
-function register(ev) {}
+// atm will not be checking for username exists, we only need a mvp, those stuffs are bttr handled with a real backend
+function register(ev) {
+  // add submitted class to the form (the parent)
+  addSubmitted(ev.target.parentNode)
+  // the only thing i cant do without the has selector (display form valid message haizz in the end still need js for this)
+  // will display a Please fill in this field message for form-inputs if check validity failed
+  // and checkvalidity will only fail cuz i know its only required, so it will only fail if user entered ntg
+  // select all divs with .form-input that is inside login-register-dialog-right
+  const inputDivs = document.querySelectorAll('.login-register-dialog-right .form-input')
+  console.log(inputDivs)
+  const isFormValid = !emptyFieldHandler(inputDivs)
+
+  // exit the function if form is not valid
+  if (!isFormValid) return
+
+  const usernameEl = document.querySelector('#username')
+  const passwordEl = document.querySelector('#password')
+  const password2El = document.querySelector('#password2')
+  const isTourGuide = document.querySelector('#isTourGuide').checked
+
+  // will be running this code twice, so made a closure to make life easier
+  const registerFailed = () => {
+    // sets isvalid state for both passwordEls, resets the values, adds invalid class to their parents (the divs)
+    passwordEl.value = ''
+    passwordEl.setCustomValidity('Username not found/password unmatch')
+    passwordEl.parentElement.setAttribute('data-invalid-msg', 'Both passwords are not the same')
+    passwordEl.parentElement.classList.add('invalid')
+
+    password2El.value = ''
+    password2El.setCustomValidity('Two passwords unmatch')
+    password2El.parentElement.setAttribute('data-invalid-msg', 'Both passwords are not the same')
+    password2El.parentElement.classList.add('invalid')
+    resetInvalidEvent(passwordEl)
+    resetInvalidEvent(password2El)
+  }
+
+  // check if the two passwords are the same
+  if (passwordEl.value !== password2El.value) {
+    registerFailed()
+
+    return
+  }
+
+  const newUserObj = {
+    username: usernameEl.value,
+    password: passwordEl.value,
+    role: isTourGuide ? 'TOUR_GUIDE' : 'TRAVELLER'
+  }
+
+  localStorage.setItem(usernameEl.value, JSON.stringify(newUserObj))
+  alert('Register success, welcome, ' + usernameEl.value + '! Please login!')
+
+  // redirect user to login page
+  goToLogin()
+}

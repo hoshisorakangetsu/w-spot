@@ -5,6 +5,7 @@
 // ACCESS THE USEROBJ FOR A CERTAIN USER BY caling getItem('username') on the localStorage
 // WARN: NEW FIELDS CAN BE ADDED ANY TIME AS NEEDED
 interface User {
+  username: string;
   password: string;
   role: 'TOUR_GUIDE' | 'TRAVELLER';  // will not have any other strings
 }

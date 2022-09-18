@@ -313,3 +313,12 @@ footer hr {
 .footer-links a:hover {
   background-color: var(--hsla-selection);
 }
+
+/* all labels should have a pointer as cursor */
+label {
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+}

@@ -15,6 +15,14 @@ function goToLogin() {
 // if user is logged in, this will be a string with smtg inside, if not it will be null
 let isLoggedIn = !!sessionStorage.getItem('loggedInUser')
 
+// logout is rather trivial, just clear sessionStorage's loggedInUser and redirect to home
+// if and only if user is logged in, even though user should not have access to this function without logging in (normal users)
+function logout() {
+  if (!isLoggedIn) return
+  sessionStorage.removeItem('loggedInUser')
+  goHome()
+}
+
 const userMenuBtn = document.querySelector('#user-menu')
 let isUserMenuOpen = false
 let openedMenuId = ''

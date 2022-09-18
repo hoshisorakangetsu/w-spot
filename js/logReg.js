@@ -91,3 +91,6 @@ function login(ev) {
   // sets the localUser as the loggedInUser
   sessionStorage.setItem('loggedInUser', localUser)
 }
+
+// TODO: add register functionality
+function register(ev) {}

@@ -25,6 +25,7 @@ function emptyFieldHandler(fields) {
     // if the field is required and the value after trim is 0
     const inputField = el.querySelector('input')
     if (inputField.required && inputField.value.trim().length === 0) {
+      // set the attribute on div to render the after
       el.setAttribute('data-invalid-msg', 'Please fill in this field')
       el.classList.add('invalid')
       hasEmptyRequired = true
@@ -73,7 +74,6 @@ function login(ev) {
   }
 
   const localUser = localStorage.getItem(usernameEl.value)
-  console.log(localUser)
   if (!localUser) {
     loginFailed()
 
@@ -104,7 +104,6 @@ function register(ev) {
   // and checkvalidity will only fail cuz i know its only required, so it will only fail if user entered ntg
   // select all divs with .form-input that is inside login-register-dialog-right
   const inputDivs = document.querySelectorAll('.login-register-dialog-right .form-input')
-  console.log(inputDivs)
   const isFormValid = !emptyFieldHandler(inputDivs)
 
   // exit the function if form is not valid

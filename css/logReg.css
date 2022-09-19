@@ -35,10 +35,7 @@
 }
 
 .login-register-dialog-left h1 {
-  position: absolute;
   font-size: 4em;
-  top: 10%;
-  left: 0; right: 0;
 }
 
 .login-register-dialog-left h2 {

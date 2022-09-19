@@ -139,11 +139,11 @@ nav ul li a:hover {
   position: absolute;
   display: flex;
   flex-direction: column;
-  top: 115%;
+  top: 120%;
   right: -100%;
   width: max-content;
   border-radius: 15px;
-  background-color: var(--hsl-bg);
+  background-color: var(--hsl-bg-darker);
   padding: 1vh 1vw;
 }
 
@@ -250,6 +250,8 @@ footer {
 }
 
 footer h1 {
+  border-top: 1px solid var(--hsl-primary);
+  margin: 0px 1vw;
   cursor: pointer;
 }
 
@@ -310,7 +312,12 @@ footer hr {
   margin: .5vh 0px;
 }
 
-.footer-links a:hover {
+.footer-active {
+  background-color: var(--hsl-primary);
+  color: var(--hsl-bg) !important;
+}
+
+.footer-links a:not(.footer-active):hover {
   background-color: var(--hsla-selection);
 }
 

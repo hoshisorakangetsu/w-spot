@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/tours.css">
+  <script src="../js/utils.js" defer></script>
+  <script src="../js/common.js" defer></script>
+  <script src="../js/tours.js" defer></script>
+  <title>W-Spot: Tours</title>
+</head>
+
+<body>
+  <!-- header is fixed across files -->
+  <header>
+    <h1 onclick="goHome()">W</h1>
+    <nav>
+      <ul>
+        <li>
+          <a href="./index.html">Home</a>
+        </li>
+        <li>
+          <a href="./Tours.html" class="nav-active">Tours</a>
+        </li>
+        <li>
+          <a href="./AboutUs.html">About Us</a>
+        </li>
+        <li>
+          <a href="./FAQ.html">FAQs</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="user-menu" id="user-menu">
+      <!-- svg for user icon (copied directly from userIcon.svg and modified abit to be able to style it) -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" class="header-icon">
+        <g>
+          <circle cx="7" cy="5.5" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          </circle>
+          <path d="M2.73,11.9a5,5,0,0,1,8.54,0" fill="none" stroke-linecap="round" stroke-linejoin="round"></path>
+          <circle cx="7" cy="7" r="6.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          </circle>
+        </g>
+      </svg>
+      <!-- will be expanded out when user click on the user icon -->
+      <!-- will use js to determine which div to show -->
+      <div class="user-menu-actions" id="not-logged-in-menu">
+        <!-- go to login page handled by js as there are more stuffs needed to be handled -->
+        <a href="#" onclick="goToLogin()">Log In</a>
+      </div>
+      <div class="user-menu-actions" id="logged-in-menu">
+        <a href="./MyAccount.html">My Account</a>
+        <a href="#" onclick="logout()">Log Out</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- main content differs across files -->
+  <main>
+    <div class="two-col-layout">
+      <div class="left-subnav">
+        <a class="active" href="#" onclick="showTours(this, 'all')">All</a>
+        <a href="#" onclick="showTours(this, 'tours')">Tours</a>
+        <a href="#" onclick="showTours(this, 'blogs')">Blogs</a>
+      </div>
+      <div class="main-content">
+        <div class="tour-blogs-wrapper" id="tours">
+          <h1>Tours</h1>
+          <hr />
+          <div class="tour-blogs-content-wrapper">
+            <div class="tour-blogs-card">
+              <img src="../assets/no-preview.png" alt="No preview">
+              <h2 title="One Day Penang Tour">One day Penang Tour</h2>
+              <button class="action-btn-primary">Learn More</button>
+            </div>
+
+            <div class="tour-blogs-card">
+              <img src="../assets/no-preview.png" alt="No preview">
+              <h2>Bayan Lepas Tour</h2>
+              <button class="action-btn-primary">Learn More</button>
+            </div>
+
+            <div class="tour-blogs-card">
+              <img src="../assets/no-preview.png" alt="No preview">
+              <h2>Lorem, ipsum dolor.</h2>
+              <button class="action-btn-primary">Learn More</button>
+            </div>
+
+            <div class="tour-blogs-card">
+              <img src="../assets/no-preview.png" alt="No preview">
+              <h2>Lorem, ipsum dolor.</h2>
+              <button class="action-btn-primary">Learn More</button>
+            </div>
+          </div>
+        </div>
+        <div class="tour-blogs-wrapper" id="blogs">
+          <h1>Blogs</h1>
+          <hr />
+          <div class="tour-blogs-content-wrapper">
+            <div class="tour-blogs-card">
+              <img src="../assets/no-preview.png" alt="No preview">
+              <h2>My Day at Penang</h2>
+              <button class="action-btn-primary">Learn More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- footer is fixed across files -->
+  <footer>
+    <div class="footer-navs">
+      <h1 onclick="goHome()">W-Spot</h1>
+      <div class="footer-info-wrapper">
+        <div class="footer-links">
+          <a href="./index.html">Home</a>
+          <a href="./Tours.html" class="footer-active">Tours</a>
+          <a href="./FAQ.html">FAQs</a>
+          <a href="./AboutUs.html">About Us</a>
+        </div>
+        <div class="footer-more-infos">
+          <h2>Any Doubts?</h2>
+          <h3>Mail us at <a href="mailto:cs@wspot.com">cs@wspot.com</a></h3>
+          <h2>OR</h2>
+          <h3>Call us at <a href="tel:+60123456789">+(60)12-345 6789</a></h3>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="copyright-claim">
+      <p>Copyright &copy; w-spot inc. 2022 All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+
+</html>

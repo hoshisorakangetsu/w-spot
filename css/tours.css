@@ -1,0 +1,93 @@
+/* this file contains styles for Tours.html */
+
+/* to center the contents */
+main {
+  display: flex;
+  justify-content: center;
+  /* some of the childrens will have position sticky or absolute */
+  position: relative;
+}
+
+.two-col-layout {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  gap: 3vw;
+  width: 100%;
+  padding: 0vh 2vw;
+  height: fit-content;
+}
+
+.left-subnav {
+  position: sticky;
+  top: 15vh;
+  background-color: var(--hsl-bg-darker);
+  display: flex;
+  flex-direction: column;
+  padding: 2vh 2vw;
+  border-radius: 12px;
+  height: min-content;
+}
+
+.left-subnav a {
+  display: block;
+  text-decoration: none;
+  color: var(--hsl-text);
+  font-size: 1.25em;
+  border-radius: 10px;
+  margin: .5vh 0px;
+  padding: 2vh 0px;
+}
+
+.left-subnav .active {
+  background-color: var(--hsl-primary);
+  color: var(--hsl-bg) !important;
+}
+
+.left-subnav a:not(.active):hover {
+  background-color: var(--hsla-selection);
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  margin-top: 15vh;
+}
+
+.tour-blogs-wrapper {
+  border-radius: 12px;
+  padding: 2vh 2vw;
+  background-color: var(--hsl-bg-darker);
+}
+
+.tour-blogs-wrapper hr {
+  border: 1px solid var(--hsl-primary);
+}
+
+.tour-blogs-content-wrapper {
+  display: flex;
+  gap: 2vw;
+  flex-wrap: wrap;
+  margin-top: 2vh;
+}
+
+.tour-blogs-card {
+  display: flex;
+  flex-direction: column;
+  padding: 2vh 2vw;
+  border-radius: 12px;
+  background-color: var(--hsl-secondary);
+  width: calc(60vw * 0.3);
+}
+
+.tour-blogs-card * {
+  margin: 1vh 0px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.tour-blogs-card button {
+  font-size: 1em;
+  padding: 1vh 0px;
+}

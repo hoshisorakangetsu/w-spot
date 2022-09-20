@@ -12,7 +12,8 @@
 
 .login-register-dialog-wrapper {
   width: 75%;
-  height: 50vh;
+  max-width: 900px;
+  min-height: 50vh;
   display: grid;
   grid-template-columns: 50% 50%;
   box-shadow: 1px 2px 15px var(--hsl-shadow);
@@ -22,6 +23,7 @@
 .login-register-dialog-left {
   border-top-left-radius: 12px;
   border-bottom-left-radius: 12px;
+  padding: 0px 15px;
   background-repeat: no-repeat !important;
   background-size: cover !important;
   display: flex;

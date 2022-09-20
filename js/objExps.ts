@@ -9,3 +9,6 @@ interface User {
   password: string;
   role: 'TOUR_GUIDE' | 'TRAVELLER';  // will not have any other strings
 }
+
+// can retrieve the list of tour guides from localStorage, it will be a string array of their usernames
+type TourGuides = string[];

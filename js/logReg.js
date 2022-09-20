@@ -143,6 +143,21 @@ function register(ev) {
     role: isTourGuide ? 'TOUR_GUIDE' : 'TRAVELLER'
   }
 
+  // if the user is a tour guide, append to the tourGuide array in localStorage
+  if (isTourGuide) {
+    // if fail to retrieve tourGuides from localStorage, mean it doesn't exist yet, initialize it with an empty arr
+    let tourGuides = localStorage.getItem('tourGuides')
+    if (!tourGuides) 
+      tourGuides = []
+    else 
+      tourGuides = JSON.parse(tourGuides)
+    
+    // this is just a MVP, so there are no repeat checks, and repeat checks should be done by real backends anyways
+    tourGuides.push(usernameEl.value)
+    localStorage.setItem('tourGuides', JSON.stringify(tourGuides))
+  }
+
+
   localStorage.setItem(usernameEl.value, JSON.stringify(newUserObj))
   alert('Register success, welcome, ' + usernameEl.value + '! Please login!')
 

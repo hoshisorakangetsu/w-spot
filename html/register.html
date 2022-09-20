@@ -58,59 +58,61 @@
 
   <!-- main content differs across files -->
   <main>
-    <div class="login-register-main">
-      <div class="login-register-dialog-wrapper">
-        <div class="login-register-dialog-left register-left">
-          <h1>Register</h1>
-          <div>
-            <h2>Register to enjoy more goodies</h2>
-            <p>You will be redirected to log in page automatically upon registering</p>
+    <div class="main-wrapper">
+      <div class="login-register-main">
+        <div class="login-register-dialog-wrapper">
+          <div class="login-register-dialog-left register-left">
+            <h1>Register</h1>
+            <div>
+              <h2>Register to enjoy more goodies</h2>
+              <p>You will be redirected to log in page automatically upon registering</p>
+            </div>
           </div>
-        </div>
-        <div class="login-register-dialog-right register-right">
-          <!-- since no backend, this form will be handled by fake backend js codes -->
-          <form>
-            <!-- will be using a hack to style the label on invalid how i wish the had selector is already widely available haih -->
-            <div class="form-input" data-invalid-msg=" ">
-              <input 
-                type="text" 
-                name="username" 
-                id="username" 
-                placeholder="hanyue1014"
-                required 
-                aria-label="Username">
-              <!-- the hack cant provide visual aids, will let screen reader know on the input -->
-              <label for="username" aria-hidden="true">Username</label>
-            </div>
-            <div class="form-input" data-invalid-msg=" ">
-              <input 
-                type="password" 
-                name="password" 
-                id="password" 
-                placeholder="********"
-                required 
-                aria-label="Password">
-              <label for="password" aria-hidden="true">Password</label>
-            </div>
-            <div class="form-input" data-invalid-msg=" ">
-              <input 
-                type="password" 
-                name="password2" 
-                id="password2" 
-                placeholder="********"
-                required 
-                aria-label="Password">
-              <label for="password" aria-hidden="true">Reenter password</label>
-            </div>
-            <div class="form-checkbox">
-              <input type="checkbox" name="isTourGuide" id="isTourGuide">
-              <label for="isTourGuide">Become a Tour Guide?</label>
-            </div>
-            <!-- this way the form won't be submitted, will handle login with fakse backend using js -->
-            <button class="action-btn-primary" type="button" onclick="register(event)">
-              Register
-            </button>
-          </form>
+          <div class="login-register-dialog-right register-right">
+            <!-- since no backend, this form will be handled by fake backend js codes -->
+            <form>
+              <!-- will be using a hack to style the label on invalid how i wish the had selector is already widely available haih -->
+              <div class="form-input" data-invalid-msg=" ">
+                <input
+                  type="text"
+                  name="username"
+                  id="username"
+                  placeholder="hanyue1014"
+                  required
+                  aria-label="Username">
+                <!-- the hack cant provide visual aids, will let screen reader know on the input -->
+                <label for="username" aria-hidden="true">Username</label>
+              </div>
+              <div class="form-input" data-invalid-msg=" ">
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="********"
+                  required
+                  aria-label="Password">
+                <label for="password" aria-hidden="true">Password</label>
+              </div>
+              <div class="form-input" data-invalid-msg=" ">
+                <input
+                  type="password"
+                  name="password2"
+                  id="password2"
+                  placeholder="********"
+                  required
+                  aria-label="Password">
+                <label for="password" aria-hidden="true">Reenter password</label>
+              </div>
+              <div class="form-checkbox">
+                <input type="checkbox" name="isTourGuide" id="isTourGuide">
+                <label for="isTourGuide">Become a Tour Guide?</label>
+              </div>
+              <!-- this way the form won't be submitted, will handle login with fakse backend using js -->
+              <button class="action-btn-primary" type="button" onclick="register(event)">
+                Register
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </div>

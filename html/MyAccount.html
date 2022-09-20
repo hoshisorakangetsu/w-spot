@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/myAccount.css">
   <script src="../js/utils.js" defer></script>
   <script src="../js/common.js" defer></script>
   <script src="../js/loginGuard.js" defer></script>
@@ -59,7 +60,14 @@
 
   <!-- main content differs across files -->
   <main>
-    
+    <!-- will use js to add data and toggle views between TRAVELLER role and TOUR_GUIDE role -->
+    <!-- how i wish i could use vue -->
+    <div class="main-wrapper">
+      <div class="main-header">
+        <!-- span will be populated by data with js -->
+        <h1>Welcome, <span id="role">Lorem, ipsum.</span> <span id="username">Lorem, ipsum.</span></h1>
+      </div>
+    </div>
   </main>
 
   <!-- footer is fixed across files -->

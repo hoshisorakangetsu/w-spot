@@ -1,13 +1,5 @@
 /* this file contains styles for Tours.html */
 
-/* to center the contents */
-main {
-  display: flex;
-  justify-content: center;
-  /* some of the childrens will have position sticky or absolute */
-  position: relative;
-}
-
 .two-col-layout {
   display: grid;
   grid-template-columns: 1fr 5fr;

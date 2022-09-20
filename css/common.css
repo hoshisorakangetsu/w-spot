@@ -180,8 +180,16 @@ nav ul li a:hover {
 }
 
 main {
+  display: flex;
+  justify-content: center;
   min-height: 100vh;
   background-color: var(--hsl-bg);
+}
+
+.main-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  height: fit-content;
 }
 
 /* only if user can hover only show the expanded and collapsed header */

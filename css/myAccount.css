@@ -1,0 +1,26 @@
+/* styles for MyAccount page */
+
+.main-content-myaccount-wrapper {
+  margin: 0px auto;
+  width: 90%;
+}
+
+/* implementation abit ugly, shouldnt be using margin to position stuffs but this is just a mvp */
+.main-header {
+  margin-top: 15vh;
+  padding: 2vh 2vw;
+  background-color: var(--hsl-bg-darker);
+  border-radius: 99999px;  /* css hack for pill shape */
+}
+
+.main-header h1 {
+  color: var(--hsl-text);
+}
+
+.main-header #role {
+  color: var(--hsl-text-secondary);
+}
+
+.main-header #username {
+  color: var(--hsl-primary);
+}

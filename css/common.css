@@ -31,7 +31,7 @@
   --hsl-text: hsl(var(--h), var(--s), var(--l-text));
 
   --s-text-secondary: 60%;
-  --l-text-secondary: 35%;
+  --l-text-secondary: 50%;
   --hsl-text-secondary: hsl(var(--h), var(--s-text-secondary), var(--l-text-secondary));
 
   /* tweaked color to apply a matching bg color (the main body) based on primary color*/

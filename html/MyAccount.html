@@ -63,9 +63,21 @@
     <!-- will use js to add data and toggle views between TRAVELLER role and TOUR_GUIDE role -->
     <!-- how i wish i could use vue -->
     <div class="main-wrapper">
-      <div class="main-header">
-        <!-- span will be populated by data with js -->
-        <h1>Welcome, <span id="role">Lorem, ipsum.</span> <span id="username">Lorem, ipsum.</span></h1>
+      <div class="main-content-myaccount-wrapper">
+        <div class="main-header">
+          <!-- span will be populated by data with js -->
+          <!-- role default is Traveller, will be changed by js -->
+          <h1>Welcome, <span id="role">Traveller</span> <span id="username">Lorem, ipsum.</span></h1>
+        </div>
+        <div class="main-content">
+          <h1>Tours</h1>
+          <div class="two-col-layout">
+            <!-- TODO: Premade tours and Custom tours -->
+            <div class="tours-type"></div>
+            <!-- TODO: show the tours applied by the customer -->
+            <div class="tours-list"></div>
+          </div>
+        </div>
       </div>
     </div>
   </main>

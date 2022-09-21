@@ -69,7 +69,12 @@
   padding: 2vh 2vw;
   border-radius: 12px;
   background-color: var(--hsl-secondary);
+  box-shadow: 0px 0px 3px var(--hsl-shadow);
   width: calc(60vw * 0.3);
+}
+
+.tour-blogs-card:hover {
+  box-shadow: 1px 1px 5px var(--hsl-shadow);
 }
 
 .tour-blogs-card * {

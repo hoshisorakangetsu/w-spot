@@ -10,9 +10,9 @@
 /* variables */
 :root {
   /* color for text/primary color */
-  --h: 185;
-  --s: 80%;
-  --l: 75%;
+  --h: 220;
+  --s: 100%;
+  --l: 50%;
   --hsl-primary: hsl(var(--h), var(--s), var(--l));
 
   /* color for error */
@@ -35,14 +35,14 @@
   --hsl-text-secondary: hsl(var(--h), var(--s-text-secondary), var(--l-text-secondary));
 
   /* tweaked color to apply a matching bg color (the main body) based on primary color*/
-  --s-bg: 35%;
-  --l-bg: 15%;
+  --s-bg: 30%;
+  --l-bg: 70%;
   --hsl-bg: hsl(var(--h), var(--s-bg), var(--l-bg));
   /* bg color with transparency */
   --hsla-bg: hsla(var(--h), var(--s-bg), var(--l-bg), 0.8);
 
   /* to have a background in a background (highlight a container) */
-  --hsl-bg-darker: hsl(var(--h), var(--s-bg), 5%);
+  --hsl-bg-darker: hsl(var(--h), var(--s-bg), 80%);
 
   /* tweaked color to apply a matching box shadows based on primary color*/
   --s-shadow: 15%;

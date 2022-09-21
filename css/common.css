@@ -139,7 +139,7 @@ nav ul li a:hover {
   position: absolute;
   display: flex;
   flex-direction: column;
-  top: 120%;
+  top: 110%;
   right: -100%;
   width: max-content;
   border-radius: 15px;
@@ -268,7 +268,9 @@ footer *:not(hr) {
 }
 
 footer hr {
-  border: 1px solid var(--hsl-primary);
+  border: none;
+  height: 1px;
+  background-color: var(--hsl-primary);
   margin: 0px 2vw;
 }
 

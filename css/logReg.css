@@ -111,8 +111,8 @@
 
 .login-register-dialog-right form input[type="text"]:focus, 
 .login-register-dialog-right form input[type="password"]:focus {
-  background-color: var(--hsl-primary);
-  color: var(--hsl-bg-darker);
+  background-color: var(--hsl-secondary);
+  box-shadow: 1px 1px 5px var(--hsl-shadow);
 }
 
 /* will use js to toggle the submitted class on the form, so user wont see the red stuff as soon as they enter the form */

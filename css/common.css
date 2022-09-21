@@ -23,7 +23,7 @@
 
   /* tweaked color to apply a matching secondary color (mostly for element background) based on primary color*/
   --s-secondary: 40%;
-  --l-secondary: 50%;
+  --l-secondary: 80%;
   --hsl-secondary: hsl(var(--h), var(--s-secondary), var(--l-secondary));
 
   /* text will be black */

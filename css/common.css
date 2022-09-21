@@ -23,15 +23,15 @@
 
   /* tweaked color to apply a matching secondary color (mostly for element background) based on primary color*/
   --s-secondary: 40%;
-  --l-secondary: 25%;
+  --l-secondary: 50%;
   --hsl-secondary: hsl(var(--h), var(--s-secondary), var(--l-secondary));
 
-  /* text will be white */
-  --l-text: 90%;
+  /* text will be black */
+  --l-text: 20%;
   --hsl-text: hsl(var(--h), var(--s), var(--l-text));
 
   --s-text-secondary: 60%;
-  --l-text-secondary: 50%;
+  --l-text-secondary: 35%;
   --hsl-text-secondary: hsl(var(--h), var(--s-text-secondary), var(--l-text-secondary));
 
   /* tweaked color to apply a matching bg color (the main body) based on primary color*/
@@ -46,7 +46,7 @@
 
   /* tweaked color to apply a matching box shadows based on primary color*/
   --s-shadow: 15%;
-  --l-shadow: 70%;
+  --l-shadow: 10%;
   --hsl-shadow: hsl(var(--h), var(--s-shadow), var(--l-shadow));
 
   --hsla-selection: hsla(var(--h), var(--s), var(--l), 0.4);

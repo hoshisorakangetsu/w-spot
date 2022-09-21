@@ -88,6 +88,10 @@
   height: 65%;
 }
 
+.tour-blogs-card h2 {
+  margin: 0px;
+}
+
 .tour-blogs-card button {
   font-size: 1em;
   padding: 1vh 0px;

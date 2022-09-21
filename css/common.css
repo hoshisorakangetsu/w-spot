@@ -41,8 +41,10 @@
   /* bg color with transparency */
   --hsla-bg: hsla(var(--h), var(--s-bg), var(--l-bg), 0.8);
 
+  --hsl-bg-lighter: hsl(var(--h), var(--s-bg), 80%);
+
   /* to have a background in a background (highlight a container) */
-  --hsl-bg-darker: hsl(var(--h), var(--s-bg), 80%);
+  --hsl-bg-darker: hsl(var(--h), var(--s-bg), 60%);
 
   /* tweaked color to apply a matching box shadows based on primary color*/
   --s-shadow: 15%;
@@ -68,7 +70,7 @@ header {
   z-index: 999; /* on top everything */
   height: 5vh;
   border-radius: 99999px;  /* css hack for pill shape */
-  background-color: var(--hsl-secondary);
+  background-color: var(--hsl-bg-lighter);
   color: var(--hsl-text);
   position: fixed;
   top: 2vh;
@@ -223,7 +225,7 @@ main {
 
 .action-btn-primary {
   background-color: var(--hsl-primary);
-  color: var(--hsl-secondary);
+  color: var(--hsl-text);
   font-size: 1.25em;
   padding: 2vh 2vw;
   border-radius: 10px;
@@ -254,11 +256,10 @@ main {
 }
 
 footer {
-  background-color: var(--hsl-bg);
+  background-color: var(--hsl-bg-lighter);
 }
 
 footer h1 {
-  border-top: 1px solid var(--hsl-primary);
   margin: 0px 1vw;
   cursor: pointer;
 }
@@ -338,4 +339,11 @@ label {
 
 input[type="checkbox"] {
   cursor: pointer;
+}
+
+/* disabled button should be more transparent and have no pointer-events, with cursor set to not allowed*/
+button:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: .6;
 }

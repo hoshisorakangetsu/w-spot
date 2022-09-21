@@ -4,15 +4,16 @@
   display: grid;
   grid-template-columns: 1fr 5fr;
   gap: 3vw;
-  width: 100%;
-  padding: 0vh 2vw;
+  width: 90%;
+  margin: 0px auto;
+  padding-bottom: 2vh;
   height: fit-content;
 }
 
 .left-subnav {
   position: sticky;
   top: 15vh;
-  background-color: var(--hsl-bg-darker);
+  background-color: var(--hsl-bg-lighter);
   display: flex;
   flex-direction: column;
   padding: 2vh 2vw;
@@ -49,7 +50,7 @@
 .tour-blogs-wrapper {
   border-radius: 12px;
   padding: 2vh 2vw;
-  background-color: var(--hsl-bg-darker);
+  background-color: var(--hsl-bg-lighter);
 }
 
 .tour-blogs-wrapper hr {
@@ -68,9 +69,9 @@
   flex-direction: column;
   padding: 2vh 2vw;
   border-radius: 12px;
-  background-color: var(--hsl-secondary);
+  background-color: var(--hsl-bg-darker);
   box-shadow: 0px 0px 3px var(--hsl-shadow);
-  width: calc(60vw * 0.3);
+  width: calc(57vw * 0.3);
 }
 
 .tour-blogs-card:hover {
@@ -90,6 +91,7 @@
 
 .tour-blogs-card h2 {
   margin: 0px;
+  height: 1.5em;
 }
 
 .tour-blogs-card button {

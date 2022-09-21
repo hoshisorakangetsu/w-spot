@@ -10,6 +10,7 @@
   <script src="../js/utils.js" defer></script>
   <script src="../js/common.js" defer></script>
   <script src="../js/loginGuard.js" defer></script>
+  <script src="../js/myAccount.js" defer></script>
   <title>W-Spot: My Account</title>
 </head>
 
@@ -20,7 +21,7 @@
     <nav>
       <ul>
         <li>
-          <a href="./index.html" class="nav-active">Home</a>
+          <a href="./index.html">Home</a>
         </li>
         <li>
           <a href="./Tours.html">Tours</a>
@@ -73,9 +74,105 @@
           <h1>Tours</h1>
           <div class="two-col-layout">
             <!-- TODO: Premade tours and Custom tours -->
-            <div class="tours-type"></div>
+            <div class="tours-type">
+              <a class="active" href="#" onclick="filterTours(this, 'all')">All</a>
+              <a href="#" onclick="filterTours(this, 'premade')">Premade</a>
+              <a href="#" onclick="filterTours(this, 'custom')">Custom</a>
+            </div>
             <!-- TODO: show the tours applied by the customer -->
-            <div class="tours-list"></div>
+            <div class="tours-list">
+              <!-- premade tours (zanshi no plan make this dynamic) -->
+              <!-- if no do dynamic for this one, can put pictures to demonstrate how it would look like -->
+              <div class="applied-tours-list-container" id="premade-tours">
+                <h1>Premade Tours</h1>
+                <div class="applied-tours-list">
+                  <div class="applied-tours-card">
+                    <h2>Title lai</h2>
+                    <h4>Applied By: <span title="Customer name here">Customer name here</span></h4>
+                    <h4>Status: <span>Pending | Accepted</span></h4>
+                    <button 
+                      class="action-btn-primary"
+                      onclick="acceptTour('Title here')"
+                    >Accept</button>
+                  </div>
+                  <div class="applied-tours-card">
+                    <h2>Title lai</h2>
+                    <h4>Applied By: <span title="Customer name here">Customer name here</span></h4>
+                    <h4>Status: <span>Pending | Accepted</span></h4>
+                    <button 
+                      class="action-btn-primary"
+                      onclick="acceptTour('Title here')"
+                    >Accept</button>
+                  </div>
+                  <div class="applied-tours-card">
+                    <h2>Title lai</h2>
+                    <h4>Applied By: <span title="Customer name here">Customer name here</span></h4>
+                    <h4>Status: <span>Pending | Accepted</span></h4>
+                    <button 
+                      class="action-btn-primary"
+                      onclick="acceptTour('Title here')"
+                    >Accept</button>
+                  </div>
+                  <div class="applied-tours-card">
+                    <h2>Title lai</h2>
+                    <h4>Applied By: <span title="Customer name here">Customer name here</span></h4>
+                    <h4>Status: <span>Pending | Accepted</span></h4>
+                    <button 
+                      class="action-btn-primary"
+                      onclick="acceptTour('Title here')"
+                    >Accept</button>
+                  </div>
+                </div>
+              </div>
+              <!-- 
+                custom tours requested by customer (will try make this dynamic, if can't bobian) 
+                IDEA:
+                  if customer, get the list of custom tours by them and set accept button to disabled
+                  if tour guide, get the list of all custom tours and set accept button to not disabled
+                In html, this will be an empty div as it will be soon hydrated by js
+              -->
+              <div class="applied-tours-list-container" id="custom-tours">
+                <h1>Custom Tours</h1>
+                <div class="applied-tours-list">
+                  <div class="applied-tours-card">
+                    <h2>Title lai</h2>
+                    <h4>Applied By: <span title="Customer name here">Customer name here</span></h4>
+                    <h4>Status: <span>Pending | Accepted</span></h4>
+                    <button 
+                      class="action-btn-primary"
+                      onclick="acceptTour('Title here')"
+                    >Accept</button>
+                  </div>
+                  <div class="applied-tours-card">
+                    <h2>Title lai</h2>
+                    <h4>Applied By: <span title="Customer name here">Customer name here</span></h4>
+                    <h4>Status: <span>Pending | Accepted</span></h4>
+                    <button 
+                      class="action-btn-primary"
+                      onclick="acceptTour('Title here')"
+                    >Accept</button>
+                  </div>
+                  <div class="applied-tours-card">
+                    <h2>Title lai</h2>
+                    <h4>Applied By: <span title="Customer name here">Customer name here</span></h4>
+                    <h4>Status: <span>Pending | Accepted</span></h4>
+                    <button 
+                      class="action-btn-primary"
+                      onclick="acceptTour('Title here')"
+                    >Accept</button>
+                  </div>
+                  <div class="applied-tours-card">
+                    <h2>Title lai</h2>
+                    <h4>Applied By: <span title="Customer name here">Customer name here</span></h4>
+                    <h4>Status: <span>Pending | Accepted</span></h4>
+                    <button 
+                      class="action-btn-primary"
+                      onclick="acceptTour('Title here')"
+                    >Accept</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

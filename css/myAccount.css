@@ -2,15 +2,20 @@
 
 .main-content-myaccount-wrapper {
   margin: 0px auto;
+  margin-bottom: 2vh;
   width: 90%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  gap: 3vh;
 }
 
 /* implementation abit ugly, shouldnt be using margin to position stuffs but this is just a mvp */
 .main-header {
-  margin-top: 15vh;
+  margin-top: 12vh;
   padding: 2vh 2vw;
-  background-color: var(--hsl-bg-darker);
-  border-radius: 99999px;  /* css hack for pill shape */
+  background-color: var(--hsl-bg-lighter);
+  border-radius: 12px;
 }
 
 .main-header h1 {
@@ -23,4 +28,96 @@
 
 .main-header #username {
   color: var(--hsl-primary);
+}
+
+.main-content {
+  background-color: var(--hsl-bg-lighter);
+  padding: 2vh 2vw;
+  border-radius: 12px;
+}
+
+.main-content h1 {
+  border-bottom: 1px solid var(--hsl-primary);
+}
+
+.main-content .two-col-layout {
+  padding: 2vh 0px;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  gap: 3vw;
+}
+
+.tours-type {
+  position: sticky;
+  top: 12vh;
+  background-color: var(--hsl-bg-darker);
+  display: flex;
+  flex-direction: column;
+  padding: 2vh 2vw;
+  border-radius: 12px;
+  height: min-content;
+}
+
+.tours-type a {
+  display: block;
+  text-decoration: none;
+  color: var(--hsl-text);
+  font-size: 1.25em;
+  border-radius: 10px;
+  margin: .5vh 0px;
+  padding: 2vh 0px;
+}
+
+.tours-type a.active {
+  background-color: var(--hsl-primary);
+  color: var(--hsl-bg) !important;
+}
+
+.tours-type a:not(.active):hover {
+  background-color: var(--hsla-selection);
+}
+
+.tours-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+.applied-tours-list-container {
+  padding: 2vh 2vw;
+  background-color: var(--hsl-bg-darker);
+  border-radius: 12px;
+}
+
+.applied-tours-list {
+  display: flex;
+  gap: 1vw;
+  flex-wrap: wrap;
+  margin-top: 1vh;
+}
+
+.applied-tours-card {
+  display: flex;
+  flex-direction: column;
+  padding: 2vh 2vw;
+  border-radius: 12px;
+  background-color: var(--hsl-bg-lighter);
+  box-shadow: 0px 0px 3px var(--hsl-shadow);
+  width: calc(55vw * 0.3);
+}
+
+.applied-tours-card:hover {
+  box-shadow: 1px 1px 5px var(--hsl-shadow);
+}
+
+.applied-tours-card * {
+  margin: 1vh 0px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.applied-tours-card button {
+  font-size: 1em;
+  padding: 1vh 0px;
 }

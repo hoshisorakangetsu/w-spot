@@ -19,16 +19,16 @@ function filterTours(el, section) {
 
   switch (section) {
     case 'all':
-      premadeDiv.style.display = 'flex'
-      customDiv.style.display = 'flex'      
+      premadeDiv.style.display = 'block'
+      customDiv.style.display = 'block'      
       break;
     case 'premade':
-      premadeDiv.style.display = 'flex'
+      premadeDiv.style.display = 'block'
       customDiv.style.display = 'none'
       break;
     case 'custom':
       premadeDiv.style.display = 'none'
-      customDiv.style.display = 'flex'
+      customDiv.style.display = 'block'
       break;
     default:
       break;

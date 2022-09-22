@@ -41,5 +41,5 @@ window.onload = () => {
   // render role (can safely parse as have log in guard)
   document.getElementById('role').innerHTML = loggedInUser.role
   // render user name
-  document.getElementById('username').innerHTML = loaggedInUser.username
+  document.getElementById('username').innerHTML = loggedInUser.username
 }

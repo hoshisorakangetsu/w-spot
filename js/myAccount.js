@@ -36,4 +36,10 @@ function filterTours(el, section) {
 }
 
 // TODO: get whether the current logged in user is a tour guide or a traveller, customize contents
-window.onload = () => {}
+window.onload = () => {
+  const loggedInUser = JSON.parse(sessionStorage.getItem('loggedInUser'))
+  // render role (can safely parse as have log in guard)
+  document.getElementById('role').innerHTML = loggedInUser.role
+  // render user name
+  document.getElementById('username').innerHTML = loaggedInUser.username
+}

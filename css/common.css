@@ -363,6 +363,14 @@ footer hr {
   cursor: pointer;
 }
 
+.bgm-controls svg {
+  stroke: var(--hsl-primary);
+}
+
+.bgm-controls svg path {
+  fill: var(--hsl-primary);
+}
+
 .bgm-controls:hover h2 {
   opacity: 1;
   transform: translateX(0);

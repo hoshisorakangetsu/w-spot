@@ -169,6 +169,9 @@ function playBgm() {
     previouslyPlaying = nowPlaying
   }
 
+  // if there arent any bgm playing before, just make the play button start from first song
+  currentBgm = currentBgm < 0 ? 0 : currentBgm
+  bgmEl.src = bgmFolder + bgms[currentBgm].fileName
   bgmEl.play()
   nowPlaying = bgmEl
   nowPlayingBGMEl.innerText = bgms[currentBgm].songName
@@ -200,7 +203,6 @@ function nextBgm() {
     if (++currentBgm >= bgms.length) {
       currentBgm = 0
     }
-    bgmEl.src = bgmFolder + bgms[currentBgm].fileName
     playBgm()
   }
 }
@@ -212,7 +214,6 @@ function previousBgm() {
     if (--currentBgm < 0) {
       currentBgm = bgms.length - 1
     }
-    bgmEl.src = bgmFolder + bgms[currentBgm].fileName
     playBgm()
   }
 }
@@ -243,7 +244,6 @@ function closeBGMDialog() {
 // play a random bgm
 function enableBGM() {
   currentBgm = Math.ceil(Math.random() * 4) - 1
-  bgmEl.src = bgmFolder + bgms[currentBgm].fileName
   playBgm()
   closeBGMDialog()
 }

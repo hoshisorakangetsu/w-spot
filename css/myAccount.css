@@ -83,6 +83,18 @@
   gap: 2vh;
 }
 
+#no-custom-tour {
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#no-custom-tour h1 {
+  border: none;
+  color: var(--hsl-text-secondary);
+}
+
 .applied-tours-list-container {
   padding: 2vh 2vw;
   background-color: var(--hsl-bg-darker);
@@ -120,4 +132,8 @@
 .applied-tours-card button {
   font-size: 1em;
   padding: 1vh 0px;
+}
+
+#custom-tour-list {
+  display: none;
 }

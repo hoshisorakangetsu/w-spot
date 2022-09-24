@@ -24,15 +24,24 @@ interface PremadeTours {
 }
 
 // for custom made tours applied by user
-interface CustomMadeTours {
+interface CustomTour {
   // TODO: decide which fields should this have
+  title: string;
+
+  // actually status is useless as we wont be toggling it
+  status: 'ACCEPTED' | 'PENDING'; 
+  guide: string; 
+  customer: string;
 }
 
+type CustomTours = CustomTour[];
+
+// might not be needing this as for now only custom tour will be rendered dynamically
 // for the tours applied by all customers
 // status whether the tour applied is accepted or pending
 // guide is username of the guide who accepted the tour
 // customer is the customer who applied the tour
 interface AppliedTours {
   premade: (PremadeTours & { status: 'ACCEPTED' | 'PENDING'; guide: string; customer: string; })[];
-  customMade: (CustomMadeTours & { status: 'ACCEPTED' | 'PENDING'; guide: string; customer: string; })[];
+  customMade: (CustomTour & { status: 'ACCEPTED' | 'PENDING'; guide: string; customer: string; })[];
 }

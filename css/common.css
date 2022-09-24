@@ -89,6 +89,14 @@ body {
   align-items: center;
 }
 
+#prompt-front h2 {
+  color: var(--hsl-text);
+}
+
+#prompt-front a {
+  color: var(--hsl-primary);
+}
+
 .resp-btns {
   display: flex;
   width: 100%;

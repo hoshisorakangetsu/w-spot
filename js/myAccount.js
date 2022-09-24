@@ -35,8 +35,7 @@ function filterTours(el, section) {
   }
 }
 
-// TODO: get whether the current logged in user is a tour guide or a traveller, customize contents
-window.onload = () => {
+window.addEventListener("load", () => {
   const loggedInUser = JSON.parse(sessionStorage.getItem('loggedInUser'))
   // render role (can safely parse as have log in guard)
   document.getElementById('role').innerHTML = loggedInUser.role.split('_').join(' ')
@@ -79,6 +78,5 @@ window.onload = () => {
       // append the tour into the bigger container
       customTourListDiv.appendChild(tourContainer)
     })
-
   }
-}
+})

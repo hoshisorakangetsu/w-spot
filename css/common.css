@@ -65,6 +65,48 @@ body {
   color: var(--hsl-primary);
 }
 
+#want-bgm-prompt {
+  z-index: 9999; /* always be in front */
+  position: fixed;
+  top: 0; bottom: 0;
+  left: 0; right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#prompt-front {
+  padding: 2vh 2vw;
+  background-color: var(--hsl-bg-lighter);
+  border-radius: 15px;
+  z-index: 99999;
+  width: 50%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4vh;
+  align-items: center;
+}
+
+.resp-btns {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 5vw;
+}
+
+.resp-btns * {
+  width: 25%;
+}
+
+#prompt-backdrop {
+  background-color: hsla(var(--h), var(--s-shadow), var(--l-shadow), 0.4);
+  position: fixed;
+  top: 0; bottom: 0;
+  left: 0; right: 0;
+}
+
 /* fixed styles for both type of headers*/
 header {
   z-index: 999; /* on top everything */
@@ -229,17 +271,30 @@ main {
   font-size: 1.25em;
   padding: 2vh 2vw;
   border-radius: 10px;
-  border: none;
+  border: 2px solid var(--hsl-primary);
+  box-shadow: 2px 2px 4px var(--hsl-shadow);
+}
+
+.action-btn-secondary {
+  background-color: transparent;
+  color: var(--hsl-primary);
+  font-size: 1.25em;
+  padding: 2vh 2vw;
+  border-radius: 10px;
+  border: 2px solid var(--hsl-primary);
   box-shadow: 2px 2px 4px var(--hsl-shadow);
 }
 
 .action-btn-primary:hover,
-.action-btn-primary:focus {
+.action-btn-primary:focus,
+.action-btn-secondary:hover,
+.action-btn-secondary:focus {
   transform: translateY(-10%);
   box-shadow: 2px 2px 12px var(--hsl-shadow);
 }
 
-.action-btn-primary:active {
+.action-btn-primary:active,
+.action-btn-secondary:active {
   transform: unset;
 }
 
@@ -260,7 +315,6 @@ footer {
 }
 
 footer h1 {
-  margin: 0px 1vw;
   cursor: pointer;
 }
 
@@ -279,6 +333,45 @@ footer hr {
   margin: 0px auto;
   max-width: 320px;
 } */
+
+.footer-header {
+  border-radius: 12px;
+  margin: 0px 1vw;
+  background-color: var(--hsl-bg-darker);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bgm-controls {
+  display: flex;
+  position: relative;
+  align-items: center;
+  gap: 1vw;
+}
+
+.bgm-controls h2 {
+  min-width: max-content;
+  opacity: 0;
+  transform: translateX(50%);
+  pointer-events: none;
+}
+
+.bgm-controls * {
+  padding: 0px;
+  min-width: 2rem;
+  cursor: pointer;
+}
+
+.bgm-controls:hover h2 {
+  opacity: 1;
+  transform: translateX(0);
+  color: var(--hsl-text-secondary);
+}
+
+#now-playing {
+  color: var(--hsl-primary);
+}
 
 .footer-info-wrapper {
   display: grid;

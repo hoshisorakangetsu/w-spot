@@ -121,3 +121,132 @@ function expandHeader() {
 // for some reason focus and focusout doesn't seem to be working, will just leave it here
 addMultipleEventListeners(header, collapseHeader, "mouseleave", "focusout")
 addMultipleEventListeners(header, expandHeader, "mouseenter", "focus")
+
+// below are bgm related variables and functions
+// element that is responsible for playing bgm
+const bgmEl = document.getElementById('bgm-audio')
+// set the volume to lower
+bgmEl.volume = 0.5
+// the now playing (to show the song name)
+const nowPlayingBGMEl = document.getElementById('now-playing')
+// the 4 buttons
+const lastBgmEl = document.getElementById('last-bgm')
+const pauseBgmEl = document.getElementById('pause-bgm')
+const playBgmEl = document.getElementById('play-bgm')
+const nextBgmEl = document.getElementById('next-bgm')
+// folder the bgms are located at (relative to the html files)
+const bgmFolder = '../assets/'
+// list of available bgms
+const bgms = [
+  {
+    songName: 'The City Favored By The Winds',
+    fileName: 'mond1.mp3'
+  }, 
+  {
+    songName: 'Bustling Afternoon in Mondstadt',
+    fileName: 'mond2.mp3'
+  }, 
+  {
+    songName: 'Liyue',
+    fileName: 'liyue.mp3'
+  }, 
+  {
+    songName: 'Hustle and Bustle of Ormos',
+    fileName: 'ormos-day.mp3'
+  }
+]
+// currently playing bgm (used for next and previous), -1 means no bgm playing
+let currentBgm = -1
+// the element that is currently playing any media
+let nowPlaying = null
+// the element that was previously playing media
+let previouslyPlaying = null
+
+function playBgm() {
+  // in case there is something playing right now
+  if (nowPlaying) {
+    nowPlaying.pause()
+    previouslyPlaying = nowPlaying
+  }
+
+  bgmEl.play()
+  nowPlaying = bgmEl
+  nowPlayingBGMEl.innerText = bgms[currentBgm].songName
+  pauseBgmEl.style.display = 'block'
+  playBgmEl.style.display = 'none'
+}
+
+function pauseBgm() {
+  // if the bgm is not now playing, quit the function
+  if (!nowPlaying || nowPlaying !== bgmEl) 
+    return
+  
+  bgmEl.pause()
+  pauseBgmEl.style.display = 'none'
+  playBgmEl.style.display = 'block'
+  // if there is smtg playing before, but is not ourselves, play tht
+  if (previouslyPlaying && previouslyPlaying !== bgmEl) {
+    previouslyPlaying.play()
+    nowPlaying = previouslyPlaying
+  } else {
+    nowPlaying = null
+  }
+}
+
+function nextBgm() {
+  // if the bgm is playing now, and the current bgm is not a negative number
+  if (nowPlaying === bgmEl && currentBgm >= 0) {
+    // if go out of the list already, start back from the first song
+    if (++currentBgm >= bgms.length) {
+      currentBgm = 0
+    }
+    bgmEl.src = bgmFolder + bgms[currentBgm].fileName
+    playBgm()
+  }
+}
+
+function previousBgm() {
+  // if the bgm is playing now, and the current bgm is not a negative number
+  if (nowPlaying === bgmEl && currentBgm >= 0) {
+    // if go out of the list already, start back from the last song
+    if (--currentBgm < 0) {
+      currentBgm = bgms.length - 1
+    }
+    bgmEl.src = bgmFolder + bgms[currentBgm].fileName
+    playBgm()
+  }
+}
+
+// assign the buttons to their functions
+lastBgmEl.addEventListener('click', previousBgm)
+pauseBgmEl.addEventListener('click', pauseBgm)
+playBgmEl.addEventListener('click', playBgm)
+nextBgmEl.addEventListener('click', nextBgm)
+
+// chrome's autoplay policy
+/**
+ Chrome's autoplay policies are simple:
+
+  Muted autoplay is always allowed.
+  Autoplay with sound is allowed if:
+    - User has interacted with the domain (click, tap, etc.).
+    - On desktop, the user's Media Engagement Index threshold has been crossed, meaning the user has previously play video with sound.
+    - On mobile, the user has added the site to his or her home screen.
+*/
+// so we need to use a confirm box to ask the user if he/she wants to play the bgm
+const bgmDialEl = document.getElementById('want-bgm-prompt')
+
+function closeBGMDialog() {
+  bgmDialEl.style.display = 'none'
+}
+
+// play a random bgm
+function enableBGM() {
+  currentBgm = Math.ceil(Math.random() * 4) - 1
+  bgmEl.src = bgmFolder + bgms[currentBgm].fileName
+  playBgm()
+  closeBGMDialog()
+}
+
+// go to next bgm when the current one ended
+bgmEl.addEventListener('ended', () => nextBgm())

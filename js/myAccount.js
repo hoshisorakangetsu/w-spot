@@ -35,6 +35,11 @@ function filterTours(el, section) {
   }
 }
 
+// goes to customTour.html, inside that will have js to render the details
+function viewTour(tourIdx) {
+  window.open(`./CustomDetails.html#${tourIdx}`, 'blank')
+}
+
 window.addEventListener("load", () => {
   const loggedInUser = JSON.parse(sessionStorage.getItem('loggedInUser'))
   // render role (can safely parse as have log in guard)
@@ -58,7 +63,7 @@ window.addEventListener("load", () => {
       customTours = customTours.filter(tour => tour.customer === loggedInUser.username)
 
     // start to generate the childrens
-    customTours.forEach(tour => {
+    customTours.forEach((tour, index) => {
       // the container, <div class="applied-tours-card">
       const tourContainer = document.createElement('div')
       tourContainer.classList.add('applied-tours-card')
@@ -71,6 +76,10 @@ window.addEventListener("load", () => {
           class="action-btn-primary"
           onclick="acceptTour('${tour.title}')"
         >Accept</button>
+        <button
+          class="action-btn-secondary"
+          onclick="viewTour('${index}')"
+        >View Details</button>
       `
       // set the template to be the html of the container
       // not very safe but is just front end, so ok

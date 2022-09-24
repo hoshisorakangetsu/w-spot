@@ -321,6 +321,7 @@ main {
 
 footer {
   background-color: var(--hsl-bg-lighter);
+  overflow-x: hidden;
 }
 
 footer h1 {
@@ -387,6 +388,7 @@ footer hr {
 }
 
 .footer-info-wrapper {
+  margin-top: 1vh;
   display: grid;
   gap: 2vw;
   grid-template-columns: 1fr 5fr;

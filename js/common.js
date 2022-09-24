@@ -126,7 +126,7 @@ addMultipleEventListeners(header, expandHeader, "mouseenter", "focus")
 // element that is responsible for playing bgm
 const bgmEl = document.getElementById('bgm-audio')
 // set the volume to lower
-bgmEl.volume = 0.5
+bgmEl.volume = 0.4
 // the now playing (to show the song name)
 const nowPlayingBGMEl = document.getElementById('now-playing')
 // the 4 buttons

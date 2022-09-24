@@ -175,8 +175,6 @@ function playBgm() {
   bgmEl.play()
   nowPlaying = bgmEl
   nowPlayingBGMEl.innerText = bgms[currentBgm].songName
-  pauseBgmEl.style.display = 'block'
-  playBgmEl.style.display = 'none'
 }
 
 function pauseBgm() {
@@ -185,8 +183,6 @@ function pauseBgm() {
     return
   
   bgmEl.pause()
-  pauseBgmEl.style.display = 'none'
-  playBgmEl.style.display = 'block'
   // if there is smtg playing before, but is not ourselves, play tht
   if (previouslyPlaying && previouslyPlaying !== bgmEl) {
     previouslyPlaying.play()
@@ -250,3 +246,12 @@ function enableBGM() {
 
 // go to next bgm when the current one ended
 bgmEl.addEventListener('ended', () => nextBgm())
+// when pause or play, change the pause play button
+bgmEl.addEventListener('pause', () => {
+  pauseBgmEl.style.display = 'none'
+  playBgmEl.style.display = 'block'
+})
+bgmEl.addEventListener('play', () => {
+  pauseBgmEl.style.display = 'block'
+  playBgmEl.style.display = 'none'
+})

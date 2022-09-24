@@ -91,6 +91,7 @@ body {
 
 #prompt-front h2 {
   color: var(--hsl-text);
+  font-size: 1.15em;
 }
 
 #prompt-front a {

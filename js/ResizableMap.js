@@ -1,4 +1,5 @@
-// functions for all those tour details
+// to make the image maps responsive
+// hahah this might be the first and last time i document the functions properly due to time
 class ResizableMap {
   /**
    * Creates a resizable map that resizes the image map based on window size
@@ -8,13 +9,12 @@ class ResizableMap {
    * @param {number} originalHeight Original height of the image bound to
    */
   constructor(map, img, originalWidth, originalHeight) {
-    console.log(this)
     // set this and trigger resize once (which will calculate and remap the coords
     this.previousWidth = originalWidth
     this.previousHeight = originalHeight
     this.map = map
     this.img = img
-    
+
     this.resize = () => {
       // all the area tags of the map elements, converting it into array first
       let areas = Array.from(this.map.areas)
@@ -28,7 +28,7 @@ class ResizableMap {
           const newHeight = this.img.clientHeight
           const widthChngeRatio = newWidth / this.previousWidth
           const heightChngeRatio = newHeight / this.previousHeight
-          
+
           const newCoords = coords.map((coord, idx) => {
             // x coordinates (index 0 and 2)
             if (idx % 2 === 0) {
@@ -38,7 +38,7 @@ class ResizableMap {
               return coord * heightChngeRatio
             }
           })
-          
+
           // set the coordinates to the new coordinates calculated
           area.coords = newCoords.join(',')
           // reset the value of previous height and width so next time resize will resize relative to this size

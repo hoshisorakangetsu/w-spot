@@ -86,7 +86,8 @@
 }
 
 .tour-blogs-card img {
-  height: 65%;
+  height: 15vh;
+  border-radius: 12px;
 }
 
 .tour-blogs-card h2 {

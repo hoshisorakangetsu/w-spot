@@ -16,17 +16,35 @@ class ResizableMap {
     this.img = img
     
     this.resize = () => {
-      console.log('resize triggered')
-      console.log(this)
-      console.log('previous width:', this.previousWidth)
-      console.log('previous height:', this.previousHeight)
-      console.log('map:', this.map)
-      console.log('img:', this.img)
       // all the area tags of the map elements, converting it into array first
       let areas = Array.from(this.map.areas)
       areas.forEach(area => {
-        // TODO: handle resize logic here
-        console.log(area.coords)
+        // we only support rectangle shapes rn
+        if (area.shape === 'rect') {
+          // get the coordinates and parse them
+          const coords = area.coords.split(',').map(coord => parseFloat(coord))
+
+          const newWidth = this.img.clientWidth
+          const newHeight = this.img.clientHeight
+          const widthChngeRatio = newWidth / this.previousWidth
+          const heightChngeRatio = newHeight / this.previousHeight
+          
+          const newCoords = coords.map((coord, idx) => {
+            // x coordinates (index 0 and 2)
+            if (idx % 2 === 0) {
+              return coord * widthChngeRatio
+            } else {
+              // y coordinates (index 1 and 3)
+              return coord * heightChngeRatio
+            }
+          })
+          
+          // set the coordinates to the new coordinates calculated
+          area.coords = newCoords.join(',')
+          // reset the value of previous height and width so next time resize will resize relative to this size
+          this.previousWidth = newWidth
+          this.previousHeight = newHeight
+        }
       })
     }
 

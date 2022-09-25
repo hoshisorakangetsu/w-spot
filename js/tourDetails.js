@@ -1,0 +1,1 @@
+// functions for all those tour details

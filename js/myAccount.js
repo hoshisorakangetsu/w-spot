@@ -1,11 +1,5 @@
 // functions to be used in MyAccount.html
 
-// for now not gonna play with the accept function (eg. changing the status)
-function acceptTour(name) {
-  const accept = confirm(`Do you want to accept the tour: ${name}?`)
-  alert(accept ? 'Tour accepted!' : 'Tour not accepted!')
-}
-
 function filterTours(el, section) {
   // select all siblings that have .active class, remove their active class
   el.parentNode.querySelectorAll('.active').forEach(activeEl => {

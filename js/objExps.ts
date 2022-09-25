@@ -27,6 +27,9 @@ interface PremadeTours {
 interface CustomTour {
   // TODO: decide which fields should this have
   title: string;
+  details: string; // the additional infos
+  startDate: string; // shud be date string
+  endDate: string; // shud be date string as well
 
   // actually status is useless as we wont be toggling it
   status: 'ACCEPTED' | 'PENDING'; 

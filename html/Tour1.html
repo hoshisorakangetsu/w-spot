@@ -10,6 +10,7 @@
   <script src="../js/utils.js" defer></script>
   <script src="../js/common.js" defer></script>
   <script src="../js/tourDetails.js" defer></script>
+  <script src="../js/tour1Details.js" defer></script>
   <title>W-Spot: Tour 1</title>
 </head>
 
@@ -78,7 +79,10 @@
       <div class="details-container">
         <!-- inside can be video or img, doesn't matter -->
         <div class="media-container">
-          <img src="../assets/no-preview.png" alt="No preview available">
+          <img src="../assets/no-preview.png" alt="No preview available" usemap="#tour-1-img-map">
+          <map name="tour-1-img-map" id="tour-1-img-map">
+            <area shape="rect" coords="226,275,739,793" href="" alt="">
+          </map>
         </div>
         <div class="details-field-container">
           <div class="field-container" id="tour-title">

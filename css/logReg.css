@@ -10,6 +10,14 @@
   align-items: center;
 }
 
+#login-main {
+  background-image: url(../assets/png-bridge-light.png);
+}
+
+#register-main {
+  background-image: url(../assets/png-flag-light.png);
+}
+
 .login-register-dialog-wrapper {
   width: 75%;
   max-width: 900px;
@@ -148,7 +156,19 @@
 }
 
 .login-left {
-  background-image: url(../assets/sunrise-png.png);
+  background-image: linear-gradient(
+      hsla(var(--h), var(--s-bg), 20%, 0.6), 
+      hsla(var(--h), var(--s-bg), 20%, 0.6)
+    ), url(../assets/komtar-dark.png);
+  background-position: top right;
+}
+
+.register-left {
+  background-image: linear-gradient(
+      hsla(var(--h), var(--s-bg), 20%, 0.6), 
+      hsla(var(--h), var(--s-bg), 20%, 0.6)
+    ), url(../assets/png-bridge-dark.png);
+  background-position: top left;
 }
 
 .login-right p {

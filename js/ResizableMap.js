@@ -48,7 +48,7 @@ class ResizableMap {
       })
     }
 
-    // trigger resize once to adjust the coords
+    // trigger resize once to adjust the coords when the resizable map is created (the img size will alrd be adjusted by css, so nid resize the map once)
     this.resize()
 
     // trigger resize whenever window changes size

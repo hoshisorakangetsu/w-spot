@@ -7,3 +7,77 @@
     border-radius: 15px;
     background-color: var(--hsl-bg-lighter);
 }
+.details-container::after{
+    clear: both;
+    content: "";
+    display: table;
+}
+.details-container h1,h2{
+        text-align: left;
+}
+.details-container p{
+    clear:left;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+#face1{
+    float: left;
+    margin-top: 35px;
+    border-radius: 35px;
+    margin-right: 20px;
+}
+
+
+body{
+    background-color: #f3f3f3;
+}
+.main-banner{
+    margin: 0 auto;
+    width: 380px;
+    height: 280px;
+    background-color: var(--hsl-bg-lighter);
+    overflow: hidden;
+    position: relative;
+    float: left;
+    
+}
+.main-banner .imgban{
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0px;
+   transition: all ease-in-out 500ms;
+   -webkit-transition:  all ease-in-out 500ms;
+   -moz-transition:  all ease-in-out 500ms;
+   -o-transition:  all ease-in-out 500ms;
+}
+.main-banner #imgban3{
+    background-image: url('../assets/kekloksi1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 400px;
+    height: 300px;
+}
+.main-banner #imgban2{
+    background-image: url('../assets/kekloksi2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 400px;
+    height: 300px;
+    
+}
+.main-banner #imgban1{
+    background-image: url('../assets/kekloksi3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    width: 400px;
+    height: 300px;
+}
+button#action-btn-primary{
+    
+}

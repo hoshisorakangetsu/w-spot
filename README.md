@@ -7,3 +7,5 @@ A toy website made by a group of first year degree students
   - [hoshisorakangetsu](https://github.com/hoshisorakangetsu)
 - Yi Kit AKA
   - [yongyk](https://github.com/yongyk)
+- Soon Chee AKA
+  - [AC3019](https://github.com/AC3019)

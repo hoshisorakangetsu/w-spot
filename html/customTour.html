@@ -6,12 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/common.css">
-  <link rel="stylesheet" href="../css/Tour3.css">
+  <link rel="stylesheet" href="../css/customTour.css">
   <script src="../js/utils.js" defer></script>
   <script src="../js/common.js" defer></script>
-  <script src="../js/ResizableMap.js" defer></script>
-  <script src="../js/tour3Details.js" defer></script>
-  <title>W-Spot: Tour 3</title>
+  <title>W-Spot: Custom Tour</title>
 </head>
 
 <body>
@@ -39,7 +37,7 @@
           <a href="./index.html">Home</a>
         </li>
         <li>
-          <a href="./Tours.html" class="nav-active">Tours</a>
+          <a href="./Tours.html">Tours</a>
         </li>
         <li>
           <a href="./AboutUs.html">About Us</a>
@@ -77,58 +75,64 @@
   <main>
     <div class="main-wrapper">
       <div class="details-container">
-        <!-- inside can be video or img, doesn't matter -->
-        <div class="media-container">
-          <img id="tour-3-img" src="../assets/imageMapTour3.jpg" alt="No preview available" usemap="#tour-3-img-map">
-          <map name="tour-3-img-map" id="tour-3-img-map">
-            <area target="" alt="" title="" href="" coords="597,217,-1,10" shape="rect">
-            <area target="" alt="" title="" href="" coords="93,330,4,224" shape="rect">
-            <area target="" alt="" title="" href="" coords="4,344,94,448" shape="rect">
-            <area target="" alt="" title="" href="" coords="105,226,233,332" shape="rect">
-            <area target="" alt="" title="" href="" coords="245,224,372,334" shape="rect">
-            <area target="" alt="" title="" href="" coords="382,223,515,333" shape="rect">
-            <area target="" alt="" title="" href="" coords="103,342,232,445" shape="rect">
-            <area target="" alt="" title="" href="" coords="246,340,372,449" shape="rect">
-            <area target="" alt="" title="" href="" coords="382,340,513,449" shape="rect">
-            <area target="" alt="" title="" href="" coords="523,224,597,446" shape="rect">
-          </map>
+        <!-- code starts here -->
+        <div>
+          <h2>Start To Plan Your Trip</h2>
+          <h2>Do not hesitate, Contact Us now!</h2>
         </div>
-        <div class="details-field-container">
-          <div class="field-container" id="tour-title">
-            <h2>Title</h2>
-            <h4>Lorem ipsum dolor sit amet consectetur.</h4>
-          </div>
-          <div class="field-container" id="tour-customer">
-            <h2>Published By</h2>
-            <h4>W-Spot Official</h4>
-          </div>
-          <div class="field-container" id="tour-start-date">
-            <h2>Start Date</h2>
-            <h4>20/2/2023</h4>
-          </div>
-          <div class="field-container" id="tour-end-date">
-            <h2>End Date</h2>
-            <h4>22/2/2023</h4>
-          </div>
-          <div class="field-container" id="tour-period">
-            <h2>Tour Period</h2>
-            <h4>2 Days</h4>
-          </div>
-          <div class="field-container" id="tour-addInfo">
-            <h2>Additional Info</h2>
-            <div id="addInfoField">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, voluptatibus quaerat! Corporis iste tempora amet repellat. Vitae id eos ipsum rerum optio, consequuntur est atque sint consequatur iste. Qui voluptatibus eligendi, quos sunt aperiam beatae?
-            </div>
-          </div>
-        </div>
-        <div class="action-btns">
-          <button 
-            class="action-btn-secondary" 
-            onclick="window.location.href = './Tours.html'"
-          >Back</button>
-          <!-- TODO: add fake apply function -->
-          <button class="action-btn-primary">Apply</button>
-        </div>
+					<form action="" method="post">
+						<fieldset>
+							<legend>Personal Info</legend>
+								<div>
+										<label for="">Name</label>
+										<input type="text" name="name" id="name" placeholder="Your full name here">
+										<label for="">IC number</label>
+										<input type="text" name="ic" id="ic" placeholder="111111001111">
+								</div>
+								<div>
+										<label for="">Email</label>
+										<input type="email" name="email" id="email" placeholder="youremail@example.com">
+										<label for="">Phone Number</label>
+										<input type="text" name="pNumber" id="pNumber" placeholder="0101234567">
+								</div>
+						</fieldset>
+						<fieldset>
+								<legend>Tour Information</legend>
+									<div>
+										<label for="">Tour Title</label>
+										<input type="text" name="tourTitle" id="tourTitle">
+									</div>
+									<div>
+										<label for="">Starting Date</label>
+										<input type="date" name="sDate" id="sDate">
+										<label for="">Ending Date</label>
+										<input type="date" name="eDate" id="eDate">
+									</div>
+									<div>
+										<label for="">Detail Information</label>
+										<textarea name="detailInfo" id="detailInfo" cols="30" rows="10"></textarea>
+									</div>
+						</fieldset>
+						<div>
+								<button class="action-btn-secondary">Back</button>
+								<button class="action-btn-primary">Submit</button>
+						</div>
+				</form>
+				<div>
+					<h3>Please be patient and we will get back to you in 48 hours. Thank You</h3>
+				</div>
+				<div>
+					<h2>Want to contact us with call to solve the curious about your tour?</h2>
+					<h4>Here is our contact info!</h4>
+					<div>
+						Working hours: 
+						<span>9:00 a.m. to 5:30 a.m. (MST)</span> 
+					</div>
+					<div>
+						Our Office Number:
+						<span>+60 </span>
+					</div>
+				</div>
       </div>
     </div>
   </main>

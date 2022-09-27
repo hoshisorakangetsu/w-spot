@@ -133,6 +133,8 @@ fieldset textarea{
 }
 fieldset textarea:focus{
     background-color: rgb(236, 236, 157);
+    transform: scale(1.1);
+    transition: 0.5s;
 }
 
 .main-banner {

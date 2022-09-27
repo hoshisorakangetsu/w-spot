@@ -20,7 +20,7 @@
 }
 .details-container input[type="text"]#name:hover {
     border-color: #0d1d14;
-    
+    margin-top: 10px;
     transform: scale(1.2);
     transition: 0.5s;
 }
@@ -41,6 +41,7 @@
     margin-top: 10px;
 }
 .details-container input[type="button"]#clear:hover{
+         border-color: #0d1d14;
         background-color: aquamarine;
         transform: scale(0.8);
         transition: 1.2s;
@@ -51,12 +52,33 @@
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 20px;
+    border-radius: 30px;
 }
 .details-container textarea:hover{
+    border-color: #0d1d14;
     transform: scale(1.2);
     transition: 0.5s;
 }
 #mysection {
     background-color: rgb(220, 201, 238);
     height: 100%;
+}
+.details-container input[type="file"]#uploadfile{
+    background-color: aquamarine;
+}
+.details-container input[type="submit"]#submit{
+    border-radius: 150px;
+    background-color: bisque;
+    transition: .3s;
+    padding:10px;
+    margin-top: 10px;
+}
+.details-container input[type="submit"]#submit:hover{
+         border-color: #0d1d14;
+        background-color: aquamarine;
+        transform: scale(0.8);
+        transition: 1.2s;
+}
+.details-container h1{
+    border: 1px solid red;
 }

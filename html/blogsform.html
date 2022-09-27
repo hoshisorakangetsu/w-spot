@@ -81,11 +81,10 @@
        
         <h1>New Blogs Form</h1>
             <form id="myform">
-            <input type="date" name="date" id="date" size="10" placeholder="date" /><br>
             <input type="text"id="name"placeholder="name"><br>
             <textarea placeholder="enter your reviews"></textarea><br>
-            <input type="file" id="myFile" name="filename"><br>
-             <input type="submit">
+            <input type="file" id="myFile"id="uploadfile" name="filename"><br>
+             <input type="submit" id="submit" onclick="myfunc()">
            
         
             <input type="button"value="clear" id="clear" onclick="cancelinput()">
@@ -94,6 +93,9 @@
                 
                   document.getElementById("myform").reset();
               }
+              function myfunc(){
+                  alert("You have successfully submitted this form ");
+                }
             </script>
           </form>
        </section>

@@ -30,11 +30,17 @@ interface CustomTour {
   details: string; // the additional infos
   startDate: string; // shud be date string
   endDate: string; // shud be date string as well
+  // customer field (customer is the username)
+  customer: string;
+  // fields below need to be filled in by customer when apply custom tour as when log in we only have the username
+  customerName: string; // real name of the customer
+  customerIC: string; // ic of the customer
+  customerEmail: string; // email of the customer
+  customerHpNo: string; // phone number of the customer
 
   // actually status is useless as we wont be toggling it
   status: 'ACCEPTED' | 'PENDING'; 
   guide: string; 
-  customer: string;
 }
 
 type CustomTours = CustomTour[];

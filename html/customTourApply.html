@@ -9,7 +9,9 @@
   <link rel="stylesheet" href="../css/customTour.css">
   <script src="../js/utils.js" defer></script>
   <script src="../js/common.js" defer></script>
-  <title>W-Spot: Custom Tour</title>
+  <script src="../js/loginGuard.js" defer></script>
+  <script src="../js/customTourApply.js" defer></script>
+  <title>W-Spot: Custom Tour Application</title>
 </head>
 
 <body>
@@ -37,7 +39,7 @@
           <a href="./index.html">Home</a>
         </li>
         <li>
-          <a href="./Tours.html">Tours</a>
+          <a href="./Tours.html" class="nav-active">Tours</a>
         </li>
         <li>
           <a href="./AboutUs.html">About Us</a>
@@ -90,7 +92,7 @@
 										<input type="text" name="ic" id="ic" placeholder="111111001111">
 								</div>
 								<div>
-										<label for="">Email</label>
+										<label for="email">Email</label>
 										<input type="email" name="email" id="email" placeholder="youremail@example.com">
 										<label for="">Phone Number</label>
 										<input type="text" name="pNumber" id="pNumber" placeholder="0101234567">
@@ -108,14 +110,17 @@
 										<label for="">Ending Date</label>
 										<input type="date" name="eDate" id="eDate">
 									</div>
-									<div>
+									<div style="display: flex; flex-direction: column;">
 										<label for="">Detail Information</label>
 										<textarea name="detailInfo" id="detailInfo" cols="30" rows="10"></textarea>
 									</div>
 						</fieldset>
 						<div>
-								<button class="action-btn-secondary">Back</button>
-								<button class="action-btn-primary">Submit</button>
+								<button 
+                  class="action-btn-secondary" 
+                  onclick="window.location.href = './Tours.html'"
+                >Back</button>
+								<button class="action-btn-primary" onclick="applyTour()">Submit</button>
 						</div>
 				</form>
 				<div>

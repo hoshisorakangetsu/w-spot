@@ -133,3 +133,53 @@ fieldset textarea{
 fieldset textarea:focus{
     background-color: rgb(236, 236, 157);
 }
+
+.main-banner {
+    /* margin: 0 auto; */
+    width: 380px;
+    height: 280px;
+    background-color: var(--hsl-bg-lighter);
+    overflow: hidden;
+    position: relative;
+    /* float: left; */
+
+}
+
+.main-banner .imgban {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    transition: all ease-in-out 500ms;
+    -webkit-transition: all ease-in-out 500ms;
+    -moz-transition: all ease-in-out 500ms;
+    -o-transition: all ease-in-out 500ms;
+}
+
+.main-banner #imgban6 {
+    background-image: url('../assets/penanghill3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 400px;
+    height: 300px;
+}
+
+.main-banner #imgban5 {
+    background-image: url('../assets/penanghill2.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 400px;
+    height: 300px;
+
+}
+.main-banner #imgban4 {
+    background-image: url('../assets/penanghill1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 400px;
+    height: 300px;
+
+}

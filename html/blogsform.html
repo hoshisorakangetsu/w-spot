@@ -77,18 +77,28 @@
       <div class="details-container">
         <!-- code starts here -->
        <img src="../assets/blogsformimg.jpg" alt="">
+       <section id="mysection">
        
         <h1>New Blogs Form</h1>
-            <script>document.getElementById('DateField').valueAsDate = new Date();
-            </script>
+            <form id="myform">
             <input type="date" name="date" id="date" size="10" placeholder="date" /><br>
-            <input type="text"name="name"placeholder="name"><br>
-            <textarea placeholder="enter your reviews"></textarea>
-
-          
+            <input type="text"id="name"placeholder="name"><br>
+            <textarea placeholder="enter your reviews"></textarea><br>
+            <input type="file" id="myFile" name="filename"><br>
+             <input type="submit">
+           
         
+            <input type="button"value="clear" id="clear" onclick="cancelinput()">
+            <script>
+              function cancelinput(){
+                
+                  document.getElementById("myform").reset();
+              }
+            </script>
+          </form>
+       </section>
       </div>
-      </div>
+    </div>
     
   </main>
 

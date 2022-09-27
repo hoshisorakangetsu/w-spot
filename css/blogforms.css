@@ -1,0 +1,25 @@
+.details-container {
+    width: 85%;
+    margin: 0px auto;
+    margin-top: 12vh;
+    margin-bottom: 2vh;
+    padding: 3vh 3vw;
+    border-radius: 15px;
+    background-color: var(--hsl-bg-lighter);
+}
+.details-container img{
+    width: 50%;
+    height: 100%;
+    float: left;
+    margin-left: 0%;
+}
+.details-container::after{
+    clear: both;
+    content: "";
+    display: table;
+}
+#date input[type="date"]:focus {
+    border-color: #2ecc71;
+    width: 280px;
+    transition: 0.5s;
+}

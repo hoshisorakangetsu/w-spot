@@ -11,3 +11,5 @@ A toy website made by a group of first year degree students
   - [AC3019](https://github.com/AC3019)
 - Chalit AKA
   - [chalitcarsenmo](https://github.com/chalitcarsenmo)
+- Yi Hoong AKA
+  - [YhChiam](https://github.com/YhChiam)

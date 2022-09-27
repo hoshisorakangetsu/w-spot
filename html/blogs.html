@@ -186,9 +186,18 @@
             </script>
           </div>
           <h4>&#x1F44D; Helpful ?</h4>
-          
+          <fieldset>
+            <legend>Tell Us More</legend>
           <textarea placeholder="Share your experiences with us" rows="5"cols="3"></textarea>
-          <input type="submit" class="action-btn-primary" value="submit" id="submit">
+          <input type="submit" class="action-btn-primary" value="submit" id="submit" onclick="myfunction1()">
+          <script>
+            function myfunction1(){
+              if (confirm("Are you sure you want to submit your feedback ?")){
+
+              }
+            }
+          </script>
+          </fieldset>
         </div>
       </div>
     </div>

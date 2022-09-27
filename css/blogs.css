@@ -105,39 +105,31 @@
     float: left;
     margin-top: 0px;
 }
-.details-container textarea{
-    width: 400px;
-}
-#submit{
-    width: 100px;
-    height: 50px;
-}
 fieldset legend{
     text-align: left;
     margin-left: 35px;
     background-color: bisque;
     font-size: medium;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
 }
 fieldset textarea{
-    float: left;
-    margin-left: 30px;
-    margin-top: 20px;
     border: 2px solid #ccc;
     border-radius: 4px;
-    background-color: rgb(236, 236, 157);
-    font-size: 16px;
-    margin-bottom: 20px;
     
+    font-size: 16px;
 }
-fieldset{
+.comments{
     background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2vh;
+    padding: 2vh 2vw;
 }
-.action-btn-primary{
-    clear: left;
-    float: left;
-    margin-left: 40px;
-    margin-bottom: 20px;
-    padding: auto;
+.comments textarea {
+    padding: 1vh 1vw;
+    width: 65%;
+}
+fieldset textarea:focus{
+    background-color: rgb(236, 236, 157);
 }

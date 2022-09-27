@@ -7,3 +7,27 @@
     border-radius: 15px;
     background-color: var(--hsl-bg-lighter);
 }
+
+table{
+    border-collapse: collapse;
+    border: 1px solid var(--hsl-text);
+}
+
+th, td{
+    border: 1px solid var(--hsl-text);
+    padding: 1vh 1vw;
+    color: var(--hsl-text);
+}
+
+th {
+    background-color: var(--hsl-primary);
+}
+
+td {
+    background-color: var(--hsl-bg-lighter);
+}
+
+table tr th:nth-child(2),
+table tr td:nth-child(2) {
+    padding: 1vh 3vw;
+}

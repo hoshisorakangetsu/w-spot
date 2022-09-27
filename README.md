@@ -9,3 +9,5 @@ A toy website made by a group of first year degree students
   - [yongyk](https://github.com/yongyk)
 - Soon Chee AKA
   - [AC3019](https://github.com/AC3019)
+- Chalit AKA
+  - [chalitcarsenmo](https://github.com/chalitcarsenmo)

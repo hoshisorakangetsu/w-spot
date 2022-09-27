@@ -1,9 +1,65 @@
 .details-container {
-    width: 85%;
-    margin: 0px auto;
-    margin-top: 12vh;
-    margin-bottom: 2vh;
-    padding: 3vh 3vw;
-    border-radius: 15px;
-    background-color: var(--hsl-bg-lighter);
+	width: 85%;
+	margin: 0px auto;
+	margin-top: 12vh;
+	margin-bottom: 2vh;
+	padding: 3vh 3vw;
+	border-radius: 15px;
+	background-color: var(--hsl-bg-lighter);
+}
+
+fieldset{
+	border-radius: 15px;
+	border: 2px solid var(--hsl-primary);
+	margin-top: 3vh;
+}
+
+fieldset legend{
+	font-size: 1.2em;
+	font-weight: 600;
+	color: var(--hsl-text);
+}
+
+label{
+	font-size: 1.3em;
+	color: var(--hsl-text);
+}
+
+input{
+	margin-top: 1vh;
+	margin-bottom: 0.35vh;
+	padding: 1vh 12vw;
+  border-radius: 15px;
+	border-color: var(--hsl-primary);
+}
+
+input:focus{
+  top: 3vh;
+  box-shadow: 0px 2px 8px var(--hsl-shadow);
+}
+
+.detailInfo{
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 0.35vh;
+}
+
+textarea{
+	width: 90%;
+	border-radius: 15px;
+	border: 2px solid;
+	border-color: var(--hsl-primary);
+}
+
+textarea:focus{
+	top: 3vh;
+	box-shadow: 0px 2px 8px var(--hsl-shadow);
+}
+
+.button{
+	margin-top: 1vh;
+}
+
+.contact{
+	margin-top: 1vh;
 }

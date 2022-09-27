@@ -79,43 +79,43 @@
       <div class="details-container">
         <!-- code starts here -->
         <div>
-          <h2>Start To Plan Your Trip</h2>
+          <h1>Start To Plan Your Trip</h2>
           <h2>Do not hesitate, Contact Us now!</h2>
         </div>
 					<form action="" method="post">
 						<fieldset>
 							<legend>Personal Info</legend>
 								<div>
-										<label for="">Name</label>
-										<input type="text" name="name" id="name" placeholder="Your full name here">
-										<label for="">IC number</label>
-										<input type="text" name="ic" id="ic" placeholder="111111001111">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" placeholder="Your full name here" required>
+										<label for="ic">IC number</label>
+										<input type="text" name="ic" id="ic" placeholder="111111001111" required>
 								</div>
 								<div>
 										<label for="email">Email</label>
-										<input type="email" name="email" id="email" placeholder="youremail@example.com">
-										<label for="">Phone Number</label>
-										<input type="text" name="pNumber" id="pNumber" placeholder="0101234567">
+										<input type="email" name="email" id="email" placeholder="youremail@example.com" required>
+										<label for="pNumber">Phone Number</label>
+										<input type="text" name="pNumber" id="pNumber" placeholder="0101234567" required>
 								</div>
 						</fieldset>
 						<fieldset>
 								<legend>Tour Information</legend>
 									<div>
-										<label for="">Tour Title</label>
-										<input type="text" name="tourTitle" id="tourTitle">
+										<label for="tourTitle">Tour Title</label>
+										<input type="text" name="tourTitle" id="tourTitle" required>
 									</div>
 									<div>
-										<label for="">Starting Date</label>
-										<input type="date" name="sDate" id="sDate">
-										<label for="">Ending Date</label>
-										<input type="date" name="eDate" id="eDate">
+										<label for="sDate">Starting Date</label>
+										<input type="date" name="sDate" id="sDate" required>
+										<label for="eDate">Ending Date</label>
+										<input type="date" name="eDate" id="eDate" required>
 									</div>
-									<div style="display: flex; flex-direction: column;">
-										<label for="">Detail Information</label>
+									<div class="detailInfo">
+										<label for="detailInfo">Detail Information</label>
 										<textarea name="detailInfo" id="detailInfo" cols="30" rows="10"></textarea>
 									</div>
 						</fieldset>
-						<div>
+						<div class="button">
 								<button 
                   class="action-btn-secondary" 
                   onclick="window.location.href = './Tours.html'"
@@ -123,12 +123,12 @@
 								<button class="action-btn-primary" onclick="applyTour()">Submit</button>
 						</div>
 				</form>
-				<div>
-					<h3>Please be patient and we will get back to you in 48 hours. Thank You</h3>
+				<div class="contact">
+					<h2>Please be patient and we will get back to you in 48 hours once you submit the form. Thank You</h2>
 				</div>
-				<div>
+				<div class="contact">
 					<h2>Want to contact us with call to solve the curious about your tour?</h2>
-					<h4>Here is our contact info!</h4>
+					<h3>Here is our contact info!</h3>
 					<div>
 						Working hours: 
 						<span>9:00 a.m. to 5:30 a.m. (MST)</span> 

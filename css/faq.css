@@ -14,7 +14,13 @@
 }
 
 .faq-container * {
-    text-align: left;
+    padding-right: 4vh;
+    text-align: justify;
+}
+
+.faq-picture{
+    width: 100%;
+    height: auto;
 }
 
 .questions-container {
@@ -36,6 +42,7 @@
 
 
 .tour-question {
+    padding: 1vh 1vw;
     background-color: var(--hsl-bg-darker);
     text-align: left;
 }
@@ -45,6 +52,7 @@ details summary::-webkit-details-marker {
 }
   
 details summary {
+    margin-bottom: 1vh;
     padding: 1rem 1rem;
     padding-bottom: 0;
     cursor: pointer;
@@ -107,6 +115,7 @@ details:not([open]) summary div {
     display: grid;
     grid-template-columns: 1fr 13fr;
     gap: 1vw;
+    margin-bottom: 1vh;
 }
 
 .expand-text p {

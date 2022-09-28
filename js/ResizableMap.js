@@ -41,11 +41,11 @@ class ResizableMap {
 
           // set the coordinates to the new coordinates calculated
           area.coords = newCoords.join(',')
-          // reset the value of previous height and width so next time resize will resize relative to this size
-          this.previousWidth = newWidth
-          this.previousHeight = newHeight
         }
       })
+      // reset the value of previous height and width so next time resize will resize relative to this size
+      this.previousWidth = newWidth
+      this.previousHeight = newHeight
     }
 
     // trigger resize once to adjust the coords when the resizable map is created (the img size will alrd be adjusted by css, so nid resize the map once)

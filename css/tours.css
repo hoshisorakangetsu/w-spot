@@ -75,7 +75,7 @@
 }
 
 .tour-blogs-card:hover {
-  box-shadow: 1px 1px 5px var(--hsl-shadow);
+  box-shadow: 1px 1px 8px var(--hsl-shadow);
 }
 
 .tour-blogs-card * {

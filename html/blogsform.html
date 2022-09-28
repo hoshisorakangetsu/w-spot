@@ -6,17 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/common.css">
-  <link rel="stylesheet" href="../css/customTour.css">
+  <link rel="stylesheet" href="../css/blogforms.css">
   <script src="../js/utils.js" defer></script>
   <script src="../js/common.js" defer></script>
-  <script src="../js/loginGuard.js" defer></script>
-  <script src="../js/customTourApply.js" defer></script>
-  <title>W-Spot: Custom Tour Application</title>
+  <title>W-Spot: New Blogs Input</title>
 </head>
 
 <body>
   <!-- want bgm prompt (need to have user interaction only can play bgm) -->
-  <div id="want-bgm-prompt">
+  <div id="want-bgm-prompt" style="display: none">
     <!-- main content (the prompt) -->
     <div id="prompt-front">
       <h1>Do you want to enable the BGM?</h1>
@@ -39,10 +37,10 @@
           <a href="./index.html">Home</a>
         </li>
         <li>
-          <a href="./Tours.html" class="nav-active">Tours</a>
+          <a href="./Tours.html">Tours</a>
         </li>
         <li>
-          <a href="./AboutUs.html">About Us</a>
+          <a href="./AboutUs.html" class="nav-active">About Us</a>
         </li>
         <li>
           <a href="./FAQ.html">FAQs</a>
@@ -78,68 +76,32 @@
     <div class="main-wrapper">
       <div class="details-container">
         <!-- code starts here -->
-        <div>
-          <h1>Start To Plan Your Trip</h2>
-          <h2>Do not hesitate, Contact Us now!</h2>
-        </div>
-					<form action="" method="post">
-						<fieldset>
-							<legend>Personal Info</legend>
-								<div>
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" placeholder="Your full name here" required>
-										<label for="ic">IC number</label>
-										<input type="text" name="ic" id="ic" placeholder="111111001111" required>
-								</div>
-								<div>
-										<label for="email">Email</label>
-										<input type="email" name="email" id="email" placeholder="youremail@example.com" required>
-										<label for="pNumber">Phone Number</label>
-										<input type="text" name="pNumber" id="pNumber" placeholder="0101234567" required>
-								</div>
-						</fieldset>
-						<fieldset>
-								<legend>Tour Information</legend>
-									<div>
-										<label for="tourTitle">Tour Title</label>
-										<input type="text" name="tourTitle" id="tourTitle" required>
-									</div>
-									<div>
-										<label for="sDate">Starting Date</label>
-										<input type="date" name="sDate" id="sDate" required>
-										<label for="eDate">Ending Date</label>
-										<input type="date" name="eDate" id="eDate" required>
-									</div>
-									<div class="detailInfo">
-										<label for="detailInfo">Detail Information</label>
-										<textarea name="detailInfo" id="detailInfo" cols="30" rows="10"></textarea>
-									</div>
-						</fieldset>
-						<div class="button">
-								<button 
-                  class="action-btn-secondary" 
-                  onclick="window.location.href = './Tours.html'"
-                >Back</button>
-								<button class="action-btn-primary" onclick="applyTour()">Submit</button>
-						</div>
-				</form>
-				<div class="contact">
-					<h2>Please be patient and we will get back to you in 48 hours once you submit the form. Thank You</h2>
-				</div>
-				<div class="contact">
-					<h2>Want to contact us with call to solve the curious about your tour?</h2>
-					<h3>Here is our contact info!</h3>
-					<div>
-						Working hours: 
-						<span>9:00 a.m. to 5:30 a.m. (MST)</span> 
-					</div>
-					<div>
-						Our Office Number:
-						<span>+60 </span>
-					</div>
-				</div>
+       <img src="../assets/blogsformimg.jpg" alt="">
+       <section id="mysection">
+       
+        <h1>New Blogs Form</h1>
+            <form id="myform">
+            <input type="text"id="name"placeholder="name"><br>
+            <textarea placeholder="enter your reviews"></textarea><br>
+            <input type="file" id="myFile"id="uploadfile" name="filename"><br>
+             <input type="submit" id="submit" onclick="myfunc()">
+           
+        
+            <input type="button"value="clear" id="clear" onclick="cancelinput()">
+            <script>
+              function cancelinput(){
+                
+                  document.getElementById("myform").reset();
+              }
+              function myfunc(){
+                  alert("You have successfully submitted this form ");
+                }
+            </script>
+          </form>
+       </section>
       </div>
     </div>
+    
   </main>
 
   <!-- footer is fixed across files -->

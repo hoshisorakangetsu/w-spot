@@ -72,6 +72,7 @@
   background-color: var(--hsl-bg-darker);
   box-shadow: 0px 0px 5px var(--hsl-shadow);
   width: calc(57vw * 0.3);
+  transition: .4s;
 }
 
 .tour-blogs-card:hover {

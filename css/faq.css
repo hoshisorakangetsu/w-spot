@@ -1,0 +1,117 @@
+.details-container {
+    width: 85%;
+    margin: 0px auto;
+    margin-top: 12vh;
+    margin-bottom: 2vh;
+    padding: 3vh 3vw;
+    border-radius: 15px;
+    background-color: var(--hsl-bg-lighter);
+    display: flex;
+}
+
+.faq-container {
+    width: 40%;
+}
+
+.faq-container * {
+    text-align: left;
+}
+
+.questions-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.questions-container * {
+    text-align: left;
+}
+
+.customer-question {
+    padding: 1vh 1vw;
+    background-color: var(--hsl-bg-darker);
+    text-align: left;
+}
+
+
+.tour-question {
+    background-color: var(--hsl-bg-darker);
+    text-align: left;
+}
+
+details summary::-webkit-details-marker {
+    display: none;
+}
+  
+details summary {
+    padding: 1rem 1rem;
+    padding-bottom: 0;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 300;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 13fr;
+    gap: 1vw;
+}
+
+summary * {
+    height: 100%;
+}
+
+details summary span {
+    position: relative;
+    display: inline-flex;
+    background-color: var(--hsl-bg-lighter);
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+details summary span::before {
+    content: "+";  /* dropdown arrow */
+    font-size: 1.5rem;
+    position: absolute;
+    font-weight: 200;
+    transform-origin: center;
+    transition: 200ms linear;
+}
+
+details[open] summary span::before {
+    transform: rotate(45deg);
+    font-size: 2rem;
+}
+
+details summary {
+    outline: 0;
+}
+
+details summary div {
+    background-color: var(--hsl-bg-lighter);
+    height: 5vh;
+    width: 96%;
+    padding: 0 2%;
+    display: flex;
+    align-items: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+details:not([open]) summary div {
+    border-radius: 5px;
+}
+
+.expand-text {
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr 13fr;
+    gap: 1vw;
+}
+
+.expand-text p {
+    padding: 1vh 1vw;
+    background-color: var(--hsl-bg-lighter);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}

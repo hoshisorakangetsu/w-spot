@@ -128,3 +128,11 @@ details:not([open]) summary div {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
+
+.expand-text a {
+    color: var(--hsl-text);
+}
+
+.expand-text a:hover {
+    color: var(--hsl-primary);
+}

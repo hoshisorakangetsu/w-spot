@@ -35,3 +35,7 @@ table tr td:nth-child(2) {
 .about-us > h1,p,.why-choose-us > h1, p{
     text-align: left;
 }
+
+.tour > h2{
+    text-align: left;
+}

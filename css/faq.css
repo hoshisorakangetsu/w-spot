@@ -56,7 +56,7 @@ details summary::-webkit-details-marker {
 }
   
 details summary {
-    margin-bottom: 1vh;
+    margin-bottom: 0.6vh;
     padding: 1rem 1rem;
     padding-bottom: 0;
     cursor: pointer;

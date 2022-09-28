@@ -119,7 +119,7 @@
 
 .login-register-dialog-right form input[type="text"]:focus, 
 .login-register-dialog-right form input[type="password"]:focus {
-  background-color: var(--hsl-secondary);
+  background-color: var(--hsl-bg);
   box-shadow: 1px 1px 5px var(--hsl-shadow);
 }
 

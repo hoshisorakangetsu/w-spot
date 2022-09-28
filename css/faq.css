@@ -7,6 +7,7 @@
     border-radius: 15px;
     background-color: var(--hsl-bg-lighter);
     display: flex;
+    color: var(--hsl-text);
 }
 
 .faq-container {
@@ -34,12 +35,15 @@
     text-align: left;
 }
 
+.questions-container a:hover {
+    color: var(--hsl-primary);
+}
+
 .customer-question {
     padding: 1vh 1vw;
     background-color: var(--hsl-bg-darker);
     text-align: left;
 }
-
 
 .tour-question {
     padding: 1vh 1vw;

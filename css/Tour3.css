@@ -13,6 +13,33 @@ img {
     height: 10%;
 }
 
+h2 {
+    font-weight: 700;
+}
+
+.location {
+    font-size: 2em;
+}
+
+.flex {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 4vh auto;
+}
+
+.flex img {
+    width: 35%;
+}
+
+.flex h1 {
+    font-size: 3em;
+    color: var(--hsl-text);
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
 .button {
     display: flex;
     justify-content: center;

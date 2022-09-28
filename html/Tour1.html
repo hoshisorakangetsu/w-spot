@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/commonTour.css">
   <link rel="stylesheet" href="../css/tourDetails.css">
   <script src="../js/utils.js" defer></script>
   <script src="../js/common.js" defer></script>
@@ -93,25 +94,31 @@
             <h2>Published By</h2>
             <h4>W-Spot Official</h4>
           </div>
-          <div class="field-container" id="tour-start-date">
-            <h2>Start Date</h2>
-            <h4>20/2/2023</h4>
-          </div>
-          <div class="field-container" id="tour-end-date">
-            <h2>End Date</h2>
-            <h4>22/2/2023</h4>
-          </div>
           <div class="field-container" id="tour-period">
             <h2>Tour Period</h2>
             <h4>2 Days</h4>
           </div>
-          <div class="field-container" id="tour-addInfo">
-            <h2>Additional Info</h2>
-            <div id="addInfoField">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, voluptatibus quaerat! Corporis iste tempora amet repellat. Vitae id eos ipsum rerum optio, consequuntur est atque sint consequatur iste. Qui voluptatibus eligendi, quos sunt aperiam beatae?
-            </div>
+          <div class="info">
+            <form action="" method="post">
+              <h2>Choose your Date</h2>
+              <div class="date">
+                <div>
+                  <label for="sDate">Start Date</label>
+                  <input type="date" name="sDate" id="sDate" required>
+                </div>
+                <div>
+                  <label for="eDate">End Date</label>
+                  <input type="date" name="sDate" id="sDate" disabled>
+                </div>
+              </div>
+              <div class="info">
+                <h2>Additional Enquiry</h2>
+                <div>
+                  <textarea name="additionalEnquiry" id="additionalEnquiry" cols="30" rows="10"></textarea>
+                </div>
+              </div>
+            </form>
           </div>
-        </div>
         <div class="action-btns">
           <button 
             class="action-btn-secondary" 

@@ -1,0 +1,51 @@
+label {
+    font-size: 1.3em;
+    color: var(--hsl-text);
+}
+
+.date {
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    margin-top: 0.5vh;
+}
+
+input {
+	padding: 1vh 2vw;
+	border-radius: 12px;
+	border-color: var(--hsl-primary);
+	text-align: left;
+	background-color: transparent;
+	outline: none;
+}
+
+input:focus {
+    background-color: var(--hsl-bg);
+    box-shadow: 0px 2px 8px var(--hsl-shadow);
+}
+
+textarea {
+	width: 30%;
+	border-radius: 15px;
+	border: 2px solid;
+	border-color: var(--hsl-primary);
+	margin: 0 auto;
+	background-color: transparent;
+	outline: none;
+	text-align: left;
+}
+
+textarea:focus {
+	background-color: var(--hsl-bg);
+	box-shadow: 0px 2px 8px var(--hsl-shadow);
+}
+
+.info {
+    margin-top: 0.5vh;
+}
+
+.info p{
+    color: var(--hsl-text);
+    margin-top: 0.4vh;
+    font-size: 1.5em;
+}

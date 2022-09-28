@@ -8,14 +8,14 @@
 	background-color: var(--hsl-bg-lighter);
 }
 
-fieldset{
+fieldset {
 	border-radius: 15px;
 	border: 2px solid var(--hsl-primary);
 	margin-top: 3vh;
 	padding: 1vh 1vw;
 }
 
-fieldset legend{
+fieldset legend {
 	font-size: 1.2em;
 	font-weight: 600;
 	color: var(--hsl-text);
@@ -27,30 +27,30 @@ fieldset legend{
 	gap: 1.5vh;
 }
 
-.flex{
+.flex {
 	display: flex;
 	justify-content: center;
 	gap: 2vw;
 }
 
-.flex > *{
+.flex > * {
 	width: 48%;
 }
 
-.grid{
+.grid {
 	display: grid;
 	grid-template-columns: 1fr 5fr;
 	align-items: center;
 	gap: 0.5vw;
 }
 
-label{
+label {
 	font-size: 1.3em;
 	color: var(--hsl-text);
 	text-align: left;
 }
 
-input{
+input {
 	padding: 1vh 2vw;
 	border-radius: 12px;
 	border-color: var(--hsl-primary);
@@ -59,15 +59,21 @@ input{
 	outline: none;
 }
 
-input:focus{
+input:focus {
 	background-color: var(--hsl-bg);
   	box-shadow: 0px 2px 8px var(--hsl-shadow);
 }
 
-.title {
+.info-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.info {
 	display: grid;
-	grid-template-columns: 1fr 12fr;
+	grid-template-columns: 1fr 5fr;
 	align-items: center;
+	width: 48%;
 	gap: 1vw;
 }
 
@@ -85,18 +91,18 @@ input:focus{
 	gap: 1vw;
 }
 
-.detailInfo{
+.detailInfo {
 	display: flex;
 	flex-direction: column;
 	margin-top: 2vh;
 	margin-bottom: 0.35vh;
 }
 
-.detailInfo label{
+.detailInfo label {
 	text-align: left;
 }
 
-textarea{
+textarea {
 	width: 100%;
 	border-radius: 15px;
 	border: 2px solid;
@@ -107,18 +113,18 @@ textarea{
 	text-align: left;
 }
 
-textarea:focus{
+textarea:focus {
 	background-color: var(--hsl-bg);
 	box-shadow: 0px 2px 8px var(--hsl-shadow);
 }
 
-.button{
+.button {
 	margin-top: 1vh;
 	display: flex;
 	gap: 2vw;
 	justify-content: center;
 }
 
-.contact{
+.contact {
 	margin-top: 2vh;
 }

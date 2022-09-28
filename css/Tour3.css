@@ -7,3 +7,15 @@
     border-radius: 15px;
     background-color: var(--hsl-bg-lighter);
 }
+
+img {
+    width: 50%;
+    height: 10%;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    margin-top: 1vh;
+    gap: 2vw;
+}

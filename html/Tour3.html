@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/commonTour.css">
   <link rel="stylesheet" href="../css/Tour3.css">
   <script src="../js/utils.js" defer></script>
   <script src="../js/common.js" defer></script>
@@ -79,49 +80,54 @@
       <div class="details-container">
         <!-- inside can be video or img, doesn't matter -->
         <div class="media-container">
-          <img id="tour-3-img" src="../assets/imageMapTour3.jpg" alt="No preview available" usemap="#tour-3-img-map">
+          <img id="tour-3-img" src="../assets/imageMapTour3.jpg" alt="Image Map" usemap="#tour-3-img-map">
           <map name="tour-3-img-map" id="tour-3-img-map">
-            <area target="" alt="" title="" href="" coords="597,217,-1,10" shape="rect">
-            <area target="" alt="" title="" href="" coords="93,330,4,224" shape="rect">
-            <area target="" alt="" title="" href="" coords="4,344,94,448" shape="rect">
-            <area target="" alt="" title="" href="" coords="105,226,233,332" shape="rect">
-            <area target="" alt="" title="" href="" coords="245,224,372,334" shape="rect">
-            <area target="" alt="" title="" href="" coords="382,223,515,333" shape="rect">
-            <area target="" alt="" title="" href="" coords="103,342,232,445" shape="rect">
-            <area target="" alt="" title="" href="" coords="246,340,372,449" shape="rect">
-            <area target="" alt="" title="" href="" coords="382,340,513,449" shape="rect">
-            <area target="" alt="" title="" href="" coords="523,224,597,446" shape="rect">
+            <area target="_blank" alt="Penang Hill" href="https://en.wikipedia.org/wiki/Penang_Hill" coords="93,330,4,224" shape="rect">
+            <area target="_blank" alt="FortCornwallis" href="https://en.wikipedia.org/wiki/Fort_Cornwallis" coords="4,344,94,448" shape="rect">
+            <area target="_blank" alt="Kek Lok Si" href="https://en.wikipedia.org/wiki/Kek_Lok_Si" coords="105,226,233,332" shape="rect">
+            <area target="_blank" alt="Town Hall" href="https://en.wikipedia.org/wiki/Town_Hall,_Penang" coords="103,342,232,445" shape="rect">
+            <area target="_blank" alt="Kapitan Keling Mosque" href="https://en.wikipedia.org/wiki/Kapitan_Keling_Mosque" coords="245,224,372,334" shape="rect">
+            <area target="_blank" alt="Sri Mahamariamman Temple" href="https://en.wikipedia.org/wiki/Sri_Mahamariamman_Temple,_Penang" coords="246,340,372,449" shape="rect">
+            <area target="_blank" alt="St. George%27s Church" href="https://en.wikipedia.org/wiki/St._George%27s_Church,_Penang" coords="382,223,515,333" shape="rect">
+            <area target="_blank" alt="Street Art" href="https://www.penang-insider.com/old-penang-street-art/" coords="382,340,513,449" shape="rect">
           </map>
         </div>
-        <div class="details-field-container">
-          <div class="field-container" id="tour-title">
+        <div>
+          <div>
             <h2>Title</h2>
-            <h4>Lorem ipsum dolor sit amet consectetur.</h4>
+            <h4>Penang Full Day Tour</h4>
           </div>
-          <div class="field-container" id="tour-customer">
+          <div>
             <h2>Published By</h2>
             <h4>W-Spot Official</h4>
           </div>
-          <div class="field-container" id="tour-start-date">
-            <h2>Start Date</h2>
-            <h4>20/2/2023</h4>
-          </div>
-          <div class="field-container" id="tour-end-date">
-            <h2>End Date</h2>
-            <h4>22/2/2023</h4>
-          </div>
-          <div class="field-container" id="tour-period">
+          <div>
             <h2>Tour Period</h2>
             <h4>2 Days</h4>
           </div>
-          <div class="field-container" id="tour-addInfo">
-            <h2>Additional Info</h2>
-            <div id="addInfoField">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, voluptatibus quaerat! Corporis iste tempora amet repellat. Vitae id eos ipsum rerum optio, consequuntur est atque sint consequatur iste. Qui voluptatibus eligendi, quos sunt aperiam beatae?
-            </div>
+          <div>
+            <h2>Location Visit</h2>
           </div>
+          <form action="" method="post">
+            <div>
+              <div>
+                <h2>Start Date</h2>
+                <input type="date" name="sDate" id="sDate" required>
+              </div>
+              <div>
+                <h2>End Date</h2>
+                <input type="date" name="sDate" id="sDate" disabled>
+              </div>
+            </div>
+            <div>
+              <h2>Additional Enquiry</h2>
+              <div>
+                <textarea name="additionalEnquiry" id="additionalEnquiry" cols="30" rows="10"></textarea>
+              </div>
+            </div>
+          </form>
         </div>
-        <div class="action-btns">
+        <div class="button">
           <button 
             class="action-btn-secondary" 
             onclick="window.location.href = './Tours.html'"

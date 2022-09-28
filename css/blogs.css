@@ -7,7 +7,17 @@
     border-radius: 15px;
     background-color: var(--hsl-bg-lighter);
 }
-
+/*
+.details-container2 {
+    width: 85%;
+    margin: 0px auto;
+    margin-top: 20vh;
+    margin-bottom: 2vh;
+    padding: 3vh 3vw;
+    border-radius: 15px;
+    background-color: var(--hsl-bg-lighter);
+}
+*/
 
 .details-container h1,
 .details-container h2 {
@@ -185,4 +195,14 @@ fieldset textarea:focus{
     width: 400px;
     height: 300px;
 
+}
+section.parallax{
+    background-image: url('../assets/kekloksi1.jpg');
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 0px;
+    padding-top: 0px;
 }

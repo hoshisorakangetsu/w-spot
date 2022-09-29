@@ -16,6 +16,11 @@ class ResizableMap {
     this.img = img
 
     this.resize = () => {
+      // get the ratio of change
+      const newWidth = this.img.clientWidth
+      const newHeight = this.img.clientHeight
+      const widthChngeRatio = newWidth / this.previousWidth
+      const heightChngeRatio = newHeight / this.previousHeight
       // all the area tags of the map elements, converting it into array first
       let areas = Array.from(this.map.areas)
       areas.forEach(area => {
@@ -24,10 +29,6 @@ class ResizableMap {
           // get the coordinates and parse them
           const coords = area.coords.split(',').map(coord => parseFloat(coord))
 
-          const newWidth = this.img.clientWidth
-          const newHeight = this.img.clientHeight
-          const widthChngeRatio = newWidth / this.previousWidth
-          const heightChngeRatio = newHeight / this.previousHeight
 
           const newCoords = coords.map((coord, idx) => {
             // x coordinates (index 0 and 2)

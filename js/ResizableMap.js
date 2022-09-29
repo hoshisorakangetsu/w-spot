@@ -29,7 +29,6 @@ class ResizableMap {
           // get the coordinates and parse them
           const coords = area.coords.split(',').map(coord => parseFloat(coord))
 
-
           const newCoords = coords.map((coord, idx) => {
             // x coordinates (index 0 and 2)
             if (idx % 2 === 0) {

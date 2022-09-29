@@ -119,7 +119,6 @@ body {
 /* fixed styles for both type of headers*/
 header {
   z-index: 9999; /* on top everything */
-  height: 5vh;
   border-radius: 99999px;  /* css hack for pill shape */
   background-color: var(--hsl-bg-lighter);
   color: var(--hsl-text);

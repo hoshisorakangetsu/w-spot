@@ -23,6 +23,7 @@
 /* select all direct children of media-container*/
 .media-container > div {
   width: 48%;
+  align-self: stretch;  /* take up full height of the container */
 }
 
 .media-container img,
@@ -39,7 +40,6 @@
   justify-content: space-evenly;
   background-color: var(--hsl-bg-darker);
   border-radius: 12px;
-  align-self: stretch;  /* take up full height of the container */
 }
 
 .field-container h2 {

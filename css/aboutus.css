@@ -27,8 +27,9 @@ td {
     background-color: var(--hsl-bg-lighter);
 }
 
-table tr th:nth-child(2),
-table tr td:nth-child(2) {
+/* for the year column */
+table tr th:first-child,
+table tr td:first-child {
     padding: 1vh 3vw;
 }
 

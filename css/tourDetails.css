@@ -14,10 +14,14 @@
 }
 
 .media-container {
-  width: 90%;
-  height: 60vh;
-  overflow: hidden;
-  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* select all direct children of media-container*/
+.media-container > div{
+  width: 48%;
 }
 
 .media-container img,
@@ -27,7 +31,6 @@
 }
 
 .details-field-container {
-  width: 90%;
   display: flex;
   flex-direction: column;
   gap: 3vh;

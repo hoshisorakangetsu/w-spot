@@ -63,7 +63,7 @@
 /* apply primary color to all texts */
 body {
   color: var(--hsl-primary);
-  animation: body-load 1s linear;
+  animation: body-load 0.7s linear;
 }
 
 @keyframes body-load {
@@ -81,7 +81,7 @@ body {
 }
 
 #want-bgm-prompt {
-  z-index: 9999; /* always be in front */
+  z-index: 99999; /* always be in front */
   position: fixed;
   top: 0; bottom: 0;
   left: 0; right: 0;
@@ -94,7 +94,7 @@ body {
   padding: 2vh 2vw;
   background-color: var(--hsl-bg-lighter);
   border-radius: 15px;
-  z-index: 99999;
+  z-index: 999999;
   width: 50%;
   height: 50vh;
   display: flex;

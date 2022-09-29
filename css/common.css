@@ -71,6 +71,7 @@ body {
   height: 4vw;
   display: none; /* Only visible after the user has scrolled the page (using js) */
   border: none;
+  font-size: 1.5em;
   box-shadow: 1px 1px 5px var(--hsl-shadow);
   border-radius: 50%;
   position: fixed;

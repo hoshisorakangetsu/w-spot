@@ -66,9 +66,32 @@ body {
   transform-origin: center;
 }
 
+#goToTop {
+  width: 4vw;
+  height: 4vw;
+  display: none; /* Only visible after the user has scrolled the page (using js) */
+  border: none;
+  box-shadow: 1px 1px 5px var(--hsl-shadow);
+  border-radius: 50%;
+  position: fixed;
+  bottom: 5vh;
+  right: 3vw;
+  transition: .3s;
+  z-index: 9999; /*go on top everything else */
+}
+
+#goToTop:hover {
+  box-shadow: 0px 3px 8px var(--hsl-shadow);
+}
+
+#goToTop:active {
+  box-shadow: 0px 1px 3px var(--hsl-shadow);
+}
+
 #want-bgm-prompt {
   z-index: 99999; /* always be in front */
   position: fixed;
+  /* css hack to fullscreen stuff */
   top: 0; bottom: 0;
   left: 0; right: 0;
   display: flex;

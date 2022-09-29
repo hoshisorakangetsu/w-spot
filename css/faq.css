@@ -140,3 +140,7 @@ details:not([open]) summary div {
 .expand-text a:hover {
     color: var(--hsl-primary);
 }
+
+.important {
+    color: var(--hsl-primary);
+}

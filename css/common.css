@@ -63,6 +63,19 @@
 /* apply primary color to all texts */
 body {
   color: var(--hsl-primary);
+  animation: body-load 5s linear;
+}
+
+@keyframes body-load {
+  0% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 #want-bgm-prompt {

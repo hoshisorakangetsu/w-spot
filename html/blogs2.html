@@ -79,140 +79,145 @@
       <div class="details-container">
         <!-- code starts here -->
         <section class="parallax2"></section>
-        <img id="face1" src="../assets/faces1.jpg" width="70px" height="70px" alt="">
-        <h1>Penang Hill</h1>
-        <h2>Published by : Derrick </h2>
-        <h2>Date : 26/9/2022</h2>
-        <h2>Ratings : &#11088;&#11088;</h2>
-
-        <div id="blogs" style="background-color:#ffe6ff; border-radius:20px; ">
-          <a href="https://www.facebook.com/kekloksipenang/">
-            <img src="../assets/fb.png" target="_blank" alt=""
-              style="width: 50px;height:50px;float:right;border-radius:10px;">
-          </a>
-          <a href="https://www.instagram.com/explore/locations/289753633/kek-lok-si-templepenang-malaysia/?hl=en">
-            <img src="../assets/insta.svg" target="_blank" alt="" style="width: 50px;height:50px;float:right;">
-          </a>
-
-          <p style="font-size: 100px;float:left;margin:0px;">&#8220;</p>
-
-          <p>Whatever your denomination, Kek Lok Si is well worth a visit.
-            Take plenty of water if you're planning to walk up the hill and pagoda. There is a stall selling water etc
-            near the top but
-            I think it's run by a relative if Dick Turpins! Make sure you have plenty of memory</p>
+        <div
+          style="width: 85%;margin: 0px auto;margin-top: 1.5vh;margin-bottom: 2vh;padding: 3vh 3vw;border-radius: 15px;background-color: var(--hsl-bg-lighter)">
 
 
-          <p style="margin-bottom: 0px;">Whatever your denomination, Kek Lok Si is well worth a visit.
-            Take plenty of water if you're planning to walk up the hill and pagoda. There is a stall selling water etc
-            near the top but
-            I think it's run by a relative if Dick Turpins! Make sure you have plenty of memory
-            cards/space on your mobile as the views of the temple and Penang as you get higher up
-            are simply breathtaking. Enjoy!
-            Whatever your denomination, Kek Lok Si is well worth a visit.
-            Take plenty of water if you're planning to walk up the hill and pagoda. There is a stall selling water etc
-            near the top but
-            I think it's run by a relative if Dick Turpins! Make sure you have plenty of memory
-            cards/space on your mobile as the views of the temple and Penang as you get higher up
-            are simply breathtaking. Enjoy!
-            <span style="font-size: 100px; display: block;width: fit-content;margin-left:auto;">&#8221;
-          </p>
+          <img id="face1" src="../assets/faces1.jpg" width="70px" height="70px" alt="">
+          <h1>Penang Hill</h1>
+          <h2>Published by : Derrick </h2>
+          <h2>Date : 26/9/2022</h2>
+          <h2>Ratings : &#11088;&#11088;</h2>
 
-        </div>
+          <div id="blogs" style="background-color:#ffe6ff; border-radius:20px; ">
+            <a href="https://www.facebook.com/kekloksipenang/">
+              <img src="../assets/fb.png" target="_blank" alt=""
+                style="width: 50px;height:50px;float:right;border-radius:10px;">
+            </a>
+            <a href="https://www.instagram.com/explore/locations/289753633/kek-lok-si-templepenang-malaysia/?hl=en">
+              <img src="../assets/insta.svg" target="_blank" alt="" style="width: 50px;height:50px;float:right;">
+            </a>
 
-        <div class="img-map-container">
+            <p style="font-size: 100px;float:left;margin:0px;">&#8220;</p>
 
-          <div class="img-map">
-            <div class="main-banner" id="main-banner">
-              <div class="imgban" id="imgban6">
-              </div>
-              <div class="imgban" id="imgban5">
-              </div>
-              <div class="imgban" id="imgban4">
-              </div>
-            </div>
-            <!--
-                  <img src="../assets/kekloksi1.jpg" alt="">
-                  -->
-            <script>
-              var bannerStatus = 1;
-              var bannerTimer = 4000;
-              var startbannerLoop = setInterval(function () {
-                bannerLoop();
-              }, bannerTimer);
-              function bannerLoop() {
-                if (bannerStatus === 1) {
-                  document.getElementById("imgban5").style.opacity = "0";
-                  setTimeout(function () {
-                    document.getElementById("imgban4").style.right = "0px";
-                    document.getElementById("imgban4").style.zIndex = "1000";
-                    document.getElementById("imgban5").style.right = "-1200px";
-                    document.getElementById("imgban5").style.zIndex = "1500";
-                    document.getElementById("imgban6").style.right = "1200px";
-                    document.getElementById("imgban6").style.zIndex = "500";
-                  }, 500);
-                  setTimeout(function () {
-                    document.getElementById("imgban5").style.opacity = "1";
-                  }, 1000);
-                  bannerStatus = 2;
-                }
-                else if (bannerStatus === 2) {
-                  document.getElementById("imgban6").style.opacity = "0";
-                  setTimeout(function () {
-                    document.getElementById("imgban5").style.right = "0px";
-                    document.getElementById("imgban5").style.zIndex = "1000";
-                    document.getElementById("imgban6").style.right = "-1200px";
-                    document.getElementById("imgban6").style.zIndex = "1500";
-                    document.getElementById("imgban4").style.right = "1200px";
-                    document.getElementById("imgban4").style.zIndex = "500";
-                  }, 500);
-                  setTimeout(function () {
-                    document.getElementById("imgban6").style.opacity = "1";
-                  }, 1000);
-                  bannerStatus = 3;
-                }
-                else if (bannerStatus === 3) {
-                  document.getElementById("imgban4").style.opacity = "0";
-                  setTimeout(function () {
-                    document.getElementById("imgban6").style.right = "0px";
-                    document.getElementById("imgban6").style.zIndex = "1000";
-                    document.getElementById("imgban4").style.right = "-1200px";
-                    document.getElementById("imgban4").style.zIndex = "1500";
-                    document.getElementById("imgban5").style.right = "1200px";
-                    document.getElementById("imgban5").style.zIndex = "500";
-                  }, 500);
-                  setTimeout(function () {
-                    document.getElementById("imgban4").style.opacity = "1";
-                  }, 1000);
-                  bannerStatus = 1;
-                }
-              }
-            </script>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31776.447001318298!2d100.2598220678863!3d5.408460948944601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304ac28738d4ea43%3A0xf862c72e1eb12bb9!2sPenang%20Hill!5e0!3m2!1sen!2smy!4v1664257120087!5m2!1sen!2smy"
-              width="400" height="280" style="border:0;" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p>Whatever your denomination, Kek Lok Si is well worth a visit.
+              Take plenty of water if you're planning to walk up the hill and pagoda. There is a stall selling water etc
+              near the top but
+              I think it's run by a relative if Dick Turpins! Make sure you have plenty of memory</p>
+
+
+            <p style="margin-bottom: 0px;">Whatever your denomination, Kek Lok Si is well worth a visit.
+              Take plenty of water if you're planning to walk up the hill and pagoda. There is a stall selling water etc
+              near the top but
+              I think it's run by a relative if Dick Turpins! Make sure you have plenty of memory
+              cards/space on your mobile as the views of the temple and Penang as you get higher up
+              are simply breathtaking. Enjoy!
+              Whatever your denomination, Kek Lok Si is well worth a visit.
+              Take plenty of water if you're planning to walk up the hill and pagoda. There is a stall selling water etc
+              near the top but
+              I think it's run by a relative if Dick Turpins! Make sure you have plenty of memory
+              cards/space on your mobile as the views of the temple and Penang as you get higher up
+              are simply breathtaking. Enjoy!
+              <span style="font-size: 100px; display: block;width: fit-content;margin-left:auto;">&#8221;
+            </p>
+
           </div>
 
-          <div class="btn-actions">
-            <button class="action-btn-secondary">Back</button>
-            <button class="action-btn-primary" type="button"
-              onclick="window.open('https://en.wikipedia.org/wiki/Penang_Hill', 'blank')">Find Out More</button>
-          </div>
-          <h4>&#x1F44D; Helpful ?</h4>
-          <fieldset>
-            <legend>Tell Us More</legend>
-            <div class="comments">
-              <textarea placeholder="Share your experiences with us" rows="5" cols="3"></textarea>
-              <input type="submit" class="action-btn-primary" value="submit" id="submit" onclick="myfunction1()">
+          <div class="img-map-container">
+
+            <div class="img-map">
+              <div class="main-banner" id="main-banner">
+                <div class="imgban" id="imgban6">
+                </div>
+                <div class="imgban" id="imgban5">
+                </div>
+                <div class="imgban" id="imgban4">
+                </div>
+              </div>
+              <!--
+                    <img src="../assets/kekloksi1.jpg" alt="">
+                    -->
               <script>
-                function myfunction1() {
-                  if (confirm("Are you sure you want to submit your feedback ?")) {
+                var bannerStatus = 1;
+                var bannerTimer = 4000;
+                var startbannerLoop = setInterval(function () {
+                  bannerLoop();
+                }, bannerTimer);
+                function bannerLoop() {
+                  if (bannerStatus === 1) {
+                    document.getElementById("imgban5").style.opacity = "0";
+                    setTimeout(function () {
+                      document.getElementById("imgban4").style.right = "0px";
+                      document.getElementById("imgban4").style.zIndex = "1000";
+                      document.getElementById("imgban5").style.right = "-1200px";
+                      document.getElementById("imgban5").style.zIndex = "1500";
+                      document.getElementById("imgban6").style.right = "1200px";
+                      document.getElementById("imgban6").style.zIndex = "500";
+                    }, 500);
+                    setTimeout(function () {
+                      document.getElementById("imgban5").style.opacity = "1";
+                    }, 1000);
+                    bannerStatus = 2;
+                  }
+                  else if (bannerStatus === 2) {
+                    document.getElementById("imgban6").style.opacity = "0";
+                    setTimeout(function () {
+                      document.getElementById("imgban5").style.right = "0px";
+                      document.getElementById("imgban5").style.zIndex = "1000";
+                      document.getElementById("imgban6").style.right = "-1200px";
+                      document.getElementById("imgban6").style.zIndex = "1500";
+                      document.getElementById("imgban4").style.right = "1200px";
+                      document.getElementById("imgban4").style.zIndex = "500";
+                    }, 500);
+                    setTimeout(function () {
+                      document.getElementById("imgban6").style.opacity = "1";
+                    }, 1000);
+                    bannerStatus = 3;
+                  }
+                  else if (bannerStatus === 3) {
+                    document.getElementById("imgban4").style.opacity = "0";
+                    setTimeout(function () {
+                      document.getElementById("imgban6").style.right = "0px";
+                      document.getElementById("imgban6").style.zIndex = "1000";
+                      document.getElementById("imgban4").style.right = "-1200px";
+                      document.getElementById("imgban4").style.zIndex = "1500";
+                      document.getElementById("imgban5").style.right = "1200px";
+                      document.getElementById("imgban5").style.zIndex = "500";
+                    }, 500);
+                    setTimeout(function () {
+                      document.getElementById("imgban4").style.opacity = "1";
+                    }, 1000);
+                    bannerStatus = 1;
                   }
                 }
               </script>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31776.447001318298!2d100.2598220678863!3d5.408460948944601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304ac28738d4ea43%3A0xf862c72e1eb12bb9!2sPenang%20Hill!5e0!3m2!1sen!2smy!4v1664257120087!5m2!1sen!2smy"
+                width="400" height="280" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-          </fieldset>
-        </div>
+
+            <div class="btn-actions">
+              <button class="action-btn-secondary">Back</button>
+              <button class="action-btn-primary" type="button"
+                onclick="window.open('https://en.wikipedia.org/wiki/Penang_Hill', 'blank')">Find Out More</button>
+            </div>
+            <h4>&#x1F44D; Helpful ?</h4>
+            <fieldset>
+              <legend>Tell Us More</legend>
+              <div class="comments">
+                <textarea placeholder="Share your experiences with us" rows="5" cols="3"></textarea>
+                <input type="submit" class="action-btn-primary" value="Submit" id="submit" onclick="myfunction1()">
+              </div>
+            </fieldset>
+            <script>
+              function myfunction1() {
+                if (confirm("Are you sure you want to submit your feedback ?")) {
+                }
+              }
+            </script>
+          </div>
+        </div> 
       </div>
     </div>
   </main>

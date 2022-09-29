@@ -6,10 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/common.css">
-  <link rel="stylesheet" href="../css/blogs.css">
+  <link rel="stylesheet" href="../css/ApplyTour.css">
   <script src="../js/utils.js" defer></script>
   <script src="../js/common.js" defer></script>
-  <title>W-Spot:Blogs</title>
+  <script src="../js/loginGuard.js" defer></script>
+  <script src="../js/customTourApply.js" defer></script>
+  <title>W-Spot: Custom Tour Application</title>
 </head>
 
 <body>
@@ -39,7 +41,7 @@
           <a href="./index.html">Home</a>
         </li>
         <li>
-          <a href="./Tours.html">Tours</a>
+          <a href="./Tours.html" class="nav-active">Tours</a>
         </li>
         <li>
           <a href="./AboutUs.html">About Us</a>
@@ -75,153 +77,77 @@
 
   <!-- main content differs across files -->
   <main>
-    <div class="main-wrapper">
-
-      <div class="details-container">
-        <!-- code starts here -->
-        <section class="parallax1">
-        </section>
-        <div
-          style="width: 85%;margin: 0px auto;margin-top: 1.5vh;margin-bottom: 2vh;padding: 3vh 3vw;border-radius: 15px;background-color: var(--hsl-bg-lighter)">
-
-
-
-
-          <img id="face1" src="../assets/blogsface1.webp" width="70px" height="70px" alt="">
-          <h1>Kek Lok Si Temple</h1>
-          <h2>Published by : Oliver </h2>
-          <h2>Date : 26/9/2022</h2>
-          <h2>Ratings : &#11088;&#11088;&#11088;</h2>
-          <div id="blogs" style="background-color:#ffe6ff; border-radius:20px; ">
-            <a href="https://www.facebook.com/kekloksipenang/">
-              <img src="../assets/fb.png" target="_blank" alt=""
-                style="width: 50px;height:50px;float:right;border-radius:10px;">
-            </a>
-            <a href="https://www.instagram.com/explore/locations/289753633/kek-lok-si-templepenang-malaysia/?hl=en">
-              <img src="../assets/insta.svg" target="_blank" alt="" style="width: 50px;height:50px;float:right;">
-            </a>
-
-            <p style="font-size: 100px;float:left;margin:0px;">&#8220;</p>
-
-            <p>Whatever your denomination, Kek Lok Si is well worth a visit.
-              Take plenty of water if you're planning to walk up the hill and pagoda. There is a stall selling water etc
-              near the top but
-              I think it's run by a relative if Dick Turpins! Make sure you have plenty of memory</p>
-
-
-            <p style="margin-bottom: 0px;">Whatever your denomination, Kek Lok Si is well worth a visit.
-              Take plenty of water if you're planning to walk up the hill and pagoda. There is a stall selling water etc
-              near the top but
-              I think it's run by a relative if Dick Turpins! Make sure you have plenty of memory
-              cards/space on your mobile as the views of the temple and Penang as you get higher up
-              are simply breathtaking. Enjoy!
-              Whatever your denomination, Kek Lok Si is well worth a visit.
-              Take plenty of water if you're planning to walk up the hill and pagoda. There is a stall selling water etc
-              near the top but
-              I think it's run by a relative if Dick Turpins! Make sure you have plenty of memory
-              cards/space on your mobile as the views of the temple and Penang as you get higher up
-              are simply breathtaking. Enjoy!
-              <span style="font-size: 100px; display: block;width: fit-content;margin-left:auto;">&#8221;
-            </p>
-
-          </div>
-
-          <div class="img-map-container">
-
-            <div class="img-map">
-              <div class="main-banner" id="main-banner">
-                <div class="imgban" id="imgban3">
-                </div>
-                <div class="imgban" id="imgban2">
-                </div>
-                <div class="imgban" id="imgban1">
-                </div>
-              </div>
-              <!--
-                  <img src="../assets/kekloksi1.jpg" alt="">
-                  -->
-              <script>
-                var bannerStatus = 1;
-                var bannerTimer = 4000;
-                var startbannerLoop = setInterval(function () {
-                  bannerLoop();
-                }, bannerTimer);
-                function bannerLoop() {
-                  if (bannerStatus === 1) {
-                    document.getElementById("imgban2").style.opacity = "0";
-                    setTimeout(function () {
-                      document.getElementById("imgban1").style.right = "0px";
-                      document.getElementById("imgban1").style.zIndex = "1000";
-                      document.getElementById("imgban2").style.right = "-1200px";
-                      document.getElementById("imgban2").style.zIndex = "1500";
-                      document.getElementById("imgban3").style.right = "1200px";
-                      document.getElementById("imgban3").style.zIndex = "500";
-                    }, 500);
-                    setTimeout(function () {
-                      document.getElementById("imgban2").style.opacity = "1";
-                    }, 1000);
-                    bannerStatus = 2;
-                  }
-                  else if (bannerStatus === 2) {
-                    document.getElementById("imgban3").style.opacity = "0";
-                    setTimeout(function () {
-                      document.getElementById("imgban2").style.right = "0px";
-                      document.getElementById("imgban2").style.zIndex = "1000";
-                      document.getElementById("imgban3").style.right = "-1200px";
-                      document.getElementById("imgban3").style.zIndex = "1500";
-                      document.getElementById("imgban1").style.right = "1200px";
-                      document.getElementById("imgban1").style.zIndex = "500";
-                    }, 500);
-                    setTimeout(function () {
-                      document.getElementById("imgban3").style.opacity = "1";
-                    }, 1000);
-                    bannerStatus = 3;
-                  }
-                  else if (bannerStatus === 3) {
-                    document.getElementById("imgban1").style.opacity = "0";
-                    setTimeout(function () {
-                      document.getElementById("imgban3").style.right = "0px";
-                      document.getElementById("imgban3").style.zIndex = "1000";
-                      document.getElementById("imgban1").style.right = "-1200px";
-                      document.getElementById("imgban1").style.zIndex = "1500";
-                      document.getElementById("imgban2").style.right = "1200px";
-                      document.getElementById("imgban2").style.zIndex = "500";
-                    }, 500);
-                    setTimeout(function () {
-                      document.getElementById("imgban1").style.opacity = "1";
-                    }, 1000);
-                    bannerStatus = 1;
-                  }
-                }
-              </script>
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.1137160182084!2d100.27142391476518!3d5.399641296083638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304ac2185dfc8665%3A0x2c9084ea7f433ec4!2sKek%20Lok%20Si%20Temple!5e0!3m2!1sen!2smy!4v1664205182273!5m2!1sen!2smy"
-                width="400" height="280" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-
-            <div class="btn-actions">
-              <button class="action-btn-secondary">Back</button>
-              <button class="action-btn-primary" type="button"
-                onclick="window.open('https://en.wikipedia.org/wiki/Kek_Lok_Si', 'blank')">Find Out More</button>
-            </div>
-            <h4>&#x1F44D; Helpful ?</h4>
-            <fieldset>
-              <legend>Tell Us More</legend>
-              <div class="comments">
-                <textarea placeholder="Share your experiences with us" rows="5" cols="3"></textarea>
-                <input type="submit" class="action-btn-primary" value="Submit" id="submit" onclick="myfunction1()">
-              </div>
-            </fieldset>
-            <script>
-              function myfunction1() {
-                if (confirm("Are you sure you want to submit your feedback ?")) {
-                }
-              }
-            </script>
-          </div>
+		<div class="main-wrapper">
+			<div class="details-container">
+				<!-- code starts here -->
+				<div>
+          <h1>Thanks for Choosing Us</h2>
+          <h2>We will make sure you will not regret!</h2>
         </div>
-      </div>
+				<form action="" method="post">
+					<fieldset>
+						<legend>Book Now!</legend>
+							<div class="flex-col">
+								<div class="flex-container">
+									<div class="grid">
+										<label for="trip">Choose Your Trip</label>
+										<select name="trip" id="trip">
+											<option value="trip1">Yi Hoong Title (RM200)</option>
+											<option value="trip2">Penang Full Day Tour (RM500)</option>
+										</select>
+									</div>
+									<div class="grid">
+										<label for="pax">Number of Pax</label>
+										<input type="number" name="pax" id="pax" value="1">
+									</div>
+								</div>
+								<div class="flex-container">
+									<div class="grid">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" placeholder="Your full name here" required>
+									</div>
+									<div class="grid">
+										<label for="ic">IC number</label>
+										<input type="text" name="ic" id="ic" placeholder="111111001111" required>
+									</div>
+								</div>
+								<h2>Choose your Date</h2>
+								<div class="date">
+									<div>
+										<label for="sDate">Start Date</label>
+										<input type="date" name="sDate" id="sDate" required>
+									</div>
+									<div>
+										<label for="eDate">End Date</label>
+										<input type="date" name="sDate" id="sDate" disabled>
+									</div>
+								</div>
+								<div>
+									<h2>Additional Enquiry</h2>
+									<div>
+										<textarea name="additionalEnquiry" id="additionalEnquiry" cols="30" rows="10"></textarea>
+									</div>
+								</div>
+								<div class="flex-container">
+									<div class="grid">
+										<label for="budget">Promo Code</label>
+										<input type="text" name="budget" id="budget" placeholder="Please input if you have">
+									</div>
+									<div class="grid">
+										<label for="budget">Budget</label>
+										<input type="text" name="budget" id="budget" value="RM" required>
+									</div>
+								</div>
+							</div>
+					</fieldset>
+				</form>
+				<div class="button">
+          <button class="action-btn-secondary" onclick="window.location.href = './Tours.html'">Back</button>
+          <!-- TODO: add fake apply function -->
+          <button class="action-btn-primary">Apply</button>
+        </div>
+			</div>
+    </div>
   </main>
 
   <!-- footer is fixed across files -->

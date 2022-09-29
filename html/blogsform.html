@@ -80,33 +80,50 @@
         <!-- code starts here -->
        <!-- <img src="../assets/tour3_kek_lok_si.jpg" alt=""> -->
        <!-- will use css to change background image -->
-       <div class="back-img-left">
-        <h1>Congratulations</h1>
-        <p>You have discovered a hidden feature!</p>
-        <p>Use promo code <span class="promo-code">3ast3r3gg</span> for RM50 off!</p>
-       </div>
-       <section id="mysection">
-       
-        <h1>New Blogs Form</h1>
-            <form id="myform">
-            <input type="text"id="name"placeholder="name"><br>
-            <textarea placeholder="enter your reviews"></textarea><br>
-            <input type="file" id="myFile"id="uploadfile" name="filename"><br>
-             <input type="submit" id="submit" onclick="myfunc()">
-           
-        
-            <input type="button"value="clear" id="clear" onclick="cancelinput()">
-            <script>
-              function cancelinput(){
+        <div class="form">
+          <div class="back-img-left">
+            <h1>Congratulations</h1>
+            <p>You have discovered a hidden feature!</p>
+            <p>Use promo code <span class="promo-code">3ast3r3gg</span> for RM50 off!</p>
+          </div>
+          <div id="mysection">
+            <h1>New Blogs Form</h1>
+                <form id="myform">
+                  <div class="flex-col">
+                    <div class="input">
+                      <label for="name">Name</label>
+                      <input type="text"id="name"placeholder="Name">
+                    </div>
+                    <div>
+                      <div class="input">
+                        <label for="review">Your review</label>
+                        <textarea name="review" id="review" rows="5" cols="20" placeholder="Enter your reviews"></textarea>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="input">
+                        <label for="uploadfile">Upload your picture</label>
+                        <input type="file" id="myFile"id="uploadfile" name="filename">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="button">
+                    <input type="button"value="Clear" id="clear" onclick="cancelinput()">
+                    <input type="submit" id="submit" value="Submit" onclick="myfunc()">
+                  </div>
                 
-                  document.getElementById("myform").reset();
-              }
-              function myfunc(){
-                  alert("You have successfully submitted this form ");
-                }
-            </script>
-          </form>
-       </section>
+                <script>
+                  function cancelinput(){
+                    
+                      document.getElementById("myform").reset();
+                  }
+                  function myfunc(){
+                      alert("You have successfully submitted this form ");
+                    }
+                </script>
+              </form>
+            </div>
+        </div>
       </div>
     </div>
     

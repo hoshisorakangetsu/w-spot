@@ -1,18 +1,3 @@
-.details-container {
-    width: 85%;
-    margin: 0px auto;
-    margin-top: 12vh;
-    margin-bottom: 2vh;
-    padding: 3vh 3vw;
-    border-radius: 15px;
-    background-color: var(--hsl-bg-lighter);
-}
-
-img {
-    width: 50%;
-    height: 10%;
-}
-
 h2 {
     font-weight: 700;
 }

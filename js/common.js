@@ -23,6 +23,14 @@ function logout() {
   goHome()
 }
 
+// go to the top of the document (not supported in IE)
+function goToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  })
+}
+
 const userMenuBtn = document.querySelector('#user-menu')
 let isUserMenuOpen = false
 let openedMenuId = ''
@@ -81,17 +89,16 @@ Apply the "shrink and float header bar"
 - check the scroll on body and the documentElement AKA html itself
 - if the scrollTop is big, apply the class designed for the scrolled header
 */
-// TODO: Create a button with id goToTop, give it the ability to scroll to the top when clicked
 window.onscroll = () => {
   if (document.body.scrollTop >= 40 || document.documentElement.scrollTop >= 40) {
     headerIsFloating = true
     header.classList.add('collapsed', 'floating')
-    // document.getElementById('goToTop').style.display = 'block'
+    document.getElementById('goToTop').style.display = 'block'
   } else {
     // if the scroll is not that big then the class shall be removed
     headerIsFloating = false
     header.classList.remove('collapsed', 'floating')
-    // document.getElementById('goToTop').style.display = 'none'
+    document.getElementById('goToTop').style.display = 'none'
   }
   // unshow the user menu action on scroll also
   if (isUserMenuOpen) {

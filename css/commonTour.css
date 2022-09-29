@@ -42,10 +42,6 @@ textarea:focus {
 	box-shadow: 0px 2px 8px var(--hsl-shadow);
 }
 
-.info {
-    margin-top: 0.5vh;
-}
-
 .info p{
     color: var(--hsl-text);
     margin-top: 0.4vh;

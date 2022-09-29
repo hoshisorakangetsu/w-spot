@@ -14,6 +14,8 @@
 </head>
 
 <body>
+  <!-- button for goToTop -->
+  <button id="goToTop" onclick="goToTop()">&uarr;</button>
   <!-- want bgm prompt (need to have user interaction only can play bgm) -->
   <div id="want-bgm-prompt">
     <!-- main content (the prompt) -->
@@ -81,50 +83,48 @@
           <!-- TODO: replace this link with our own video (if need to use youtube video, download it down as CORS won't allow u to use youtube links directly) -->
           <!-- using video as video is easier to style, and we need to listen to the play and pause event to either play or pause the bgm -->
           <video src="https://www.youtube.com/embed/ScMzIvxBSi4" controls></video>
+          <div class="details-form-container">
+            <div class="field-container" id="tour-title">
+              <h2>Title</h2>
+              <h4>Lorem ipsum dolor sit amet consectetur.</h4>
+            </div>
+            <div class="field-container" id="tour-customer">
+              <h2>Published By</h2>
+              <h4>W-Spot Official</h4>
+            </div>
+            <div class="field-container" id="tour-period">
+              <h2>Tour Period</h2>
+              <h4>2 Days</h4>
+            </div>
+            <div class="info">
+              <h2>Price</h2>
+              <p>RM 500</p>
+            </div>
+          </div>
         </div>
-        <div class="details-field-container">
-          <div class="field-container" id="tour-title">
-            <h2>Title</h2>
-            <h4>Lorem ipsum dolor sit amet consectetur.</h4>
-          </div>
-          <div class="field-container" id="tour-customer">
-            <h2>Published By</h2>
-            <h4>W-Spot Official</h4>
-          </div>
-          <div class="field-container" id="tour-period">
-            <h2>Tour Period</h2>
-            <h4>2 Days</h4>
-          </div>
-          <div class="info">
-            <h2>Price</h2>
-            <p>RM 500</p>
-          </div>
-          <div class="info">
-            <form action="" method="post">
-              <h2>Choose your Date</h2>
-              <div class="date">
-                <div>
-                  <label for="sDate">Start Date</label>
-                  <input type="date" name="sDate" id="sDate" required>
-                </div>
-                <div>
-                  <label for="eDate">End Date</label>
-                  <input type="date" name="sDate" id="sDate" disabled>
-                </div>
+        <div class="info">
+          <form action="" method="post">
+            <h2>Choose your Date</h2>
+            <div class="date">
+              <div>
+                <label for="sDate">Start Date</label>
+                <input type="date" name="sDate" id="sDate" required>
               </div>
-              <div class="info">
-                <h2>Additional Enquiry</h2>
-                <div>
-                  <textarea name="additionalEnquiry" id="additionalEnquiry" cols="30" rows="10"></textarea>
-                </div>
+              <div>
+                <label for="eDate">End Date</label>
+                <input type="date" name="sDate" id="sDate" disabled>
               </div>
-            </form>
-          </div>
+            </div>
+            <div class="info">
+              <h2>Additional Enquiry</h2>
+              <div>
+                <textarea name="additionalEnquiry" id="additionalEnquiry" cols="30" rows="10"></textarea>
+              </div>
+            </div>
+          </form>
+        </div>
         <div class="action-btns">
-          <button 
-            class="action-btn-secondary" 
-            onclick="window.location.href = './Tours.html'"
-          >Back</button>
+          <button class="action-btn-secondary" onclick="window.location.href = './Tours.html'">Back</button>
           <!-- TODO: add fake apply function -->
           <button class="action-btn-primary">Apply</button>
         </div>

@@ -79,3 +79,25 @@ textarea:focus {
     margin-top: 1vh;
     gap: 2vw;
 }
+
+/* initial state of the locations */
+.slide-in {
+    opacity: 0;
+    transition: .6s;
+}
+
+/* displace to the left side */
+.slide-in-left {
+    transform: translateX(-65%);
+}
+
+/* displace to the right side */
+.slide-in-right {
+    transform: translateX(65%);
+}
+
+/* detect element enter by intersection observer and will add/remove this class to reset the state */
+.appear {
+    opacity: 1;
+    transform: translateX(0);
+}

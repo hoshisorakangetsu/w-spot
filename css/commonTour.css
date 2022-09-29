@@ -25,7 +25,9 @@ input:focus {
 }
 
 textarea {
-	width: 30%;
+	width: 45%;
+    padding: 2vh 3vw;
+    font-size: 1.5em;
 	border-radius: 15px;
 	border: 2px solid;
 	border-color: var(--hsl-primary);

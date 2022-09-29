@@ -66,7 +66,25 @@ html {
 .card {
     box-shadow: 0 4px 8px 0 rgba(1, 212, 249, 0.9);
 }
-  
+
+.img-class {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 25vh;
+    width: 100%;
+    display: block;
+    transition-delay: 1s;
+}
+
+.img-class:nth-of-type(1) {
+    background-image: url(../assets/kekloksitemple.jpg);
+}
+
+.img-class:hover {
+    background-size: 150%;
+}
+
   /* Some left and right padding inside the container */
 .container {
     padding: 0 16px;

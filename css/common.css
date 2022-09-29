@@ -64,21 +64,6 @@
 body {
   color: var(--hsl-primary);
   transform-origin: center;
-  animation: body-load .5s ease-in-out;
-}
-
-@keyframes body-load {
-  0% {
-    opacity: 0;
-    transform: scaleX(1.5);
-    overflow: hidden;
-  }
-
-  100% {
-    opacity: 1;
-    transform: scaleX(1);
-    overflow: auto;
-  }
 }
 
 #want-bgm-prompt {

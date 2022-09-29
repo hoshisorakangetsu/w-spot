@@ -37,6 +37,15 @@
     margin-right: 20px;
 }
 
+#blogs {
+    padding: 2vh 2vw;
+    margin: 2vh 0px;
+}
+
+#blogs p {
+    text-align: justify;
+}
+
 .img-map-container {
     display: flex;
     flex-direction: column;

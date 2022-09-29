@@ -63,6 +63,7 @@
 /* apply primary color to all texts */
 body {
   color: var(--hsl-primary);
+  transform-origin: center;
   animation: body-load 0.7s linear;
 }
 

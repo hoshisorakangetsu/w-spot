@@ -63,8 +63,8 @@
 /* apply primary color to all texts */
 body {
   color: var(--hsl-primary);
-  transform-origin: center;
-  animation: body-load 0.7s linear;
+  transform-origin: center top;
+  animation: body-load .5s ease-in-out;
 }
 
 @keyframes body-load {

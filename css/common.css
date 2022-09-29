@@ -63,7 +63,7 @@
 /* apply primary color to all texts */
 body {
   color: var(--hsl-primary);
-  animation: body-load 5s linear;
+  animation: body-load 1s linear;
 }
 
 @keyframes body-load {

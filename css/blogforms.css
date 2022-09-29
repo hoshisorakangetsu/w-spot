@@ -1,5 +1,6 @@
 .details-container {
     width: 85%;
+    display: flex;
     margin: 0px auto;
     margin-top: 12vh;
     margin-bottom: 2vh;
@@ -7,12 +8,72 @@
     border-radius: 15px;
     background-color: var(--hsl-bg-lighter);
 }
-.details-container img{
+/* .details-container img{
     width: 50%;
     height: 100%;
     float: left;
     margin-left: 0%;
 }
+.details-container img:hover{
+    transform: rotateY(180deg);
+} */
+
+.back-img-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 48%;
+    background-image: url(../assets/kekloksi1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: .3s;
+}
+
+.back-img-left p,
+.back-img-left h1 {
+    opacity: 0;
+}
+
+.back-img-left h1 {
+    font-size: 2.25em;
+}
+
+.back-img-left p {
+    color: var(--hsl-text);
+}
+
+.promo-code {
+    color: var(--hsl-primary);
+    font-weight: 700;
+}
+
+.back-img-left:hover {
+    animation: change-bg 1s ease-in-out;
+    background-image: linear-gradient(
+        hsla(var(--h), var(--s-bg), var(--l-bg), 0.5), 
+        hsla(var(--h), var(--s-bg), var(--l-bg), 0.5)
+      ), url(../assets/blogsformimg.jpg);
+}
+
+.back-img-left:hover p,
+.back-img-left:hover h1 {
+    opacity: 1;
+}
+
+@keyframes change-bg {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 .details-container::after{
     clear: both;
     content: "";
@@ -78,7 +139,4 @@
         background-color: aquamarine;
         transform: scale(0.8);
         transition: 1.2s;
-}
-.details-container h1{
-    border: 1px solid red;
 }

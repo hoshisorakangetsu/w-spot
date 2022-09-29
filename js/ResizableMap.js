@@ -21,6 +21,7 @@ class ResizableMap {
       const newHeight = this.img.clientHeight
       const widthChngeRatio = newWidth / this.previousWidth
       const heightChngeRatio = newHeight / this.previousHeight
+      console.log(newWidth, newHeight, widthChngeRatio, heightChngeRatio, this)
       // all the area tags of the map elements, converting it into array first
       let areas = Array.from(this.map.areas)
       areas.forEach(area => {

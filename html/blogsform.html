@@ -91,38 +91,38 @@
             <p>Use promo code <span class="promo-code">3ast3r3gg</span> for RM50 off!</p>
           </div>
           <div id="mysection">
-            <h1>New Blogs Form</h1>
-                <form id="myform">
-                  <div class="flex-col">
-                    <div class="input">
-                      <label for="name">Name</label>
-                      <input type="text"id="name"placeholder="Name">
-                    </div>
-                    <div class="input">
-                      <label for="review">Your review</label>
-                      <textarea name="review" id="review" rows="5" cols="20" placeholder="Enter your reviews"></textarea>
-                    </div>
-                    <div class="input">
-                      <label for="uploadfile">Upload your picture</label>
-                      <input type="file" id="myFile"id="uploadfile" name="filename">
-                    </div>
-                  </div>
-                  <div class="button">
-                    <input type="button"value="Clear" id="clear" onclick="cancelinput()">
-                    <input type="submit" id="submit" value="Submit" onclick="myfunc()">
-                  </div>
+            <form id="myform">
+              <div class="flex-col">
+                <h1>New Blogs Form</h1>
+                <div class="input">
+                  <label for="name">Name</label>
+                  <input type="text"id="name"placeholder="Name">
+                </div>
+                <div class="input">
+                  <label for="review">Your review</label>
+                  <textarea name="review" id="review" rows="5" cols="20" placeholder="Enter your reviews"></textarea>
+                </div>
+                <div class="input">
+                  <label for="uploadfile">Upload your picture</label>
+                  <input type="file" id="myFile"id="uploadfile" name="filename">
+                </div>
+                <div class="button">
+                  <input type="button"value="Clear" id="clear" onclick="cancelinput()">
+                  <input type="submit" id="submit" value="Submit" onclick="myfunc()">
+                </div>
+              </div>
                 
-                <script>
-                  function cancelinput(){
-                    
-                      document.getElementById("myform").reset();
+              <script>
+                function cancelinput(){
+                  
+                    document.getElementById("myform").reset();
+                }
+                function myfunc(){
+                    alert("You have successfully submitted this form ");
                   }
-                  function myfunc(){
-                      alert("You have successfully submitted this form ");
-                    }
-                </script>
-              </form>
-            </div>
+              </script>
+            </form>
+          </div>
         </div>
       </div>
     </div>

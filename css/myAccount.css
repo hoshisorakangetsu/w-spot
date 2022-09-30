@@ -137,3 +137,55 @@
 #custom-tour-list {
   display: none;
 }
+
+.blogs-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid var(--hsl-primary);
+}
+
+.blogs-header h1 {
+  border: none;
+  margin: 0px auto;
+}
+
+.blogs-header button {
+  padding: 0px;
+  margin: 1vh 0px;
+  padding: 1vh 1vw;
+}
+
+.created-blogs-container {
+  width: 100%;
+  display: flex;
+  margin: 2vh 0px;
+  gap: 2vw;
+}
+
+.created-blogs-card {
+  display: flex;
+  flex-direction: column;
+  padding: 2vh 2vw;
+  width: 20%;
+  border-radius: 12px;
+  background-color: var(--hsl-bg-darker);
+  box-shadow: 0px 0px 3px var(--hsl-shadow);
+  width: calc(55vw * 0.3);
+}
+
+.created-blogs-card:hover {
+  box-shadow: 1px 1px 5px var(--hsl-shadow);
+}
+
+.created-blogs-card * {
+  margin: 1vh 0px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.created-blogs-card button {
+  font-size: 1em;
+  padding: 1vh 0px;
+}

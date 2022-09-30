@@ -481,14 +481,9 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 
-/* disabled button should be more transparent and have no pointer-events, with cursor set to not allowed*/
-button:disabled {
+/* disabled stuffs should be more transparent and have no pointer-events, with cursor set to not allowed*/
+*[disabled] {
   cursor: not-allowed;
   pointer-events: none;
   opacity: .6;
-}
-
-/* for everything that has a disabled attr, lower the opacity*/
-*[disabled] {
-  opacity: 0.7;
 }

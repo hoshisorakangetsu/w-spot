@@ -10,10 +10,7 @@
   <link rel="stylesheet" href="../css/tourDetails.css">
   <script src="../js/utils.js" defer></script>
   <script src="../js/common.js" defer></script>
-  <script src="../js/ResizableMap.js" defer></script>
-  <script src="../js/commonTour.js" defer></script>
-  <script src="../js/tour1Details.js" defer></script>
-  <title>W-Spot: Tour 1</title>
+  <title>W-Spot: Tour 2</title>
 </head>
 
 <body>
@@ -83,113 +80,32 @@
       <div class="details-container">
         <!-- inside can be video or img, doesn't matter -->
         <div class="media-container">
-          <img id="tour-1-img" src="../assets/no-preview.png" alt="No preview available" usemap="#tour-1-img-map">
-          <map name="tour-1-img-map" id="tour-1-img-map">
-            <area shape="rect" coords="226,275,739,793" href="" alt="">
-          </map>
+          <!-- TODO: replace this link with our own video (if need to use youtube video, download it down as CORS won't allow u to use youtube links directly) -->
+          <!-- using video as video is easier to style, and we need to listen to the play and pause event to either play or pause the bgm -->
+          <div>
+            <video src="../assets/penang.mp4" controls></video>
+          </div>
+          <div class="details-field-container">
+            <div class="field-container" id="tour-title">
+              <h2>Title</h2>
+              <h4>Penang Jalan-Jalan Cari Makan.</h4>
+            </div>
+            <div class="field-container" id="tour-customer">
+              <h2>Published By</h2>
+              <h4>W-Spot Official</h4>
+            </div>
+            <div class="field-container" id="tour-period">
+              <h2>Tour Period</h2>
+              <h4>2 Days</h4>
+            </div>
+            <div class="info">
+              <h2>Price</h2>
+              <p>RM 350</p>
+            </div>
+          </div>
         </div>
-        <div class="details-field-container">
-          <div class="field-container" id="tour-title">
-            <h2>Title</h2>
-            <h4>Lorem ipsum dolor sit amet consectetur.</h4>
-          </div>
-          <div class="field-container" id="tour-customer">
-            <h2>Published By</h2>
-            <h4>W-Spot Official</h4>
-          </div>
-          <div class="field-container" id="tour-period">
-            <h2>Tour Period</h2>
-            <h4>2 Days</h4>
-          </div>
-          <div class="info">
-            <h2>Price</h2>
-            <p>RM 500</p>
-          </div>
-          <div class="location">
-            <h2>Location Visit</h2>
-          </div>
-          <div class="flex location-card">
-            <img 
-              src="../assets/tour3_penang_hill.jpg" 
-              alt="penang_hill" 
-              class="slide-in slide-in-left">
-            <h1 class="slide-in slide-in-right">Visit to Penang Hill</h1>
-          </div>
-          <div class="flex location-card">
-            <h1 class="slide-in slide-in-left">Visit to Kek Lok Si</h1>
-            <img 
-              src="../assets/tour3_kek_lok_si.jpg" 
-              alt="kek_lok_si" 
-              class="slide-in slide-in-right">
-          </div>
-          <div class="flex location-card slide-out">
-            <img 
-              src="../assets/tour3_kapitan_keling_mosque.jpeg" 
-              alt="kapitan_keling_mosque"
-              class="slide-in slide-in-left">
-            <h1 class="slide-in slide-in-right">Visit to Kapitan Keling Mosque</h1>
-          </div>
-          <div class="flex location-card slide-out">
-            <h1 class="slide-in slide-in-left">Visit to St.George's Church</h1>
-            <img 
-              src="../assets/tour3_St_George's_Church.jpg" 
-              alt="St.George's Church" 
-              class="slide-in slide-in-right">
-          </div>
-          <div class="flex location-card slide-out">
-            <img 
-              src="../assets/tour3_fort_cornwallis.jpg" 
-              alt="fort_cornwallis" 
-              class="slide-in slide-in-left">
-            <h1 class="slide-in slide-in-right">Visit to Fort Cornwallis</h1>
-          </div>
-          <div class="flex location-card slide-out">
-            <h1 class="slide-in slide-in-left">Visit to Town Hall</h1>
-            <img 
-              src="../assets/tour3_town_hall.jpg" 
-              alt="town_hall" 
-              class="slide-in slide-in-right">
-          </div>
-          <div class="flex location-card slide-out">
-            <img 
-              src="../assets/tour3_Sri_Mahamariamman_Temple.jpg" 
-              alt="Sri_Mahamariamman_Temple"
-              class="slide-in slide-in-left">
-            <h1 class="slide-in slide-in-right">Visit to Sri Mahamariamman Temple</h1>
-          </div>
-          <div class="flex location-card slide-out">
-            <h1 class="slide-in slide-in-left">Visit to Street Art</h1>
-            <img 
-              src="../assets/tour3_street_art.png" 
-              alt="street_art" 
-              class="slide-in slide-in-right">
-          </div>
-          <div class="info">
-            <form action="" method="post">
-              <h2>Choose your Date</h2>
-              <div class="date">
-                <div>
-                  <label for="sDate">Start Date</label>
-                  <input type="date" name="sDate" id="sDate" required>
-                </div>
-                <div>
-                  <label for="eDate">End Date</label>
-                  <input type="date" name="sDate" id="sDate" disabled>
-                </div>
-              </div>
-              <div class="info">
-                <h2>Additional Enquiry</h2>
-                <div style="display: flex;">
-                  <textarea name="additionalEnquiry" id="additionalEnquiry" cols="30" rows="10"></textarea>
-                </div>
-              </div>
-            </form>
-          </div>
-        <div class="action-btns">
-          <button 
-            class="action-btn-secondary" 
-            onclick="window.location.href = './Tours.html'"
-          >Back</button>
+        <div class="button">
+          <button class="action-btn-secondary" onclick="window.location.href = './Tours.html'">Back</button>
           <!-- TODO: add fake apply function -->
           <button class="action-btn-primary">Apply</button>
         </div>

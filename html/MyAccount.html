@@ -22,8 +22,9 @@
   <div id="want-bgm-prompt">
     <!-- main content (the prompt) -->
     <div id="prompt-front">
-      <h1>Do you want to enable the BGM?</h1>      
-      <h2>Google does not allow autoplay by default based on <a href="https://developer.chrome.com/blog/autoplay/#new-behaviors" target="blank">this policy</a></h2>
+      <h1>Do you want to enable the BGM?</h1>
+      <h2>Google does not allow autoplay by default based on <a
+          href="https://developer.chrome.com/blog/autoplay/#new-behaviors" target="blank">this policy</a></h2>
       <div class="resp-btns">
         <button class="action-btn-secondary" onclick="closeBGMDialog()">No</button>
         <button class="action-btn-primary" onclick="enableBGM()">Yes</button>
@@ -149,6 +150,27 @@
                   <!-- content will be rendered by js -->
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+        <div class="main-content">
+          <div class="blogs-header">
+            <h1>Blogs</h1>
+            <button 
+              class="action-btn-primary" 
+              onclick="window.location.href = './blogsform.html'"
+            >Create</button>
+          </div>
+          <div class="created-blogs-container">
+            <div class="created-blogs-card">
+              <h2>Title lai</h2>
+              <h4>Applied By: <span title="Customer name here">Blog creator name here</span></h4>
+              <button class="action-btn-primary" onclick="acceptTour('Title here')">View</button>
+            </div>
+            <div class="created-blogs-card">
+              <h2>Title lai</h2>
+              <h4>Applied By: <span title="Customer name here">Blog creator name here</span></h4>
+              <button class="action-btn-primary" onclick="acceptTour('Title here')">View</button>
             </div>
           </div>
         </div>

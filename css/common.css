@@ -41,10 +41,12 @@
   /* bg color with transparency */
   --hsla-bg: hsla(var(--h), var(--s-bg), var(--l-bg), 0.8);
 
-  --hsl-bg-lighter: hsl(var(--h), var(--s-bg), 90%);
+  --l-bg-lighter: 90%;
+  --hsl-bg-lighter: hsl(var(--h), var(--s-bg), var(--l-bg-lighter));
 
   /* to have a background in a background (highlight a container) */
-  --hsl-bg-darker: hsl(var(--h), var(--s-bg), 80%);
+  --l-bg-darker: 80%;
+  --hsl-bg-darker: hsl(var(--h), var(--s-bg), var(--l-bg-darker));
 
   /* tweaked color to apply a matching box shadows based on primary color*/
   --s-shadow: 30%;

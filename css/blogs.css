@@ -229,21 +229,23 @@ fieldset textarea:focus {
 
 section.parallax1 {
     background-image: url('../assets/kekloksi1.jpg');
-    min-height: 500px;
+    min-height: 55vh;
     background-attachment: fixed;
-    background-position: fixed;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     margin-top: 0px;
     padding-top: 0px;
+    overflow: hidden;
+    border-radius: 12px;
 }
 section.parallax2{
     background-image: url('../assets/penanghillbanner.jpg');
-    min-height: 500px;
+    min-height: 55vh;
     background-attachment: fixed;
-    background-position: fixed;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     margin-top: 0px;
     padding-top: 0px;
+    overflow: hidden;
+    border-radius: 12px;
 }

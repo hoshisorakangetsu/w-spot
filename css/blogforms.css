@@ -33,6 +33,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     transition: .3s;
+    border-radius: 12px;
 }
 
 .back-img-left p,
@@ -108,11 +109,11 @@ label {
 }
 
 .input {
-    width: 100%;
 	display: grid;
-	grid-template-columns: 3fr 5fr;
+    grid-template-columns: 3fr 7fr;
 	align-items: center;
 	gap: 0.5vw;
+    margin: 1vh 1vw;
 }
 
 label {
@@ -153,13 +154,6 @@ label {
 .details-container input[type="file"]#uploadfile{
 
 }*/
-
-.input {
-    display: flex;
-    gap: 1vw;
-    justify-content: center;
-    margin-top: 1vh;
-}
 
 .details-container input[type="button"]#clear{
     background-color: transparent;

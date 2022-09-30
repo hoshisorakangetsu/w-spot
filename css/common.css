@@ -209,6 +209,11 @@ nav ul li a:hover {
   font-size: 2rem;
 }
 
+/* for no display nav links when header expanded */
+header:not(.collapsed) .expand-no-display {
+  display: none;
+}
+
 .user-menu {
   position: relative;
   cursor: pointer;

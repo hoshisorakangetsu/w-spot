@@ -46,6 +46,10 @@
     text-align: justify;
 }
 
+#blogs ul {
+    text-align: justify;
+}
+
 .img-map-container {
     display: flex;
     flex-direction: column;

@@ -16,7 +16,7 @@
 .details-container h1 {
   width: 100%;
   padding-bottom: 1vh;
-  border-bottom: 1px solid var(--hsl-primary);
+  border-bottom: 2px solid var(--hsl-primary);
 }
 
 .details-field-container {
@@ -45,10 +45,11 @@
 }
 
 .action-btns {
-  width: 100%;
+  width: 40%;
   display: flex;
   justify-content: center;
   gap: 2vw;
+  margin-top: 2vh;
 }
 
 .action-btns * {

@@ -41,7 +41,14 @@
   font-size: 1.5em;
   font-weight: bold;
   border-radius: 12px;
+}
+
+/* use js to toggle data-long class, if data is long, text-align justify is better */
+/* right now will define character length of any line > 50 is data-long*/
+.data-long {
   text-align: justify;
+  width: 80%;
+  margin: 0px auto; 
 }
 
 .action-btns {

@@ -307,7 +307,8 @@ main {
 
 .action-btn-primary {
   background-color: var(--hsl-primary);
-  color: var(--hsl-text);
+  /* white always look bttr on this bg, will be hardcoding this */
+  color: #fff;
   font-size: 1.25em;
   padding: 2vh 2vw;
   border-radius: 10px;
@@ -485,4 +486,9 @@ button:disabled {
   cursor: not-allowed;
   pointer-events: none;
   opacity: .6;
+}
+
+/* for everything that has a disabled attr, lower the opacity*/
+*[disabled] {
+  opacity: 0.7;
 }

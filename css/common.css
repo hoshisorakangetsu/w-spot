@@ -481,9 +481,8 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 
-/* disabled stuffs should be more transparent and have no pointer-events, with cursor set to not allowed*/
+/* disabled stuffs should be more transparent and have no pointer-events */
 *[disabled] {
   cursor: not-allowed;
-  pointer-events: none;
   opacity: .6;
 }

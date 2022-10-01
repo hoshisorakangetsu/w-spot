@@ -1,3 +1,7 @@
+.details-container {
+    overflow-x: hidden;  /* disable horiontal scroll as before slide in the img and text are outside */
+}
+
 label {
     font-size: 1.3em;
     color: var(--hsl-text);

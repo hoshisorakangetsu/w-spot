@@ -262,3 +262,38 @@ bgmEl.addEventListener('play', () => {
   pauseBgmEl.style.display = 'block'
   playBgmEl.style.display = 'none'
 })
+
+// let user switch light/dark theme
+// can directly check the dark class on body or not, if on body then means dark theme le
+function switchTheme(el) {
+  if (document.body.classList.contains('dark')) {
+    // user is now in dark theme, switch to light theme
+    el.innerText = 'To Dark Theme'
+    document.body.classList.remove('dark')
+    localStorage.setItem('w-spot-last-theme', 'LIGHT')
+  } else {
+    // user now in light theme, switch to dark theme
+    el.innerText = 'To Light Theme'
+    document.body.classList.add('dark')
+    localStorage.setItem('w-spot-last-theme', 'DARK')
+  }
+}
+
+// retrieve user last theme
+window.addEventListener("load", () => {
+  let themeSwitcher;  // will be assigned the a that is responsible for switching theme ltr based on isLoggedIn
+  // actually abit messy but no backend no framework is aneh le
+  if (isLoggedIn) {
+    themeSwitcher = document.querySelector('#logged-in-menu .theme-switch')
+  } else {
+    themeSwitcher = document.querySelector('#not-logged-in-menu .theme-switch')
+  }
+
+  // light theme by default
+  const lastTheme = localStorage.getItem('w-spot-last-theme') || 'LIGHT'
+  
+  // apply dark theme if previously selected dark theme, change the a text
+  if (lastTheme === 'DARK') {
+    switchTheme(themeSwitcher)
+  }
+})

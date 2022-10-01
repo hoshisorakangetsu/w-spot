@@ -21,11 +21,6 @@
   --l-invalid: 65%;
   --hsl-invalid: hsl(var(--h-invalid), var(--s-invalid), var(--l-invalid));
 
-  /* tweaked color to apply a matching secondary color (mostly for element background) based on primary color*/
-  --s-secondary: 40%;
-  --l-secondary: 80%;
-  --hsl-secondary: hsl(var(--h), var(--s-secondary), var(--l-secondary));
-
   /* text will be black */
   --l-text: 20%;
   --hsl-text: hsl(var(--h), var(--s), var(--l-text));
@@ -60,6 +55,31 @@
 ::selection {
   background-color: var(--hsla-selection);
   color: var(--hsl-text);
+}
+
+/* overwrite variables for dark theme */
+.dark {
+  /* background */
+  --s-bg: 55%;
+  --l-bg: 0%;
+  --hsl-bg: hsl(var(--h), var(--s-bg), var(--l-bg));
+  --hsla-bg: hsla(var(--h), var(--s-bg), var(--l-bg), 0.8);
+  --l-bg-lighter: 15%;
+  --hsl-bg-lighter: hsl(var(--h), var(--s-bg), var(--l-bg-lighter));
+  --l-bg-darker: 25%;
+  --hsl-bg-darker: hsl(var(--h), var(--s-bg), var(--l-bg-darker));
+
+    /* text will be white */
+  --l-text: 90%;
+  --hsl-text: hsl(var(--h), var(--s), var(--l-text));
+
+  --s-text-secondary: 70%;
+  --l-text-secondary: 75%;
+  --hsl-text-secondary: hsl(var(--h), var(--s-text-secondary), var(--l-text-secondary));
+
+  --s-shadow: 30%;
+  --l-shadow: 60%;
+  --hsl-shadow: hsl(var(--h), var(--s-shadow), var(--l-shadow));
 }
 
 /* apply primary color to all texts */
@@ -137,7 +157,7 @@ body {
 }
 
 #prompt-backdrop {
-  background-color: hsla(var(--h), var(--s-shadow), var(--l-shadow), 0.4);
+  background-color: hsla(var(--h), 20%, 20%, 0.5);
   position: fixed;
   top: 0; bottom: 0;
   left: 0; right: 0;

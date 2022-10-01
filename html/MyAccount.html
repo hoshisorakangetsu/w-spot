@@ -69,12 +69,15 @@
       </svg>
       <!-- will be expanded out when user click on the user icon -->
       <!-- will use js to determine which div to show -->
+      <!-- only one theme-switch will exist at any time -->
       <div class="user-menu-actions" id="not-logged-in-menu">
         <!-- go to login page handled by js as there are more stuffs needed to be handled -->
         <!-- user should not be able to see this in MyAccount.html but will just leave it here for the sake of consistency -->
+        <a class="theme-switch" onclick="switchTheme(this)">To Dark Mode</a>
         <a href="#" onclick="goToLogin()">Log In</a>
       </div>
       <div class="user-menu-actions" id="logged-in-menu">
+        <a class="theme-switch" onclick="switchTheme(this)">To Dark Mode</a>
         <a href="./MyAccount.html">My Account</a>
         <a href="#" onclick="logout()">Log Out</a>
       </div>

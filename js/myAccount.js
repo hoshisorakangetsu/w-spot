@@ -36,6 +36,15 @@ function viewTour(tourIdx) {
 
 window.addEventListener("load", () => {
   const loggedInUser = JSON.parse(sessionStorage.getItem('loggedInUser'))
+
+  // disable button for non-tour guide users
+  const preMadeTours = document.querySelectorAll('.applied-tours-card')
+  preMadeTours.forEach(premadeTour => {
+    // safe as all premade tours only have one accept button
+    const acceptBtn = premadeTour.querySelector('button')
+    acceptBtn.disabled = loggedInUser.role === 'TRAVELLER'
+  })
+
   // render role (can safely parse as have log in guard)
   document.getElementById('role').innerHTML = loggedInUser.role.split('_').join(' ')
   // render user name
@@ -68,7 +77,13 @@ window.addEventListener("load", () => {
         <h4>Status: <span>${tour.status}</span></h4>
         <button 
           class="action-btn-primary"
-          onclick="acceptTour('${tour.title}')"
+          onclick="acceptTour('custom', '${tour.title}', ${index})"
+          ${
+            // disable if the tour is not pending and the user is not a tour guide
+            loggedInUser.role !== 'TOUR_GUIDE' && tour.status !== 'Pending' 
+              ? 'disabled'
+              : ''
+          }
         >Accept</button>
         <button
           class="action-btn-secondary"

@@ -15,7 +15,19 @@ const tours = [
 
 // get which tour they clicked apply from (the # part, use substring to remove the #)
 const fromTour = parseInt(window.location.hash.substring(1))
-const tripOption = document.getElementById('trip')
+const tripSelect = document.getElementById('trip')
+
+// append the options to tripSelect element
+tours.forEach((tour, i) => {
+  // create an option value
+  const option = document.createElement('option')
+  option.value = i
+  // safe to use innerHTML as the tours array only accessible here, no XSS oppoturnity
+  option.innerHTML = tour.title
+
+  // add the option as a child into the select
+  tripSelect.appendChild(option)
+})
 
 let selectedTour
 
@@ -25,13 +37,13 @@ let finalPrice
 // TODO: if fromTour is invalid or not exist, noneed autofill the select option
 if (fromTour !== NaN) {
   // auto fill the select option
-  tripOption.value = fromTour.toString()
+  tripSelect.value = fromTour.toString()
   selectedTour = fromTour - 1  // -1 becuz is index
 }
 
 // listen to select option change, change selectedTour
-tripOption.addEventListener("change", () => {
-  selectedTour = parseInt(tripOption.value) - 1
+tripSelect.addEventListener("change", () => {
+  selectedTour = parseInt(tripSelect.value) - 1
   calcPrice()
 })
 
@@ -101,7 +113,7 @@ function submitForm(el, ev) {
   if (selectedTour < 0) {
     alert("Please select a tour")
     // focus the element for them
-    tripOption.focus()
+    tripSelect.focus()
     return
   }
 

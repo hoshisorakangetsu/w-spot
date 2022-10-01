@@ -84,7 +84,7 @@
           <h1>Thanks for Choosing Us</h2>
           <h2>We will make sure you will not regret!</h2>
         </div>
-				<form action="" method="post">
+				<form action="" method="post" onsubmit="submitForm(this, event)">
 					<fieldset>
 						<legend>Book Now!</legend>
 							<div class="flex-col">
@@ -99,7 +99,7 @@
 									</div>
 									<div class="grid">
 										<label for="pax">Number of Pax</label>
-										<input type="number" name="pax" id="pax" value="1">
+										<input type="number" name="pax" id="pax" value="1" step="1" pattern="[0-9]">
 									</div>
 								</div>
 								<div class="flex-container">
@@ -120,7 +120,7 @@
 									</div>
 									<div>
 										<label for="eDate">End Date</label>
-										<input type="date" name="sDate" id="sDate" disabled>
+										<input type="date" name="eDate" id="eDate" disabled>
 									</div>
 								</div>
 								<div>
@@ -131,8 +131,8 @@
 								</div>
                 <div class="flex-container">
 									<div class="grid">
-                    <label for="budget">Promo Code</label>
-                    <input type="text" name="budget" id="budget" placeholder="Please input if you have">
+                    <label for="promo">Promo Code</label>
+                    <input type="text" name="promo" id="promo" placeholder="Please input if you have">
                   </div>
 									<div class="grid">
 										<label for="price">Price</label>
@@ -142,12 +142,11 @@
 								</div>
 							</div>
 					</fieldset>
+          <div class="button">
+            <button class="action-btn-secondary" onclick="window.location.href = './Tours.html'">Back</button>
+            <button class="action-btn-primary" type="submit">Apply</button>
+          </div>
 				</form>
-				<div class="button">
-          <button class="action-btn-secondary" onclick="window.location.href = './Tours.html'">Back</button>
-          <!-- TODO: add fake apply function -->
-          <button class="action-btn-primary">Apply</button>
-        </div>
 			</div>
     </div>
   </main>

@@ -112,6 +112,7 @@ function submitForm(el, ev) {
   }
 
   alert(`${document.getElementById('name').value} have applied for ${tours[selectedTour].title}. Please pay RM ${finalPrice}`)
+  location.href = './Tours.html'
 }
 
 function toInputDateValue(date) {

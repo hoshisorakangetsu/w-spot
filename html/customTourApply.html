@@ -84,7 +84,7 @@
           <h1>Start To Plan Your Trip</h2>
           <h2>Do not hesitate, Contact Us now!</h2>
         </div>
-					<form action="" method="post">
+					<form action="" method="post" onsubmit="applyTour(this, event)">
 						<fieldset>
 							<legend>Personal Info</legend>
                 <div class="flex">
@@ -95,7 +95,7 @@
                     </div>
 										<div class="grid">
                       <label for="ic">IC number</label>
-										  <input type="text" name="ic" id="ic" placeholder="111111001111" required>
+										  <input type="text" name="ic" id="ic" placeholder="111111001111" required pattern="[0-9]{12}">
                     </div>
                   </div>
                   <div class="flex-col">
@@ -105,7 +105,7 @@
                       </div>
                       <div class="grid">
                         <label for="pNumber">HP Number</label>
-                        <input type="text" name="pNumber" id="pNumber" placeholder="0101234567" required>
+                        <input type="text" name="pNumber" id="pNumber" placeholder="0101234567" required pattern="[0-9]+">
                       </div>
                   </div>
                 </div>
@@ -119,7 +119,7 @@
                     </div>
                     <div class="info">
                       <label for="budget">Budget</label>
-                      <input type="text" name="budget" id="budget" value="RM" required>
+                      <input type="text" name="budget" id="budget" value="RM " required>
                     </div>
                   </div>
 									<div class="date-container">
@@ -142,7 +142,7 @@
                   class="action-btn-secondary" 
                   onclick="window.location.href = './Tours.html'"
                 >Back</button>
-								<button class="action-btn-primary" onclick="applyTour()">Submit</button>
+								<button class="action-btn-primary" type="submit">Submit</button>
 						</div>
 				</form>
 				<div class="contact">

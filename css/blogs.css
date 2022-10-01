@@ -253,3 +253,16 @@ section.parallax2{
     overflow: hidden;
     border-radius: 12px;
 }
+
+ul {
+    margin-left: 2vw;
+}
+
+li {
+    text-align: justify; 
+    font-size: 2rem;
+}
+
+.no-top-margin {
+    margin-top: 0 !important;
+}

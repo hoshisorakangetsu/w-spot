@@ -279,21 +279,19 @@ function switchTheme(el) {
   }
 }
 
-// retrieve user last theme
-window.addEventListener("load", () => {
-  let themeSwitcher;  // will be assigned the a that is responsible for switching theme ltr based on isLoggedIn
-  // actually abit messy but no backend no framework is aneh le
-  if (isLoggedIn) {
-    themeSwitcher = document.querySelector('#logged-in-menu .theme-switch')
-  } else {
-    themeSwitcher = document.querySelector('#not-logged-in-menu .theme-switch')
-  }
+// retrieve user last theme, can be outside as this code is loaded defer, which means all elements are mounted already
+let themeSwitcher;  // will be assigned the a that is responsible for switching theme ltr based on isLoggedIn
+// actually abit messy but no backend no framework is aneh le
+if (isLoggedIn) {
+  themeSwitcher = document.querySelector('#logged-in-menu .theme-switch')
+} else {
+  themeSwitcher = document.querySelector('#not-logged-in-menu .theme-switch')
+}
 
-  // light theme by default
-  const lastTheme = localStorage.getItem('w-spot-last-theme') || 'LIGHT'
-  
-  // apply dark theme if previously selected dark theme, change the a text
-  if (lastTheme === 'DARK') {
-    switchTheme(themeSwitcher)
-  }
-})
+// light theme by default
+const lastTheme = localStorage.getItem('w-spot-last-theme') || 'LIGHT'
+
+// apply dark theme if previously selected dark theme, change the a text
+if (lastTheme === 'DARK') {
+  switchTheme(themeSwitcher)
+}

@@ -108,7 +108,7 @@
   /* the calculation for the height of the other tour cards */
   /* won't be affected if is on the same level as other cards, but in case the wrap happened */
   /* it will at least has a height on its own */
-  height: calc(4vh + 19vh + 1em + 2vh); 
+  min-height: calc(4vh + 19vh + 1em + 2vh); 
   /* justify content works as it will also be a flex (got it from .tour-blogs-card) */
   justify-content: space-evenly;
   opacity: 0.8;

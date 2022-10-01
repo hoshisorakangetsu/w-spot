@@ -23,15 +23,17 @@ budgetEl.addEventListener("blur", () => {
 })
 budgetEl.addEventListener("keydown", e => {
   console.log(e, e.key)
-  // prevent the default behavior of inputting into the field
-  e.preventDefault()
   // check if the key is a number if not a number, will return NaN
   const key = parseInt(e.key)
-  // only allow 0 - 9, backspace and . in the input
-  if (key === NaN || !((key >= 0 && key <= 9) || e.key === 'Backspace' || e.key === '.')) return
-  budgetEl.value = e.key === 'Backspace' 
-    ? budgetEl.value.substring(0, budgetEl.value.length - 1)   // if is backspace, remove the last char
-    : budgetEl.value + e.key  // else, append the char to the input
+  // only allow 0 - 9, backspace, tab and . in the input
+  if (
+    key === NaN 
+    || !((key >= 0 && key <= 9) || e.key === 'Backspace' || e.key === '.' || e.key === 'Tab')
+  ) {
+    // prevent browser default behavior
+    e.preventDefault()
+    return
+  }
 })
 
 // store the form data in localStorage (extract the array out, then push to that array and stringify it again)
@@ -88,7 +90,7 @@ function applyTour(el, ev) {
     startDate,
     endDate,
     details,
-    status: 'PENDING',  // PENDING by default
+    status: 'Pending',  // PENDING by default
   }
   console.log(customTourObj)
 

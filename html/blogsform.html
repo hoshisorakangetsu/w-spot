@@ -108,7 +108,7 @@
                 </div>
                 <div class="button">
                   <input type="button"value="Clear" id="clear" onclick="cancelinput()">
-                  <input type="submit" id="submit" value="Submit" onclick="myfunc()">
+                  <input type="submit" id="submit" value="Submit" onclick="myfunc(event)">
                 </div>
               </div>
                 
@@ -117,8 +117,14 @@
                   
                     document.getElementById("myform").reset();
                 }
-                function myfunc(){
-                    alert("You have successfully submitted this form ");
+                function myfunc(e){
+                    e.preventDefault();  // prevent redirect
+                    var publish = confirm("Publish this blog?");
+                    if (publish) {
+                      alert("You have successfully published this blog");
+                      goHome()
+                    }
+                    else alert("You cancelled the operation");
                   }
               </script>
             </form>

@@ -12,4 +12,7 @@ function acceptTour(type, name, index) {
   // update the status
   customTours[index].status = accept ? 'Accepted' : 'Pending'
   localStorage.setItem('customTours', JSON.stringify(customTours))
+  alert(accept ? 'Tour accepted!' : 'Tour not accepted!')
+  // reload to see the changes
+  window.location.reload()
 }

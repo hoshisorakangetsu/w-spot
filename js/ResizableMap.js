@@ -1,5 +1,5 @@
 // to make the image maps responsive
-// hahah this might be the first and last time i document the functions properly due to time
+// hahah this might be the last time i document the functions properly due to time
 class ResizableMap {
   /**
    * Creates a resizable map that resizes the image map based on window size

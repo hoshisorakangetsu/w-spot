@@ -5,6 +5,7 @@
   background-repeat: no-repeat !important;
   background-size: cover !important;
   position: relative;
+  perspective: 500px;  /* for 3d transform */
 }
 
 .hero-wrapper {

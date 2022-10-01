@@ -52,10 +52,13 @@
       </svg>
       <!-- will be expanded out when user click on the user icon -->
       <!-- will use js to determine which div to show -->
+      <!-- only one theme-switch will exist at any time -->
       <div class="user-menu-actions" id="not-logged-in-menu">
+        <a class="theme-switch" onclick="switchTheme(this)">To Dark Mode</a>
         <a href="./login.html">Log In</a>
       </div>
       <div class="user-menu-actions" id="logged-in-menu">
+        <a class="theme-switch" onclick="switchTheme(this)">To Dark Mode</a>
         <a href="./MyAccount.html">My Account</a>
         <a href="#" onclick="logout()">Log Out</a>
       </div>

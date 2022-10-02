@@ -1,6 +1,8 @@
 # w-spot
 A toy website made by a group of first year degree students
 
+## [Go To Website](https://hoshisorakangetsu.github.io/w-spot/html/index.html)
+
 ## Team members
 - Xuan Bin AKA
   - [hanyue1014](https://github.com/hanyue1014)

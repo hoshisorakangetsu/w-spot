@@ -36,14 +36,15 @@ let finalPrice
 
 if (fromTour !== NaN) {
   // auto fill the select option
-  tripSelect.value = fromTour.toString()
   selectedTour = fromTour - 1  // -1 becuz is index
+  tripSelect.value = selectedTour.toString()
 }
 
 // listen to select option change, change selectedTour, recalculate price
 tripSelect.addEventListener("change", () => {
   selectedTour = parseInt(tripSelect.value)
   calcPrice()
+  calcEndDate()  // calculate end date when change also
 })
 
 // elements needed for calculation (listen for their change and update the price)
@@ -74,8 +75,8 @@ const startDateEl = document.getElementById('sDate')
 startDateEl.addEventListener("change", calcEndDate)
 
 function calcEndDate() {
-  // if there are no selected tour, no need execute following stuff
-  if (!selectedTour || selectedTour < 0) return
+  // if there are no selected tour or start date not selected, no need execute following stuff
+  if (!selectedTour || selectedTour < 0 || !startDateEl.value) return
 
   // to auto calculate the end date for user
   // one day is 24hr * 60 min * 60 sec * 1000 ms

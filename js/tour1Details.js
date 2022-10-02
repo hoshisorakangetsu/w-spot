@@ -2,7 +2,7 @@
 const vidEl = document.querySelector('video')
 // listen to video play, when video play, pause currently playing media player (most likely is bgm)
 vidEl.addEventListener("play", () => {
-  if (nowPlaying) {
+  if (nowPlaying && nowPlaying !== vidEl) {
     nowPlaying.pause()
     previouslyPlaying = nowPlaying
     nowPlaying = vidEl

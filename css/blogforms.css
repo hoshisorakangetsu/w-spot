@@ -1,6 +1,6 @@
 .details-container {
     width: 85%;
-    height: 60vh;
+    min-height: 60vh;
     display: flex;
     margin: 0px auto;
     margin-top: 12vh;
@@ -127,7 +127,7 @@ label {
     align-items: center;
 }
 
-.details-container input[type="text"]#name{
+.details-container input {
     border-radius: 12px;
 	border-color: var(--hsl-primary);
 	text-align: left;
@@ -136,9 +136,13 @@ label {
     padding: 1vh 3vw;
 }
 
-.details-container input[type="text"]#name:focus {
+.details-container input {
     background-color: var(--hsl-bg);
     box-shadow: 0px 2px 8px var(--hsl-shadow);
+}
+
+label[for="review"] {
+    align-self: flex-start;
 }
 
 .details-container textarea{

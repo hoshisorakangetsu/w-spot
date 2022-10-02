@@ -176,9 +176,12 @@ function playBgm() {
     previouslyPlaying = nowPlaying
   }
 
-  // if there arent any bgm playing before, just make the play button start from first song
-  currentBgm = currentBgm < 0 ? 0 : currentBgm
-  bgmEl.src = bgmFolder + bgms[currentBgm].fileName
+  if (previouslyPlaying && previouslyPlaying !== bgmEl) {
+    // if there arent any bgm playing before, just make the play button start from first song
+    currentBgm = currentBgm < 0 ? 0 : currentBgm
+    bgmEl.src = bgmFolder + bgms[currentBgm].fileName
+  }
+
   bgmEl.play()
   nowPlaying = bgmEl
   nowPlayingBGMEl.innerText = bgms[currentBgm].songName
@@ -197,6 +200,7 @@ function pauseBgm() {
   } else {
     nowPlaying = null
   }
+  previouslyPlaying = bgmEl
 }
 
 function nextBgm() {

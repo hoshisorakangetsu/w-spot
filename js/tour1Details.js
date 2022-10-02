@@ -13,6 +13,6 @@ addMultipleEventListeners(vidEl, () => {
   if (previouslyPlaying && previouslyPlaying !== vidEl) {
     previouslyPlaying.play()
     nowPlaying = previouslyPlaying
-    previouslyPlaying = null
+    previouslyPlaying = vidEl
   }
 }, "pause", "end")

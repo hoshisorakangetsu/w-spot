@@ -86,6 +86,7 @@
 body {
   color: var(--hsl-primary);
   transform-origin: center;
+  font-family: Calibri, Arial, sans-serif;
 }
 
 #goToTop {

@@ -9,7 +9,7 @@ const tours = [
   {
     title: "Penang Full Day Tour",
     price: 500,
-    tourDuration: 2
+    tourDuration: 1
   }
 ]
 

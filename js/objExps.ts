@@ -25,7 +25,6 @@ interface PremadeTours {
 
 // for custom made tours applied by user
 interface CustomTour {
-  // TODO: decide which fields should this have
   title: string;
   details: string; // the additional infos
   startDate: string; // shud be date string

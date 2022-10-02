@@ -34,7 +34,6 @@ let selectedTour
 // to store the price calculated
 let finalPrice
 
-// TODO: if fromTour is invalid or not exist, noneed autofill the select option
 if (fromTour !== NaN) {
   // auto fill the select option
   tripSelect.value = fromTour.toString()
@@ -98,7 +97,6 @@ function calcEndDate() {
   endDateEl.value = toInputDateValue(new Date(endDate))
 }
 
-// TODO: check form invalid
 function submitForm(el, ev) {
   // prevent default submission behavior
   ev.preventDefault()

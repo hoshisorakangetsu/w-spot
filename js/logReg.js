@@ -53,7 +53,6 @@ function login(ev) {
   // exit the function if form is not valid
   if (!isFormValid) return
 
-  // TODO: add login functionality
   const usernameEl = document.querySelector('#username')
   const passwordEl = document.querySelector('#password')
 

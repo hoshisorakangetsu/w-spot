@@ -198,6 +198,7 @@ function pauseBgm() {
   bgmEl.pause()
   // if there is smtg playing before, but is not ourselves, play tht
   if (previouslyPlaying && previouslyPlaying !== bgmEl) {
+    console.log('common.js:201', previouslyPlaying)
     previouslyPlaying.play()
     nowPlaying = previouslyPlaying
   } else {

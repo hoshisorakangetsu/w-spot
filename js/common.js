@@ -276,12 +276,12 @@ bgmEl.addEventListener('play', () => {
 function switchTheme(el) {
   if (document.body.classList.contains('dark')) {
     // user is now in dark theme, switch to light theme
-    el.innerText = 'To Dark Theme'
+    el.innerText = 'To Dark Mode'
     document.body.classList.remove('dark')
     localStorage.setItem('w-spot-last-theme', 'LIGHT')
   } else {
     // user now in light theme, switch to dark theme
-    el.innerText = 'To Light Theme'
+    el.innerText = 'To Light Mode'
     document.body.classList.add('dark')
     localStorage.setItem('w-spot-last-theme', 'DARK')
   }

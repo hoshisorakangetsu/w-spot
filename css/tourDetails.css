@@ -36,6 +36,7 @@
 
 .details-field-container {
   display: flex;
+  padding: 2vh 0px;
   flex-direction: column;
   justify-content: space-evenly;
   background-color: var(--hsl-bg-darker);

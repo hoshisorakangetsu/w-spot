@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="../css/blogforms.css">
   <script src="../js/utils.js" defer></script>
   <script src="../js/common.js" defer></script>
+  <script src="../js/blogsForm.js" defer></script>
   <title>W-Spot: New Blogs Input</title>
 </head>
 
@@ -102,6 +103,16 @@
                   <input type="text" id="name" placeholder="Name" required>
                 </div>
                 <div class="input">
+                  <label for="ratings">Ratings</label>
+                  <div class="ratings-wrapper" data-selected="0">
+                    <span class="ratings" id="star1" data-star-index="1">&#9734;</span>
+                    <span class="ratings" id="star2" data-star-index="2">&#9734;</span>
+                    <span class="ratings" id="star3" data-star-index="3">&#9734;</span>
+                    <span class="ratings" id="star4" data-star-index="4">&#9734;</span>
+                    <span class="ratings" id="star5" data-star-index="5">&#9734;</span>
+                  </div>
+                </div>
+                <div class="input">
                   <label for="review">Your review</label>
                   <textarea name="review" id="review" rows="5" cols="20" placeholder="Enter your reviews" required></textarea>
                 </div>
@@ -114,26 +125,6 @@
                   <input type="submit" id="submit" value="Submit">
                 </div>
               </div>
-                
-              <script>
-                function cancelinput(){
-                  
-                    document.getElementById("myform").reset();
-                }
-                function myfunc(form, e){
-                  e.preventDefault();  // prevent redirect
-
-                  if (!form.checkValidity()) {
-                    form.reportValidity()
-                  } else {
-                    var publish = confirm("Publish this blog?");
-                    if (publish) {
-                      alert("You have successfully published this blog");
-                      goHome()
-                    } else alert("You cancelled the operation");
-                  }
-                }
-              </script>
             </form>
           </div>
         </div>

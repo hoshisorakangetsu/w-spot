@@ -191,10 +191,28 @@ label {
     box-shadow: 2px 2px 12px var(--hsl-shadow);
 }
 
+.details-container form input,
+.details-container form textarea {
+    color: var(--hsl-text);
+}
+
 .button {
 	margin-top: 1vh;
 	display: flex;
 	gap: 2vw;
 	justify-content: center;
     margin-bottom: 1vh;
+}
+
+.ratings-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 2rem;
+    gap: 1vw;
+}
+
+.ratings {
+    cursor: pointer;
+    color: gold;
+    font-weight: bold;
 }

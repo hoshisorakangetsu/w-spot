@@ -80,7 +80,7 @@ window.addEventListener("load", () => {
           onclick="acceptTour('custom', '${tour.title}', ${index})"
           ${
             // disable if the tour is not pending and the user is not a tour guide
-            loggedInUser.role !== 'TOUR_GUIDE' && tour.status !== 'Pending' 
+            loggedInUser.role !== 'TOUR_GUIDE' || tour.status !== 'Pending' 
               ? 'disabled'
               : ''
           }

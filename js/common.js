@@ -175,6 +175,7 @@ function playBgm() {
     // if there arent any bgm playing before, just make the play button start from first song
     currentBgm = currentBgm < 0 ? 0 : currentBgm
     bgmEl.src = bgmFolder + bgms[currentBgm].fileName
+    nowPlayingBGMEl.innerText = bgms[currentBgm].songName
   }
 
   // in case there is something playing right now
@@ -187,7 +188,6 @@ function playBgm() {
 
   bgmEl.play()
   nowPlaying = bgmEl
-  nowPlayingBGMEl.innerText = bgms[currentBgm].songName
 }
 
 function pauseBgm() {

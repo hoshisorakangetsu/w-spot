@@ -1,7 +1,7 @@
 # w-spot
-A toy website made by a group of first year degree students
+A toy website made by a group of first year degree students for their semester one project
 
-## [Go To Website](https://hoshisorakangetsu.github.io/w-spot/html/index.html)
+## [Click Me To Go To Website](https://hoshisorakangetsu.github.io/w-spot/html/index.html)
 
 ## Team members
 - Xuan Bin AKA

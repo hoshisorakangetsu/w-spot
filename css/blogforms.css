@@ -127,7 +127,8 @@ label {
     align-items: center;
 }
 
-.details-container input {
+/* select all inputs except the input type=file */
+.details-container input:not(input[type="file"]) {
     border-radius: 12px;
 	border-color: var(--hsl-primary);
 	text-align: left;
@@ -136,7 +137,7 @@ label {
     padding: 1vh 3vw;
 }
 
-.details-container input {
+.details-container input:not(input[type="file"]):hover {
     background-color: var(--hsl-bg);
     box-shadow: 0px 2px 8px var(--hsl-shadow);
 }

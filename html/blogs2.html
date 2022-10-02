@@ -215,13 +215,19 @@
             <fieldset>
               <legend>Tell Us More</legend>
               <div class="comments">
-                <textarea placeholder="Share your experiences with us" rows="5" cols="3"></textarea>
+                <textarea placeholder="Share your experiences with us" rows="5" cols="3" id="feedback"></textarea>
                 <input type="submit" class="action-btn-primary" value="Submit" id="submit" onclick="myfunction1()">
               </div>
             </fieldset>
             <script>
               function myfunction1() {
+                if (document.getElementById("feedback").value.length <= 0) {
+                  alert("Cannot submit empty feedback!")
+                }
                 if (confirm("Are you sure you want to submit your feedback ?")) {
+                  alert("Feedback submit successful!")
+                } else {
+                  alert("Feedback submit failed: User Canceled")
                 }
               }
             </script>

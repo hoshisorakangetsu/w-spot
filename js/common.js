@@ -178,8 +178,8 @@ function playBgm() {
     nowPlayingBGMEl.innerText = bgms[currentBgm].songName
   }
 
-  // in case there is something playing right now
-  if (nowPlaying) {
+  // in case there is something playing right now, and its not ourself
+  if (nowPlaying && nowPlaying !== bgmEl) {
     nowPlaying.pause()
     previouslyPlaying = nowPlaying
   } else {

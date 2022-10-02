@@ -2,7 +2,7 @@
 // use tours[index] to get access to the tour obj, which has price in it
 const tours = [
   {
-    title: "George Town Walk",
+    title: "GeorgeTown Walk",
     price: 388,
     tourDuration: 2  // in days
   },

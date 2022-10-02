@@ -49,10 +49,8 @@ class ResizableMap {
       this.previousHeight = newHeight
     }
 
-    // trigger resize once to adjust the coords when the resizable map is created (the img size will alrd be adjusted by css, so nid resize the map once)
-    this.resize()
-
+    // trigger resize once to adjust the coords when window is loaded (img loaded) (the img size will alrd be adjusted by css, so nid resize the map once)
     // trigger resize whenever window changes size
-    window.addEventListener("resize", this.resize)
+    addMultipleEventListeners(window, this.resize, "resize", "load")
   }
 }

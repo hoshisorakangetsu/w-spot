@@ -176,7 +176,7 @@ function playBgm() {
     previouslyPlaying = nowPlaying
   }
 
-  if (previouslyPlaying && previouslyPlaying !== bgmEl) {
+  if (!previouslyPlaying || previouslyPlaying !== bgmEl) {
     // if there arent any bgm playing before, just make the play button start from first song
     currentBgm = currentBgm < 0 ? 0 : currentBgm
     bgmEl.src = bgmFolder + bgms[currentBgm].fileName

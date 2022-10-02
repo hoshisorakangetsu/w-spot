@@ -170,17 +170,17 @@ let nowPlaying = null
 let previouslyPlaying = null
 
 function playBgm() {
+  if (!previouslyPlaying || previouslyPlaying !== bgmEl) {
+    console.log('common.js:174', previouslyPlaying)
+    // if there arent any bgm playing before, just make the play button start from first song
+    currentBgm = currentBgm < 0 ? 0 : currentBgm
+    bgmEl.src = bgmFolder + bgms[currentBgm].fileName
+  }
+
   // in case there is something playing right now
   if (nowPlaying) {
     nowPlaying.pause()
     previouslyPlaying = nowPlaying
-  }
-
-  if (!previouslyPlaying || previouslyPlaying !== bgmEl) {
-    console.log('common.js:180', previouslyPlaying)
-    // if there arent any bgm playing before, just make the play button start from first song
-    currentBgm = currentBgm < 0 ? 0 : currentBgm
-    bgmEl.src = bgmFolder + bgms[currentBgm].fileName
   }
 
   bgmEl.play()

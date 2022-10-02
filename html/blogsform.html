@@ -94,16 +94,16 @@
             <p>Use promo code <span class="promo-code">3ast3r3gg</span> for RM50 off!</p>
           </div>
           <div id="mysection">
-            <form id="myform">
+            <form id="myform" onsubmit="myfunc(this, event)">
               <div class="flex-col">
                 <h1>New Blogs Form</h1>
                 <div class="input">
                   <label for="name">Name</label>
-                  <input type="text"id="name"placeholder="Name">
+                  <input type="text" id="name" placeholder="Name" required>
                 </div>
                 <div class="input">
                   <label for="review">Your review</label>
-                  <textarea name="review" id="review" rows="5" cols="20" placeholder="Enter your reviews"></textarea>
+                  <textarea name="review" id="review" rows="5" cols="20" placeholder="Enter your reviews" required></textarea>
                 </div>
                 <div class="input">
                   <label for="uploadfile">Upload your picture</label>
@@ -111,7 +111,7 @@
                 </div>
                 <div class="button">
                   <input type="button"value="Clear" id="clear" onclick="cancelinput()">
-                  <input type="submit" id="submit" value="Submit" onclick="myfunc(event)">
+                  <input type="submit" id="submit" value="Submit">
                 </div>
               </div>
                 
@@ -120,15 +120,19 @@
                   
                     document.getElementById("myform").reset();
                 }
-                function myfunc(e){
-                    e.preventDefault();  // prevent redirect
+                function myfunc(form, e){
+                  e.preventDefault();  // prevent redirect
+
+                  if (!form.checkValidity()) {
+                    form.reportValidity()
+                  } else {
                     var publish = confirm("Publish this blog?");
                     if (publish) {
                       alert("You have successfully published this blog");
                       goHome()
-                    }
-                    else alert("You cancelled the operation");
+                    } else alert("You cancelled the operation");
                   }
+                }
               </script>
             </form>
           </div>

@@ -18,7 +18,10 @@ function selectRating(ev) {
 }
 
 function cancelinput() {
-  document.getElementById("myform").reset();
+  document.getElementById("myform").reset()
+  // reset the star selection
+  Array.from(ratingsDiv.children).forEach(el => el.innerHTML = '&#9734;')
+  ratingsDiv.dataset.selected = '0'
 }
 
 function myfunc(form, e) {

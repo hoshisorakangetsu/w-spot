@@ -104,7 +104,8 @@ textarea:focus {
 }
 
 #price {
-	color: var(--hsl-primary);
+	color: var(--hsl-text);
+	opacity: 1;
 }
 
 input, select, textarea {

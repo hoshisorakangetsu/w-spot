@@ -177,6 +177,7 @@ function playBgm() {
   }
 
   if (!previouslyPlaying || previouslyPlaying !== bgmEl) {
+    console.log('common.js:180', previouslyPlaying)
     // if there arent any bgm playing before, just make the play button start from first song
     currentBgm = currentBgm < 0 ? 0 : currentBgm
     bgmEl.src = bgmFolder + bgms[currentBgm].fileName

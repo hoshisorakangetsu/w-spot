@@ -41,9 +41,9 @@ if (fromTour !== NaN) {
   selectedTour = fromTour - 1  // -1 becuz is index
 }
 
-// listen to select option change, change selectedTour
+// listen to select option change, change selectedTour, recalculate price
 tripSelect.addEventListener("change", () => {
-  selectedTour = parseInt(tripSelect.value) - 1
+  selectedTour = parseInt(tripSelect.value)
   calcPrice()
 })
 
@@ -53,7 +53,7 @@ const promo = document.getElementById('promo')
 
 pax.addEventListener("change", calcPrice)
 promo.addEventListener("change", calcPrice)
-// calculate price one time
+// calculate price one time (the fields all alrd have value)
 calcPrice()
 
 function calcPrice() {

@@ -33,7 +33,7 @@ function myfunc(form, e) {
     // no stars selected
     alert("Please select a star rating!");
   } else {
-    var publish = confirm("Publish this blog?");
+    var publish = confirm("Do you want to publish this blog?");
     if (publish) {
       alert("You have successfully published this blog");
       goHome()

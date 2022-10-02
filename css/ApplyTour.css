@@ -61,7 +61,7 @@ h2{
 select, input {
 	padding: 1vh 2vw;
 	border-radius: 12px;
-    border: 2px solid;
+	border: 2px solid;
 	border-color: var(--hsl-primary);
 	text-align: left;
 	background-color: transparent;
@@ -70,14 +70,14 @@ select, input {
 
 input:focus,
 select:focus {
-    background-color: var(--hsl-bg);
-    box-shadow: 0px 2px 8px var(--hsl-shadow);
+	background-color: var(--hsl-bg);
+	box-shadow: 0px 2px 8px var(--hsl-shadow);
 }
 
 textarea {
 	width: 45%;
-    padding: 2vh 3vw;
-    font-size: 1.5em;
+	padding: 2vh 3vw;
+	font-size: 1.5em;
 	border-radius: 15px;
 	border: 2px solid;
 	border-color: var(--hsl-primary);
@@ -105,4 +105,8 @@ textarea:focus {
 
 #price {
 	color: var(--hsl-primary);
+}
+
+input, select, textarea {
+	color: var(--hsl-text);
 }

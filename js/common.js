@@ -181,6 +181,8 @@ function playBgm() {
   if (nowPlaying) {
     nowPlaying.pause()
     previouslyPlaying = nowPlaying
+  } else {
+    previouslyPlaying = null
   }
 
   bgmEl.play()

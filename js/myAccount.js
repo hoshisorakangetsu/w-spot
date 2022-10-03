@@ -72,7 +72,7 @@ window.addEventListener("load", () => {
       tourContainer.classList.add('applied-tours-card')
       // the template (content inside)
       const template = `
-        <h2>${tour.title}</h2>
+        <h2 title="${tour.title}">${tour.title}</h2>
         <h4>Applied By: <span title="${tour.customer}">${tour.customer}</span></h4>
         <h4>Status: <span>${tour.status}</span></h4>
         <button 

@@ -6,6 +6,7 @@ window.addEventListener("load", () => {
   const customTourStr = localStorage.getItem('customTours') || '[]'
   const customTours = JSON.parse(customTourStr)
 
+  // go to home if no hash or the hash too big
   if (hash === NaN || hash >= customTours.length) {
     goHome()
   }
@@ -57,11 +58,12 @@ window.addEventListener("load", () => {
     }
   }
 
-  // accept button disabled for traveller, else, bind the acceptTour function to the button
+  // accept button disabled for traveller and for accepted, else, bind the acceptTour function to the button
   // can directly parse as got login guard
   const loggedInUser = JSON.parse(sessionStorage.getItem('loggedInUser'))
   const acceptTourBtn = document.getElementById('acceptTour')
-  if (loggedInUser.role === 'TRAVELLER') {
+  console.log(customTourDetail.status, customTourDetail.status === 'Accepted')
+  if (loggedInUser.role === 'TRAVELLER' || customTourDetail.status === 'Accepted') {
     acceptTourBtn.disabled = true
   } else {
     acceptTourBtn.addEventListener("click", () => acceptTour('custom', customTourDetail.title, hash))

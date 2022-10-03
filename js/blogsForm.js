@@ -36,7 +36,7 @@ function myfunc(form, e) {
     var publish = confirm("Do you want to publish this blog?");
     if (publish) {
       alert("You have successfully published this blog");
-      goHome()
+      location.href = './MyAccount.html';
     } else alert("You cancelled the operation");
   }
 }

@@ -46,19 +46,6 @@ window.addEventListener("load", () => {
   addInfo.innerText = customTourDetail.details || 'No Special Requests'
   status.innerText = customTourDetail.status
 
-  // style the addInfo differently if text too long set text align to justify 
-  if (customTourDetail.details.length > 80 || customTourDetail.details.includes('\n')) {
-    addInfo.style.textAlign = 'justify'
-    addInfo.style.width = `${customTourDetail.details.length}ch`  // approximately tht amount of chars + length
-    // if there are multiple lines, set the width to the longest line
-    if (customTourDetail.details.includes('\n')) {
-      let lines = customTourDetail.details.split('\n')
-      // get the longest line
-      let longestLine = lines.reduce((prev, curr) => prev.length > curr.length ? prev : curr)
-      addInfo.style.width = `${longestLine.length + 1}ch`  // approximately tht amount of chars + length
-    }
-  }
-
   // accept button disabled for traveller and for accepted, else, bind the acceptTour function to the button
   // can directly parse as got login guard
   const loggedInUser = JSON.parse(sessionStorage.getItem('loggedInUser'))

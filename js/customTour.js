@@ -47,10 +47,11 @@ window.addEventListener("load", () => {
   status.innerText = customTourDetail.status
 
   // style the addInfo differently if text too long set text align to justify 
-  // if there are multiple lines, set the width to the longest line
-  if (customTourDetail.details.length > 80) {
+  if (customTourDetail.details.length > 80 || customTourDetail.details.includes('\n')) {
     addInfo.style.textAlign = 'justify'
-    if (customTourDetail.details.contains('\n')) {
+    addInfo.style.width = `${customTourDetail.details.length}ch`  // approximately tht amount of chars + length
+    // if there are multiple lines, set the width to the longest line
+    if (customTourDetail.details.includes('\n')) {
       let lines = customTourDetail.details.split('\n')
       // get the longest line
       let longestLine = lines.reduce((prev, curr) => prev.length > curr.length ? prev : curr)

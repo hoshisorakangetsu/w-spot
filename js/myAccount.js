@@ -50,20 +50,19 @@ window.addEventListener("load", () => {
   // render user name
   document.getElementById('username').innerHTML = loggedInUser.username
 
-  // if there are custom tours available, set the display of no custom tours available to none
-  const customToursStr = localStorage.getItem('customTours')
-
-  if (customToursStr) {
+  const customToursStr = localStorage.getItem('customTours') || '[]'
+  // convert custom tours into js workable array
+  let customTours = JSON.parse(customToursStr)
+  // if is traveller, only show those which id is his/her own
+  if (loggedInUser.role === 'TRAVELLER')
+    customTours = customTours.filter(tour => tour.customer === loggedInUser.username)
+  
+  // only overwrite the container if there are custom tours
+  if (customTours.length > 0) {
+    // if there are custom tours available, set the display of no custom tours available to none
     document.getElementById('no-custom-tour').style.display = 'none';
     const customTourListDiv = document.getElementById('custom-tour-list')
     customTourListDiv.style.display = 'flex'
-
-    // convert custom tours into js workable array
-    let customTours = JSON.parse(customToursStr)
-
-    // if is traveller, only show those which id is his/her own
-    if (loggedInUser.role === 'TRAVELLER')
-      customTours = customTours.filter(tour => tour.customer === loggedInUser.username)
 
     // start to generate the childrens
     customTours.forEach((tour, index) => {

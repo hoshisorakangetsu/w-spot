@@ -236,6 +236,7 @@
               function myfunction1() {
                 if (document.getElementById("feedback").value.length <= 0) {
                   alert("Cannot submit empty feedback!")
+                  return
                 }
                 if (confirm("Are you sure you want to submit your feedback ?")) {
                   alert("Feedback submit successful!")

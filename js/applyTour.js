@@ -94,7 +94,7 @@ function calcEndDate() {
   startDateEl.setCustomValidity("")
   const endDateEl = document.getElementById('eDate')
   // start date also counts as one date
-  const endDate = startDate.getTime() + (tours[selectedTour].tourDuration * ONE_DAY) - 1
+  const endDate = startDate.getTime() + ((tours[selectedTour].tourDuration - 1) * ONE_DAY)
 
   endDateEl.value = toInputDateValue(new Date(endDate))
 }

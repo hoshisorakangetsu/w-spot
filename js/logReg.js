@@ -91,7 +91,7 @@ function login(ev) {
   sessionStorage.setItem('loggedInUser', localUser)
   // retrieve last location before heading to login (will be safe even if user registered before login as register won't be saved in sessionStorage)
   alert('Login successful! Welcome, ' + usernameEl.value)
-  window.location.href = sessionStorage.getItem('lastPath')
+  window.location.href = sessionStorage.getItem('lastPath') || './index.html'  // go to home if no previous path
 }
 
 // atm will not be checking for username exists, we only need a mvp, those stuffs are bttr handled with a real backend

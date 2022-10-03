@@ -76,7 +76,7 @@ startDateEl.addEventListener("change", calcEndDate)
 
 function calcEndDate() {
   // if there are no selected tour or start date not selected, no need execute following stuff
-  if (!selectedTour || selectedTour < 0 || !startDateEl.value) return
+  if ((!selectedTour && selectedTour !== 0) || selectedTour < 0 || !startDateEl.value) return
 
   // to auto calculate the end date for user
   // one day is 24hr * 60 min * 60 sec * 1000 ms

@@ -80,6 +80,9 @@
   --s-shadow: 30%;
   --l-shadow: 60%;
   --hsl-shadow: hsl(var(--h), var(--s-shadow), var(--l-shadow));
+
+  /* for input icons */
+  color-scheme: dark;
 }
 
 /* apply primary color to all texts */

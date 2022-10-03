@@ -5,7 +5,7 @@ window.addEventListener("load", () => {
   console.log(loggedInUser)
   // if the user is TOUR_GUIDE, cannot apply
   if (loggedInUser.role !== 'TRAVELLER') {
-    alert('Sorry but only TRAVELLERS can\'t apply for custom tours')
+    alert('Sorry but only TRAVELLERS can apply for custom tours')
     goHome()
   }
 })

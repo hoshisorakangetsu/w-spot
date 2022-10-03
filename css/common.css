@@ -426,6 +426,7 @@ footer hr {
 .bgm-controls * {
   padding: 0px;
   min-width: 2rem;
+  max-width: 2rem;
   cursor: pointer;
 }
 

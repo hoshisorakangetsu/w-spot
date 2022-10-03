@@ -146,7 +146,7 @@ const bgmFolder = '../assets/'
 // list of available bgms
 const bgms = [
   {
-    songName: 'The City Favored By The Winds',
+    songName: 'The City Favored By Wind',
     fileName: 'mond1.mp3'
   }, 
   {

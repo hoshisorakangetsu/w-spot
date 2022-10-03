@@ -39,8 +39,8 @@ window.addEventListener("load", () => {
   // can use innerHTML as no fear for XSS, date are created with fixed format
   period.innerHTML = 
     `<em style="color: var(--hsl-primary)">${formattedStartDate}</em> to <em style="color: var(--hsl-primary)">${formattedEndDate}</em> (<em style="color: var(--hsl-primary)">${
-      // find difference and convert back to days
-      (endDate - startDate) / 1000 / 60 / 60 / 24
+      // start date counts as today
+      ((endDate - startDate) / 1000 / 60 / 60 / 24) + 1
     }</em> days)`
   budget.innerText = customTourDetail.budget
   addInfo.innerText = customTourDetail.details || 'No Special Requests'

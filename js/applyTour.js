@@ -93,7 +93,8 @@ function calcEndDate() {
   // reset the custom validity
   startDateEl.setCustomValidity("")
   const endDateEl = document.getElementById('eDate')
-  const endDate = startDate.getTime() + (tours[selectedTour].tourDuration * ONE_DAY)
+  // start date also counts as one date
+  const endDate = startDate.getTime() + (tours[selectedTour].tourDuration * ONE_DAY) - 1
 
   endDateEl.value = toInputDateValue(new Date(endDate))
 }

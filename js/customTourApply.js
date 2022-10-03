@@ -64,7 +64,7 @@ function applyTour(el, ev) {
     return
   }
 
-  if (startDate >= endDate) {
+  if (startDate > endDate) {
     alert("Start Date cannot be more than End Date!")
     return
   }
